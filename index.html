@@ -1,927 +1,590 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CyberActive AI — Autonomous Security &amp; Resilience for AI Infrastructure and Mission-Critical Environments</title>
+<meta name="description" content="CyberActive AI provides patented autonomous security and resilience technology designed to protect AI/GPU infrastructure, data centers, cloud environments, and mission-critical systems. Detect threats. Understand impact. Make intelligent decisions. Coordinate response. Restore operations.">
 <link rel="canonical" href="https://cyberactive.ai/">
 <meta property="og:url" content="https://cyberactive.ai/">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://cyberactive.ai/assets/icon-512.png">
-<meta name="twitter:card" content="summary">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
-<title>CyberActive AI — Autonomous Security &amp; Resilience for AI Infrastructure and Mission-Critical Environments</title>
-<meta name="description" content="CyberActive AI provides patented autonomous security and resilience technology designed to protect AI/GPU infrastructure, data centers, cloud environments, and mission-critical systems. Detect threats. Understand impact. Make intelligent decisions. Coordinate response. Restore operations.">
 <meta property="og:title" content="CyberActive AI — Autonomous Security &amp; Resilience for AI Infrastructure and Mission-Critical Environments">
 <meta property="og:description" content="The autonomous security and resilience intelligence layer for the infrastructure powering AI and critical operations.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<meta property="og:image" content="https://cyberactive.ai/assets/icon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#050B14">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
 <link rel="icon" type="image/svg+xml" href="assets/logo-13b.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-<meta name="theme-color" content="#050B14">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
-<style>
-  html { scroll-behavior: smooth; background: #050B14; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-  body { margin: 0; background: #050B14; color: #F4F8FF; font-family: Geist, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; font-feature-settings: "ss01", "cv11"; }
-  *, *::before, *::after { box-sizing: border-box; }
-  img, canvas, svg { max-width: 100%; }
-  button, input, textarea { font: inherit; color: inherit; -webkit-appearance: none; -moz-appearance: none; appearance: none; }
-  button { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
-  input, textarea { border-radius: 9px; }
-  h1, h2, h3 { font-kerning: normal; }
-  html { scrollbar-color: #1C2C42 #050B14; scrollbar-width: thin; }
-  ::-webkit-scrollbar { width: 10px; } ::-webkit-scrollbar-track { background: #050B14; } ::-webkit-scrollbar-thumb { background: #1C2C42; border-radius: 10px; border: 2px solid #050B14; }
-  @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) { #ca-nav { background: rgba(5,11,20,.97) !important; } }
-  #ca-menu-btn { display: none !important; }
-  a { color: #7FE6FF; text-decoration: none; }
-  a:hover { color: #F4F8FF; }
-  ::selection { background: rgba(139,92,255,.35); }
-  :focus-visible { outline: 2px solid #9B7BFF; outline-offset: 2px; }
-  section { scroll-margin-top: 72px; }
-  input::placeholder, textarea::placeholder { color: #4E6176; }
-  @keyframes caSpark { 0% { stroke-dashoffset: 22; opacity: 0; } 4% { opacity: 1; } 26% { stroke-dashoffset: -100; opacity: 1; } 30%, 100% { stroke-dashoffset: -100; opacity: 0; } }
-  @keyframes caNode { 0%, 24% { r: 4; } 29% { r: 5.6; } 38%, 100% { r: 4; } }
-  @keyframes caHalo { 0%, 26% { r: 6.4; stroke-opacity: .45; } 46% { r: 11; stroke-opacity: 0; } 47%, 100% { r: 6.4; stroke-opacity: .45; } }
-  @keyframes caFade { from { opacity: 0; } to { opacity: 1; } }
-  @keyframes caPop { from { opacity: 0; transform: translateY(14px) scale(.985); } to { opacity: 1; transform: none; } }
-  @keyframes caBlink { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
-  @keyframes caDrift { from { background-position: 0 0; } to { background-position: 64px 64px; } }
-  @media (max-width: 1080px) {
-    [data-r="g2"], [data-r="gside"] { grid-template-columns: 1fr !important; }
-    [data-r="g3"], [data-r="g5"], [data-r="g6"] { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
-    [data-r="g4"] { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
-    #ca-links { display: none !important; }
-    #ca-menu-btn { display: inline-flex !important; }
-    #ca-nav-cta { display: none !important; }
-    #ca-proof { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
-    #ca-hero-canvas { opacity: .45; }
-  }
-  @media (max-width: 680px) {
-    [data-r="g3"], [data-r="g4"], [data-r="g5"], [data-r="g6"], [data-r="gform"] { grid-template-columns: 1fr !important; }
-    [data-r="cmp"] { grid-template-columns: 1fr 1fr !important; }
-    [data-r="cmp"] > :first-child { grid-column: 1 / -1; }
-    section, footer { padding-left: 20px !important; padding-right: 20px !important; }
-    section:not(#top) { padding-top: 64px !important; padding-bottom: 64px !important; }
-    #ca-nav { padding: 12px 20px !important; }
-    #ca-proof { grid-template-columns: 1fr !important; }
-    #ca-hero-cap { left: 20px !important; right: 20px !important; align-items: flex-start !important; }
-    #ca-hero-cap > div { text-align: left !important; }
-    #top { padding-bottom: 130px !important; }
-    #dependency [data-r="gside"] > div:first-child { min-height: 400px !important; }
-    [data-ctx-tile] { min-width: 0 !important; width: auto !important; padding: 5px !important; }
-    [data-ctx-txt] { display: none !important; }
-    #ca-ctx-pill { left: 30% !important; right: 4% !important; top: auto !important; bottom: 34px !important; transform: none !important; }
-    #ca-modal > div { border-radius: 0 !important; min-height: 100%; padding: 26px 20px !important; }
-  }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation-duration: .01ms !important; } }
-</style>
-</helmet>
+<link rel="stylesheet" href="css/site.css">
+<script type="module" src="js/site.js"></script>
+</head>
+<body>
 
-<div style="min-height:100vh;background:#050B14;color:#F4F8FF;font-family:Geist,system-ui,sans-serif;overflow-x:hidden">
-
-<nav id="ca-nav" style="position:-webkit-sticky;position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 40px;background:rgba(5,11,20,.78);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(159,178,200,.1)">
-  <a href="#top" style="display:flex;align-items:center;gap:12px;color:#F4F8FF">
-    <span style="display:block;width:36px;height:36px">{{ navMark }}</span>
-    <span style="font-size:19px;font-weight:600;letter-spacing:-.02em;display:inline-flex;align-items:center">CyberActive<span style="margin-left:6px;color:#A08BFF">AI</span></span>
+<!-- ============================== NAV ============================== -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="CyberActive AI — home">
+    <span class="brand__mark">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <defs>
+          <linearGradient id="caNavS" x1="10" y1="5" x2="54" y2="60" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7FF0FF"/><stop offset=".5" stop-color="#3D7BFF"/><stop offset="1" stop-color="#8B5CFF"/></linearGradient>
+          <linearGradient id="caNavP" x1="14" y1="0" x2="52" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#B9A6FF"/><stop offset=".45" stop-color="#FFFFFF"/><stop offset="1" stop-color="#B9A6FF"/></linearGradient>
+          <radialGradient id="caNavF0" cx="32" cy="24" r="32" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3D7BFF" stop-opacity=".22"/><stop offset="1" stop-color="#8B5CFF" stop-opacity="0"/></radialGradient>
+          <filter id="caNavF" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        </defs>
+        <path d="M54 22V11.5L32 5 10 11.5V31c0 13.6 8.6 23 22 28.5 9-3.7 15.6-9.3 19.6-16.5L54 22Z" fill="url(#caNavF0)" fill-opacity=".6"/>
+        <path d="M54 22V11.5L32 5 10 11.5V31c0 13.6 8.6 23 22 28.5 9-3.7 15.6-9.3 19.6-16.5" fill="none" stroke="url(#caNavS)" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round" filter="url(#caNavF)"/>
+        <path d="M14.5 36H21L32 13.5 42 46l4-10H51.5" fill="none" stroke="url(#caNavP)" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round" filter="url(#caNavF)"/>
+        <path d="M14.5 36H21L32 13.5 42 46l4-10H51.5" pathLength="100" fill="none" stroke="#FFFFFF" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="16 200" filter="url(#caNavF)" style="animation:caSpark 4s cubic-bezier(.45,0,.2,1) .8s infinite"/>
+        <circle cx="55.5" cy="36" r="6.4" fill="none" stroke="#8B5CFF" stroke-opacity=".45" stroke-width="1" style="animation:caHalo 4s ease-out .8s infinite"/>
+        <circle cx="55.5" cy="36" r="4" fill="#8B5CFF" filter="url(#caNavF)" style="animation:caNode 4s ease-out .8s infinite"/>
+        <circle cx="55.5" cy="36" r="1.7" fill="#FFFFFF"/>
+      </svg>
+    </span>
+    <span class="brand__name">CyberActive<span>AI</span></span>
   </a>
-  <div id="ca-links" style="display:flex;align-items:center;gap:4px;font-size:14px">
-    <sc-for list="{{ navLinks }}" as="l" hint-placeholder-count="6">
-      <a href="{{ l.href }}" style="{{ l.style }}" style-hover="color:#F4F8FF;background:rgba(159,178,200,.07)">{{ l.label }}</a>
-    </sc-for>
+  <nav class="nav__links" aria-label="Primary">
+    <a href="#platform" data-spy="platform">Platform</a>
+    <a href="#ai-workloads" data-spy="ai-workloads">AI Workloads</a>
+    <a href="#markets" data-spy="markets">Solutions</a>
+    <a href="#radar" data-spy="radar">Intelligence</a>
+    <a href="#partners" data-spy="partners">Partners</a>
+    <a href="#investors" data-spy="investors">Investors</a>
+    <a href="#contact" data-spy="contact">Contact</a>
+  </nav>
+  <div class="nav__right">
+    <a class="nav__cta" href="#contact" data-open="0">Request a Demo</a>
+    <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
   </div>
-  <div style="display:flex;align-items:center;gap:10px">
-    <a id="ca-nav-cta" href="#contact" onClick="{{ openDemo }}" style="padding:10px 18px;border:1px solid #8B7BFF;border-radius:8px;font-size:14px;font-weight:500;color:#F4F8FF;white-space:nowrap;cursor:pointer;transition:background .2s" style-hover="background:rgba(139,92,255,.16);color:#F4F8FF">Request a Demo</a>
-    <button id="ca-menu-btn" onClick="{{ toggleMenu }}" aria-label="Menu" aria-expanded="{{ menuOpen }}" style="width:44px;height:44px;align-items:center;justify-content:center;border:1px solid rgba(159,178,200,.2);border-radius:10px;background:transparent;cursor:pointer;flex-direction:column;gap:5px">
-      <span style="{{ burger1 }}"></span><span style="{{ burger2 }}"></span><span style="{{ burger3 }}"></span>
-    </button>
-  </div>
-  <span ref="{{ progRef }}" style="position:absolute;left:0;bottom:-1px;height:1px;width:0;background:linear-gradient(90deg,#00D5FF,#5B8CFF,#9B7BFF);box-shadow:0 0 8px rgba(139,92,255,.6)"></span>
-</nav>
+  <span class="nav__progress" id="progress"></span>
+</header>
 
-<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
-  <div style="position:fixed;left:0;right:0;top:63px;bottom:0;z-index:49;padding:20px;background:rgba(5,11,20,.98);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);overflow-y:auto;animation:caFade .2s">
-    <div style="display:flex;flex-direction:column">
-      <sc-for list="{{ navLinks }}" as="l" hint-placeholder-count="6">
-        <a href="{{ l.href }}" onClick="{{ closeMenu }}" style="display:flex;justify-content:space-between;align-items:center;padding:18px 4px;border-bottom:1px solid rgba(159,178,200,.1);font-size:20px;font-weight:500;color:#F4F8FF">{{ l.label }}<span style="color:#4E6176">→</span></a>
-      </sc-for>
-    </div>
-    <a href="#contact" onClick="{{ openDemo }}" style="display:block;margin-top:24px;padding:16px;border-radius:10px;background:linear-gradient(135deg,#7FF0FF,#5B8CFF 55%,#9B7BFF);color:#050B14;text-align:center;font-size:16px;font-weight:600">Request a Demo</a>
-  </div>
-</sc-if>
+<div class="mobile-menu" id="mobile-menu" hidden>
+  <nav aria-label="Mobile">
+    <a href="#platform">Platform</a>
+    <a href="#ai-workloads">AI Workloads</a>
+    <a href="#markets">Solutions</a>
+    <a href="#radar">Intelligence</a>
+    <a href="#partners">Partners</a>
+    <a href="#investors">Investors</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="btn btn--primary" href="#contact" data-open="0">Request a Demo</a>
+</div>
 
-<section id="top" style="position:relative;min-height:calc(100vh - 63px);display:flex;align-items:center;overflow:hidden;padding:80px 40px">
-  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 72% 45%,rgba(61,123,255,.17),transparent 70%),radial-gradient(ellipse 45% 45% at 92% 88%,rgba(139,92,255,.16),transparent 70%)"></div>
-  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(159,178,200,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(159,178,200,.05) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse 80% 80% at 70% 50%,#000,transparent 75%);mask-image:radial-gradient(ellipse 80% 80% at 70% 50%,#000,transparent 75%)"></div>
-  <canvas id="ca-hero-canvas" ref="{{ heroRef }}" style="position:absolute;inset:0;width:100%;height:100%;display:block"></canvas>
-  <div style="position:absolute;inset:0;background:linear-gradient(90deg,#050B14 0%,rgba(5,11,20,.86) 30%,rgba(5,11,20,0) 58%);pointer-events:none"></div>
+<main>
 
-  <div style="position:relative;z-index:2;max-width:1240px;margin:0 auto;width:100%">
-    <div style="max-width:660px">
-      <div style="display:inline-flex;align-items:center;gap:10px;padding:7px 14px;border:1px solid rgba(0,213,255,.3);border-radius:999px;background:rgba(0,213,255,.06);font-size:11.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#7FE6FF;margin-bottom:28px">
-        <span style="width:6px;height:6px;border-radius:50%;background:#00D5FF;box-shadow:0 0 10px #00D5FF;animation:caBlink 2s infinite"></span>
-        Autonomous Security &amp; Resilience
+<!-- ============================== HERO ============================== -->
+<section class="hero" id="top">
+  <div class="hero__glow"></div>
+  <div class="hero__grid"></div>
+  <canvas class="hero__canvas" id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero__fade"></div>
+
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <div class="badge">Autonomous Security &amp; Resilience</div>
+      <h1>Protecting the Infrastructure Powering AI and Critical Operations.</h1>
+      <p class="hero__sub">Autonomous security and resilience for AI infrastructure <span>and mission-critical environments.</span></p>
+      <p class="hero__body">CyberActive AI provides patented autonomous security and resilience technology designed to protect AI/GPU infrastructure, data centers, cloud environments, and mission-critical systems — wherever an incident, failure, or disruption carries significant business, financial, or societal consequence.</p>
+      <p class="hero__verbs"><span>Detect threats.</span><span>Understand impact.</span><span>Make intelligent decisions.</span><span>Coordinate response.</span><span>Restore operations.</span></p>
+      <div class="row">
+        <a class="btn btn--primary btn--glow" href="#contact" data-open="0">Request a Demo</a>
+        <a class="btn btn--ghost" href="#platform">Explore the Platform</a>
       </div>
-      <h1 style="margin:0;font-size:clamp(42px,6.2vw,86px);font-weight:600;line-height:1;letter-spacing:-.045em;text-wrap:balance">Protecting the Infrastructure Powering AI and Critical Operations.</h1>
-      <p style="margin:24px 0 0;font-size:clamp(17px,1.5vw,21px);font-weight:500;line-height:1.45;color:#F4F8FF;letter-spacing:-.01em">Autonomous security and resilience for AI infrastructure <span style="color:#00D5FF">and mission-critical environments.</span></p>
-      <p style="margin:20px 0 0;max-width:56ch;font-size:16.5px;line-height:1.65;color:#9FB2C8;text-wrap:pretty">CyberActive AI provides patented autonomous security and resilience technology designed to protect AI/GPU infrastructure, data centers, cloud environments, and mission-critical systems — wherever an incident, failure, or disruption carries significant business, financial, or societal consequence.</p>
-      <p style="margin:18px 0 0;display:flex;flex-wrap:wrap;gap:6px 14px;font-family:'Geist Mono',monospace;font-size:13px;color:#F4F8FF"><span>Detect threats.</span><span>Understand impact.</span><span>Make intelligent decisions.</span><span>Coordinate response.</span><span style="color:#35D5A4">Restore operations.</span></p>
-      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:34px">
-        <a href="#contact" onClick="{{ openDemo }}" style="padding:14px 26px;border-radius:9px;background:linear-gradient(135deg,#7FF0FF,#5B8CFF 55%,#9B7BFF);color:#050B14;font-size:15px;font-weight:600;cursor:pointer;box-shadow:0 10px 40px rgba(110,110,255,.32);transition:transform .2s" style-hover="transform:translateY(-1px);color:#050B14">Request a Demo</a>
-        <a href="#platform" style="padding:14px 26px;border:1px solid rgba(244,248,255,.22);border-radius:9px;color:#F4F8FF;font-size:15px;font-weight:500;transition:border-color .2s" style-hover="border-color:rgba(244,248,255,.55);color:#F4F8FF">Explore the Platform</a>
-      </div>
     </div>
   </div>
 
-  <div id="ca-hero-cap" style="position:absolute;right:40px;bottom:32px;z-index:3;display:flex;flex-direction:column;align-items:flex-end;gap:10px">
-    <div style="display:flex;gap:6px">
-      <sc-for list="{{ heroSteps }}" as="s" hint-placeholder-count="5">
-        <span style="{{ s.style }}"></span>
-      </sc-for>
-    </div>
-    <div style="font-family:'Geist Mono',monospace;font-size:12.5px;color:#F4F8FF;text-align:right">{{ phaseLabel }}</div>
-    <div style="font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#6F8399">Illustrative platform simulation</div>
+  <div class="hero__cap">
+    <div class="hero__steps" id="hero-steps"><span class="is-on" style="--c:#277BFF"></span><span style="--c:#FF6475"></span><span style="--c:#FFBC57"></span><span style="--c:#00D5FF"></span><span style="--c:#35D5A4"></span></div>
+    <div class="hero__phase" id="hero-phase" aria-live="off">Normal operations</div>
+    <div class="hero__note">Illustrative platform simulation</div>
   </div>
 </section>
 
-<div style="position:relative;border-top:1px solid rgba(159,178,200,.1);border-bottom:1px solid rgba(159,178,200,.1);background:linear-gradient(180deg,#070F1B,#050B14)">
-  <div id="ca-proof" style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))">
-    <sc-for list="{{ proof }}" as="p" hint-placeholder-count="4">
-      <div style="padding:26px 24px;border-left:1px solid rgba(159,178,200,.08)">
-        <div style="font-size:clamp(20px,2vw,26px);font-weight:600;letter-spacing:-.02em;color:#F4F8FF">{{ p.v }}</div>
-        <div style="margin-top:6px;font-size:13px;line-height:1.5;color:#9FB2C8">{{ p.k }}</div>
-      </div>
-    </sc-for>
+<!-- ============================== PROOF ============================== -->
+<div class="proof">
+  <div class="proof__grid" data-reveal>
+    <div class="proof__item"><div class="proof__v">Patented</div><div class="proof__k">Built on approved patented technology</div></div>
+    <div class="proof__item"><div class="proof__v">Human-governed</div><div class="proof__k">Observe, approve, or autonomous modes with override</div></div>
+    <div class="proof__item"><div class="proof__v">Complementary</div><div class="proof__k">Designed to work with existing security and infrastructure tools</div></div>
+    <div class="proof__item"><div class="proof__v">Independent</div><div class="proof__k">Technology provider partnering across operators globally</div></div>
   </div>
 </div>
 
-<section id="paths" style="max-width:1240px;margin:0 auto;padding:72px 40px 0">
-  <div data-r="g3" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px">
-    <a href="#ai-workloads" style="display:flex;flex-direction:column;gap:10px;padding:24px;border:1px solid rgba(155,123,255,.22);border-radius:14px;background:radial-gradient(ellipse at 0% 0%,rgba(139,92,255,.1),transparent 60%),#08111D;color:#F4F8FF;transition:all .25s" style-hover="border-color:rgba(155,123,255,.55);transform:translateY(-3px);color:#F4F8FF"><span style="font-size:18px;font-weight:600;letter-spacing:-.015em">For AI infrastructure operators</span><span style="font-size:14px;line-height:1.55;color:#9FB2C8">GPU clouds, AI data centers, and enterprises running AI at scale.</span><span style="margin-top:6px;font-size:13.5px;color:#C9BEFF">Protect AI workloads →</span></a>
-    <a href="#partners" style="display:flex;flex-direction:column;gap:10px;padding:24px;border:1px solid rgba(155,123,255,.22);border-radius:14px;background:radial-gradient(ellipse at 0% 0%,rgba(139,92,255,.1),transparent 60%),#08111D;color:#F4F8FF;transition:all .25s" style-hover="border-color:rgba(155,123,255,.55);transform:translateY(-3px);color:#F4F8FF"><span style="font-size:18px;font-weight:600;letter-spacing:-.015em">For technology partners</span><span style="font-size:14px;line-height:1.55;color:#9FB2C8">OEM, MSSP, channel, and integration partnerships.</span><span style="margin-top:6px;font-size:13.5px;color:#C9BEFF">Partner with us →</span></a>
-    <a href="#investors" style="display:flex;flex-direction:column;gap:10px;padding:24px;border:1px solid rgba(155,123,255,.22);border-radius:14px;background:radial-gradient(ellipse at 0% 0%,rgba(139,92,255,.1),transparent 60%),#08111D;color:#F4F8FF;transition:all .25s" style-hover="border-color:rgba(155,123,255,.55);transform:translateY(-3px);color:#F4F8FF"><span style="font-size:18px;font-weight:600;letter-spacing:-.015em">For investors</span><span style="font-size:14px;line-height:1.55;color:#9FB2C8">The autonomous security layer for the AI infrastructure economy.</span><span style="margin-top:6px;font-size:13.5px;color:#C9BEFF">Investor overview →</span></a>
+<!-- ============================== AUDIENCE PATHS ============================== -->
+<section class="sec sec--boxed paths" id="paths">
+  <div class="grid g3" data-reveal>
+    <a class="path" href="#ai-workloads"><span class="path__t">For AI infrastructure operators</span><span class="path__b">GPU clouds, AI data centers, and enterprises running AI at scale.</span><span class="path__go">Protect AI workloads →</span></a>
+    <a class="path" href="#partners"><span class="path__t">For technology partners</span><span class="path__b">OEM, MSSP, channel, and integration partnerships.</span><span class="path__go">Partner with us →</span></a>
+    <a class="path" href="#investors"><span class="path__t">For investors</span><span class="path__b">The autonomous security layer for the AI infrastructure economy.</span><span class="path__go">Investor overview →</span></a>
   </div>
 </section>
 
-<section id="challenge" style="max-width:1240px;margin:0 auto;padding:104px 40px">
-  <div style="font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#A890FF;margin-bottom:20px">The infrastructure challenge</div>
-  <h2 style="margin:0;max-width:22ch;font-size:clamp(32px,4.2vw,56px);font-weight:600;line-height:1.05;letter-spacing:-.035em;text-wrap:balance">AI Infrastructure Is Scaling Faster Than Traditional Security Can Respond.</h2>
-  <div data-r="gside" style="display:grid;grid-template-columns:1fr 1.2fr;gap:40px;margin-top:44px;padding:40px;border:1px solid rgba(255,100,117,.2);border-radius:18px;background:radial-gradient(ellipse at 100% 0%,rgba(255,100,117,.08),transparent 60%),#08111D">
+<!-- ============================== CHALLENGE ============================== -->
+<section class="sec sec--boxed" id="challenge">
+  <div class="eyebrow">The infrastructure challenge</div>
+  <h2 class="h2 w22">AI Infrastructure Is Scaling Faster Than Traditional Security Can Respond.</h2>
+  <div class="challenge">
     <div>
-      <div style="font-family:'Geist Mono',monospace;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#FF8C95;margin-bottom:14px">The new adversary</div>
-      <h3 style="margin:0;font-size:clamp(24px,2.6vw,34px);font-weight:600;line-height:1.15;letter-spacing:-.025em">AI has changed cyber warfare.</h3>
-      <p style="margin:16px 0 0;font-size:16px;line-height:1.65;color:#9FB2C8">For decades, attacks were planned and executed by people. Today's adversaries increasingly use AI to operate autonomously — evolving faster than human-operated teams can investigate, coordinate, and respond.</p>
-      <p style="margin:18px 0 0;font-size:17px;font-weight:500;color:#F4F8FF">Machine-speed attacks require machine-speed decisions.</p>
+      <div class="kicker">The new adversary</div>
+      <h3>AI has changed cyber warfare.</h3>
+      <p>For decades, attacks were planned and executed by people. Today's adversaries increasingly use AI to operate autonomously — evolving faster than human-operated teams can investigate, coordinate, and respond.</p>
+      <p class="challenge__punch">Machine-speed attacks require machine-speed decisions.</p>
     </div>
     <div>
-      <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6F8399;margin-bottom:14px">AI-powered adversaries continuously</div>
-      <div data-r="g2" style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-        <div style="display:flex;gap:10px;align-items:baseline;padding:11px 14px;border:1px solid rgba(159,178,200,.1);border-radius:9px;background:#0B1424;font-size:14px;line-height:1.45;color:#C9D6E4"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#FF6475;transform:translateY(-2px)"></span>Discover exposed AI and GPU infrastructure</div>
-        <div style="display:flex;gap:10px;align-items:baseline;padding:11px 14px;border:1px solid rgba(159,178,200,.1);border-radius:9px;background:#0B1424;font-size:14px;line-height:1.45;color:#C9D6E4"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#FF6475;transform:translateY(-2px)"></span>Morph malware to evade detection</div>
-        <div style="display:flex;gap:10px;align-items:baseline;padding:11px 14px;border:1px solid rgba(159,178,200,.1);border-radius:9px;background:#0B1424;font-size:14px;line-height:1.45;color:#C9D6E4"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#FF6475;transform:translateY(-2px)"></span>Adapt in real time to defensive actions</div>
-        <div style="display:flex;gap:10px;align-items:baseline;padding:11px 14px;border:1px solid rgba(159,178,200,.1);border-radius:9px;background:#0B1424;font-size:14px;line-height:1.45;color:#C9D6E4"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#FF6475;transform:translateY(-2px)"></span>Evaluate thousands of attack paths at once</div>
-        <div style="display:flex;gap:10px;align-items:baseline;padding:11px 14px;border:1px solid rgba(159,178,200,.1);border-radius:9px;background:#0B1424;font-size:14px;line-height:1.45;color:#C9D6E4"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#FF6475;transform:translateY(-2px)"></span>Generate adaptive exploits</div>
-        <div style="display:flex;gap:10px;align-items:baseline;padding:11px 14px;border:1px solid rgba(159,178,200,.1);border-radius:9px;background:#0B1424;font-size:14px;line-height:1.45;color:#C9D6E4"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#FF6475;transform:translateY(-2px)"></span>Compromise identities and service accounts</div>
-        <div style="display:flex;gap:10px;align-items:baseline;padding:11px 14px;border:1px solid rgba(159,178,200,.1);border-radius:9px;background:#0B1424;font-size:14px;line-height:1.45;color:#C9D6E4"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#FF6475;transform:translateY(-2px)"></span>Coordinate across cloud, identity, and workloads</div>
-        <div style="display:flex;gap:10px;align-items:baseline;padding:11px 14px;border:1px solid rgba(159,178,200,.1);border-radius:9px;background:#0B1424;font-size:14px;line-height:1.45;color:#C9D6E4"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#FF6475;transform:translateY(-2px)"></span>Learn from failed attempts</div>
-      </div>
-    </div>
-  </div>
-  
-</section>
-
-<section id="platform" style="position:relative;padding:104px 40px;background:linear-gradient(180deg,#050B14,#0B1424 30%,#0B1424 70%,#050B14)">
-  <div style="max-width:1240px;margin:0 auto">
-    <div style="font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#A890FF;margin-bottom:20px">The CyberActive platform</div>
-    <h2 style="margin:0;max-width:20ch;font-size:clamp(32px,4.2vw,56px);font-weight:600;line-height:1.05;letter-spacing:-.035em;text-wrap:balance">One Intelligence Layer. Across Your Entire Infrastructure.</h2>
-    <p style="margin:24px 0 0;max-width:64ch;font-size:17px;line-height:1.65;color:#9FB2C8;text-wrap:pretty">CyberActive AI is the autonomous security and resilience intelligence layer for the infrastructure powering AI and critical operations. It brings together infrastructure context, cyber risk evaluation, decision intelligence, coordinated response, and recovery orchestration — designed to complement, not replace, existing security and infrastructure investments.</p>
-
-    <div style="position:relative;margin-top:60px">
-      <div style="position:absolute;left:4%;right:4%;top:27px;height:1px;background:linear-gradient(90deg,transparent,rgba(0,213,255,.45),rgba(39,123,255,.45),transparent)"></div>
-      <div data-r="g5" style="position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px">
-        <sc-for list="{{ pillars }}" as="p" hint-placeholder-count="5">
-          <button onClick="{{ p.onClick }}" style="{{ p.style }}">
-            <span style="{{ p.dot }}">{{ p.n }}</span>
-            <span style="display:block;margin-top:18px;font-size:18px;font-weight:600;letter-spacing:-.01em;color:#F4F8FF">{{ p.title }}</span>
-            <span style="display:block;margin-top:8px;font-size:13.5px;line-height:1.55;color:#9FB2C8">{{ p.body }}</span>
-          </button>
-        </sc-for>
-      </div>
-    </div>
-
-    <div data-r="gside" style="display:grid;grid-template-columns:1.1fr 1fr;gap:16px;margin-top:20px">
-      <div style="padding:30px 32px;border:1px solid rgba(0,213,255,.22);border-radius:14px;background:linear-gradient(135deg,rgba(0,213,255,.07),rgba(39,123,255,.04));animation:caFade .4s">
-        <div style="font-family:'Geist Mono',monospace;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#7FE6FF;margin-bottom:12px">Stage {{ pillar.n }} · {{ pillar.title }}</div>
-        <p style="margin:0;font-size:17px;line-height:1.6;color:#F4F8FF;text-wrap:pretty">{{ pillar.detail }}</p>
-      </div>
-      <div style="padding:30px 32px;border:1px solid rgba(159,178,200,.12);border-radius:14px;background:#08111D">
-        <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6F8399;margin-bottom:14px">What happens at this stage</div>
-        <div style="display:flex;flex-direction:column;gap:10px">
-          <sc-for list="{{ pillar.points }}" as="pt" hint-placeholder-count="3">
-            <div style="display:flex;gap:12px;align-items:baseline;font-size:14.5px;line-height:1.5;color:#C9D6E4"><span style="flex:none;width:6px;height:6px;border-radius:50%;background:#00D5FF;transform:translateY(-2px)"></span>{{ pt }}</div>
-          </sc-for>
-        </div>
-      </div>
-    </div>
-    <a href="#radar" style="display:inline-flex;margin-top:32px;font-size:15px;font-weight:500;color:#7FE6FF" style-hover="color:#F4F8FF">See the CA AI Core →</a>
-  </div>
-</section>
-
-
-<section id="ai-workloads" style="position:relative;padding:104px 40px;background:radial-gradient(ellipse 60% 50% at 0% 30%,rgba(139,92,255,.1),transparent 70%),radial-gradient(ellipse 50% 50% at 100% 80%,rgba(0,213,255,.07),transparent 70%),#050B14">
-  <div style="max-width:1240px;margin:0 auto">
-    <div style="font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#A890FF;margin-bottom:20px">Securing AI &amp; GPU workloads</div>
-    <h2 style="margin:0;max-width:20ch;font-size:clamp(32px,4.2vw,56px);font-weight:600;line-height:1.05;letter-spacing:-.035em;text-wrap:balance">Your AI Is Only as Valuable as It Is Secure.</h2>
-    <p style="margin:24px 0 0;max-width:66ch;font-size:17px;line-height:1.65;color:#9FB2C8;text-wrap:pretty">GPU clusters, models, and training data represent extraordinary concentrations of value — and extraordinary targets. CyberActive AI applies autonomous security technology to the assets that matter most in AI infrastructure, understanding each workload in the context of the compute, identity, and data it depends on.</p>
-    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:32px">
-      <span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6F8399;align-self:center;margin-right:6px">Threats we're built for</span>
-      <span style="padding:7px 12px;border:1px solid rgba(255,140,80,.3);border-radius:999px;background:rgba(255,140,80,.06);font-size:13px;color:#FFC29E">Model theft & exfiltration</span>
-      <span style="padding:7px 12px;border:1px solid rgba(255,140,80,.3);border-radius:999px;background:rgba(255,140,80,.06);font-size:13px;color:#FFC29E">Data & model poisoning</span>
-      <span style="padding:7px 12px;border:1px solid rgba(255,140,80,.3);border-radius:999px;background:rgba(255,140,80,.06);font-size:13px;color:#FFC29E">GPU resource hijacking</span>
-      <span style="padding:7px 12px;border:1px solid rgba(255,140,80,.3);border-radius:999px;background:rgba(255,140,80,.06);font-size:13px;color:#FFC29E">Tenant breakout</span>
-      <span style="padding:7px 12px;border:1px solid rgba(255,140,80,.3);border-radius:999px;background:rgba(255,140,80,.06);font-size:13px;color:#FFC29E">Control-plane compromise</span>
-      <span style="padding:7px 12px;border:1px solid rgba(255,140,80,.3);border-radius:999px;background:rgba(255,140,80,.06);font-size:13px;color:#FFC29E">Inference API abuse</span>
-    </div>
-    <div data-r="g3" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:40px">
-      <div style="padding:26px 24px;border:1px solid rgba(159,178,200,.12);border-radius:14px;background:linear-gradient(180deg,#0B1424,#08111D);transition:border-color .25s,transform .25s" style-hover="border-color:rgba(155,123,255,.4);transform:translateY(-3px)"><div style="font-family:'Geist Mono',monospace;font-size:11.5px;color:#A890FF;margin-bottom:16px">01</div><h3 style="margin:0 0 10px;font-size:19px;font-weight:600;letter-spacing:-.015em">Model weights & checkpoints</h3><p style="margin:0;font-size:14.5px;line-height:1.6;color:#9FB2C8">Your most valuable IP. Detect anomalous access, exfiltration, and tampering of trained models and training checkpoints.</p></div>
-      <div style="padding:26px 24px;border:1px solid rgba(159,178,200,.12);border-radius:14px;background:linear-gradient(180deg,#0B1424,#08111D);transition:border-color .25s,transform .25s" style-hover="border-color:rgba(155,123,255,.4);transform:translateY(-3px)"><div style="font-family:'Geist Mono',monospace;font-size:11.5px;color:#A890FF;margin-bottom:16px">02</div><h3 style="margin:0 0 10px;font-size:19px;font-weight:600;letter-spacing:-.015em">Training pipelines & datasets</h3><p style="margin:0;font-size:14.5px;line-height:1.6;color:#9FB2C8">Protect data integrity across ingestion, preprocessing, and training — where poisoning and supply-chain compromise begin.</p></div>
-      <div style="padding:26px 24px;border:1px solid rgba(159,178,200,.12);border-radius:14px;background:linear-gradient(180deg,#0B1424,#08111D);transition:border-color .25s,transform .25s" style-hover="border-color:rgba(155,123,255,.4);transform:translateY(-3px)"><div style="font-family:'Geist Mono',monospace;font-size:11.5px;color:#A890FF;margin-bottom:16px">03</div><h3 style="margin:0 0 10px;font-size:19px;font-weight:600;letter-spacing:-.015em">Inference endpoints & APIs</h3><p style="margin:0;font-size:14.5px;line-height:1.6;color:#9FB2C8">Identify abuse, credential misuse, and anomalous traffic against production inference services.</p></div>
-      <div style="padding:26px 24px;border:1px solid rgba(159,178,200,.12);border-radius:14px;background:linear-gradient(180deg,#0B1424,#08111D);transition:border-color .25s,transform .25s" style-hover="border-color:rgba(155,123,255,.4);transform:translateY(-3px)"><div style="font-family:'Geist Mono',monospace;font-size:11.5px;color:#A890FF;margin-bottom:16px">04</div><h3 style="margin:0 0 10px;font-size:19px;font-weight:600;letter-spacing:-.015em">GPU clusters & management planes</h3><p style="margin:0;font-size:14.5px;line-height:1.6;color:#9FB2C8">Context across GPU hosts, BMC and management interfaces, fabric, and firmware — where a single compromise has the largest blast radius.</p></div>
-      <div style="padding:26px 24px;border:1px solid rgba(159,178,200,.12);border-radius:14px;background:linear-gradient(180deg,#0B1424,#08111D);transition:border-color .25s,transform .25s" style-hover="border-color:rgba(155,123,255,.4);transform:translateY(-3px)"><div style="font-family:'Geist Mono',monospace;font-size:11.5px;color:#A890FF;margin-bottom:16px">05</div><h3 style="margin:0 0 10px;font-size:19px;font-weight:600;letter-spacing:-.015em">Multi-tenant isolation</h3><p style="margin:0;font-size:14.5px;line-height:1.6;color:#9FB2C8">Understand tenant relationships and shared infrastructure so one tenant's compromise does not become another's outage.</p></div>
-      <div style="padding:26px 24px;border:1px solid rgba(159,178,200,.12);border-radius:14px;background:linear-gradient(180deg,#0B1424,#08111D);transition:border-color .25s,transform .25s" style-hover="border-color:rgba(155,123,255,.4);transform:translateY(-3px)"><div style="font-family:'Geist Mono',monospace;font-size:11.5px;color:#A890FF;margin-bottom:16px">06</div><h3 style="margin:0 0 10px;font-size:19px;font-weight:600;letter-spacing:-.015em">Orchestration & identity</h3><p style="margin:0;font-size:14.5px;line-height:1.6;color:#9FB2C8">Kubernetes, schedulers, service accounts, and privileged access — the control plane attackers target to reach AI workloads.</p></div>
-    </div>
-    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:36px">
-      <a href="#contact" onClick="{{ openDemo }}" style="padding:13px 22px;border-radius:9px;background:linear-gradient(135deg,#7FF0FF,#5B8CFF 55%,#9B7BFF);color:#050B14;font-size:14.5px;font-weight:600;cursor:pointer" style-hover="color:#050B14">Request a Demo</a>
-      <a href="#radar" style="padding:13px 22px;border:1px solid rgba(244,248,255,.2);border-radius:9px;color:#F4F8FF;font-size:14.5px;font-weight:500" style-hover="border-color:rgba(244,248,255,.5);color:#F4F8FF">See the AI Core in action</a>
-    </div>
-  </div>
-</section>
-
-<section id="radar" style="position:relative;padding:104px 40px;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(39,123,255,.1),transparent 70%),#050B14;border-top:1px solid rgba(159,178,200,.08);border-bottom:1px solid rgba(159,178,200,.08)">
-  <div style="max-width:1240px;margin:0 auto">
-    <div style="font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#A890FF;margin-bottom:20px">Autonomous telemetry radar</div>
-    <h2 style="margin:0;max-width:22ch;font-size:clamp(32px,4.2vw,56px);font-weight:600;line-height:1.05;letter-spacing:-.035em;text-wrap:balance">Every Domain. One AI Core. Continuous Awareness.</h2>
-    <p style="margin:24px 0 0;max-width:66ch;font-size:17px;line-height:1.65;color:#9FB2C8;text-wrap:pretty">Facilities, compute, network, applications, security, and cloud telemetry all feed the CA AI Core — where signals are normalized (e.g. OCSF), correlated, analyzed for anomalies, evaluated for risk propagation and business impact, and used to drive governed response and recovery. Select a domain to inspect it.</p>
-
-    <div data-r="gside" style="display:grid;grid-template-columns:250px minmax(0,1fr) 316px;gap:16px;margin-top:52px;align-items:stretch">
-      <div style="display:flex;flex-direction:column;gap:10px;padding:22px;border:1px solid rgba(159,178,200,.12);border-radius:16px;background:rgba(11,20,36,.6);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)">
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
-          <span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6F8399">AI intelligence layer</span>
-          <span style="display:flex;align-items:center;gap:6px;font-size:11px;color:#35D5A4"><span style="width:6px;height:6px;border-radius:50%;background:#35D5A4;animation:caBlink 1.6s infinite"></span>Adapting</span>
-        </div>
-        <sc-for list="{{ aiStats }}" as="s" hint-placeholder-count="7">
-          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:9px 0;border-bottom:1px solid rgba(159,178,200,.07)">
-            <span style="font-size:13px;color:#9FB2C8">{{ s.k }}</span>
-            <span style="font-family:'Geist Mono',monospace;font-size:13.5px;color:#F4F8FF;font-variant-numeric:tabular-nums">{{ s.v }}</span>
-          </div>
-        </sc-for>
-        <div style="margin-top:auto;padding-top:14px">
-          <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6F8399;margin-bottom:10px">Anomaly confidence</div>
-          <div style="display:flex;flex-direction:column;gap:7px;font-size:12.5px;color:#9FB2C8">
-            <span style="display:flex;align-items:center;gap:9px"><span style="width:18px;height:3px;border-radius:2px;background:#277BFF"></span>Normal telemetry</span>
-            <span style="display:flex;align-items:center;gap:9px"><span style="width:18px;height:3px;border-radius:2px;background:#FFBC57"></span>Potential anomaly</span>
-            <span style="display:flex;align-items:center;gap:9px"><span style="width:18px;height:3px;border-radius:2px;background:#FF8C50"></span>High confidence</span>
-            <span style="display:flex;align-items:center;gap:9px"><span style="width:18px;height:3px;border-radius:2px;background:#FF6475"></span>Critical</span>
-            <span style="display:flex;align-items:center;gap:9px"><span style="width:18px;height:3px;border-radius:2px;background:#00D5FF"></span>Resolved</span>
-          </div>
-        </div>
-      </div>
-
-      <div style="position:relative;min-height:560px;border:1px solid rgba(0,213,255,.16);border-radius:16px;background:radial-gradient(circle at 50% 50%,rgba(0,213,255,.06),transparent 60%),#040A12;overflow:hidden">
-        <canvas ref="{{ radarRef }}" style="position:absolute;inset:0;width:100%;height:100%;display:block;cursor:pointer"></canvas>
-        <div style="position:absolute;left:50%;top:calc(50% + 14px);transform:translate(-50%,-50%);text-align:center;pointer-events:none;width:170px">
-          <img src="assets/logo-13b.svg" alt="" style="height:34px;width:34px;display:block;margin:0 auto 8px">
-          <div style="font-size:15px;font-weight:600;letter-spacing:-.01em">CA AI Core</div>
-          <div style="margin-top:4px;font-size:9.5px;line-height:1.4;letter-spacing:.06em;color:#7FE6FF">Autonomous AI &amp; GPU Infrastructure Security</div>
-        </div>
-        <div style="position:absolute;left:16px;right:16px;top:14px;display:flex;flex-wrap:wrap;justify-content:center;gap:6px">
-          <sc-for list="{{ coreChips }}" as="c" hint-placeholder-count="4">
-            <span style="padding:5px 10px;border:1px solid rgba(159,178,200,.16);border-radius:999px;background:rgba(5,11,20,.7);font-size:11px;color:#9FB2C8;white-space:nowrap">{{ c.k }} <span style="color:#F4F8FF;font-family:'Geist Mono',monospace">{{ c.v }}</span></span>
-          </sc-for>
-        </div>
-        <div style="position:absolute;left:16px;right:16px;bottom:14px;display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap">
-          <div style="display:flex;flex-wrap:wrap;gap:4px;align-items:center;font-family:'Geist Mono',monospace;font-size:11px">
-            <sc-for list="{{ chain }}" as="c" hint-placeholder-count="6">
-              <span style="{{ c.style }}">{{ c.label }}</span>
-            </sc-for>
-          </div>
-          <span style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#4E6176">Illustrative simulation</span>
-        </div>
-      </div>
-
-      <div style="padding:24px;border:1px solid rgba(159,178,200,.12);border-radius:16px;background:rgba(11,20,36,.6);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);display:flex;flex-direction:column">
-        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
-          <span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6F8399">Domain telemetry</span>
-          <span style="{{ rd.badgeStyle }}">{{ rd.stateLabel }}</span>
-        </div>
-        <h3 style="margin:12px 0 6px;font-size:26px;font-weight:600;letter-spacing:-.02em">{{ rd.name }}</h3>
-        <p style="margin:0 0 16px;font-size:13px;line-height:1.55;color:#9FB2C8">{{ rd.scope }}</p>
-        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px">
-          <sc-for list="{{ radarTabs }}" as="t" hint-placeholder-count="6">
-            <button onClick="{{ t.onClick }}" style="{{ t.style }}">{{ t.label }}</button>
-          </sc-for>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(159,178,200,.1);border:1px solid rgba(159,178,200,.1);border-radius:10px;overflow:hidden">
-          <sc-for list="{{ rd.metrics }}" as="m" hint-placeholder-count="10">
-            <div style="padding:11px 12px;background:#08111D">
-              <div style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#6F8399">{{ m.k }}</div>
-              <div style="margin-top:4px;font-family:'Geist Mono',monospace;font-size:13px;color:#F4F8FF">{{ m.v }}</div>
-            </div>
-          </sc-for>
-        </div>
+      <div class="label">AI-powered adversaries continuously</div>
+      <div class="grid g2" data-reveal>
+        <div class="dot-item threat">Discover exposed AI and GPU infrastructure</div>
+        <div class="dot-item threat">Morph malware to evade detection</div>
+        <div class="dot-item threat">Adapt in real time to defensive actions</div>
+        <div class="dot-item threat">Evaluate thousands of attack paths at once</div>
+        <div class="dot-item threat">Generate adaptive exploits</div>
+        <div class="dot-item threat">Compromise identities and service accounts</div>
+        <div class="dot-item threat">Coordinate across cloud, identity, and workloads</div>
+        <div class="dot-item threat">Learn from failed attempts</div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="dependency" style="max-width:1240px;margin:0 auto;padding:104px 40px">
-  <div style="font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#A890FF;margin-bottom:20px">Contextual intelligence</div>
-  <h2 style="margin:0;max-width:20ch;font-size:clamp(32px,4.2vw,56px);font-weight:600;line-height:1.05;letter-spacing:-.035em;text-wrap:balance">An Attack Is Never Just an Alert. It Is a Chain of Consequences.</h2>
+<!-- ============================== PLATFORM ============================== -->
+<section class="sec platform" id="platform">
+  <div class="wrap">
+    <div class="eyebrow">The CyberActive platform</div>
+    <h2 class="h2 w20">One Intelligence Layer. Across Your Entire Infrastructure.</h2>
+    <p class="lead lead--64">CyberActive AI is the autonomous security and resilience intelligence layer for the infrastructure powering AI and critical operations. It brings together infrastructure context, cyber risk evaluation, decision intelligence, coordinated response, and recovery orchestration — designed to complement, not replace, existing security and infrastructure investments.</p>
 
-  <div data-r="gside" style="display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:0;margin-top:52px;border:1px solid rgba(139,123,255,.22);border-radius:22px;background:linear-gradient(160deg,#0B1424,#070E1A);overflow:hidden;box-shadow:0 40px 120px rgba(0,0,0,.45)">
-    <div style="position:relative;min-height:460px;margin:12px;border:1px solid rgba(159,178,200,.1);border-radius:16px;background:#050B14;overflow:hidden">
-      <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(127,240,255,.22) 1px,transparent 1.3px);background-size:9px 9px;-webkit-mask-image:radial-gradient(ellipse 70% 65% at 58% 50%,#000 20%,transparent 75%);mask-image:radial-gradient(ellipse 70% 65% at 58% 50%,#000 20%,transparent 75%);opacity:.55"></div>
-      <div style="position:absolute;inset:0;background:radial-gradient(circle at 56% 50%,rgba(139,92,255,.2),transparent 32%)"></div>
-      <svg viewBox="0 0 640 440" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%">
-        <sc-for list="{{ ctxLines }}" as="l" hint-placeholder-count="5">
-          <path d="{{ l.d }}" fill="none" stroke="{{ l.stroke }}" stroke-width="{{ l.w }}" vector-effect="non-scaling-stroke"></path>
-        </sc-for>
-        <path d="M300 220H316M404 220H452" fill="none" stroke="rgba(155,123,255,.7)" stroke-width="1.6" vector-effect="non-scaling-stroke"></path>
+    <div class="pillars">
+      <div class="grid g5" id="pillars" role="tablist" aria-label="Platform stages" data-reveal>
+        <button class="pillar is-active" type="button" role="tab" aria-selected="true"><span class="pillar__dot">01</span><span class="pillar__t">Detect</span><span class="pillar__b">Identify suspicious activity and emerging threats across connected systems.</span></button>
+        <button class="pillar" type="button" role="tab" aria-selected="false"><span class="pillar__dot">02</span><span class="pillar__t">Understand</span><span class="pillar__b">Correlate signals, infrastructure relationships, and operational dependencies.</span></button>
+        <button class="pillar" type="button" role="tab" aria-selected="false"><span class="pillar__dot">03</span><span class="pillar__t">Decide</span><span class="pillar__b">Evaluate risk, likely propagation, and potential operational impact.</span></button>
+        <button class="pillar" type="button" role="tab" aria-selected="false"><span class="pillar__dot">04</span><span class="pillar__t">Act</span><span class="pillar__b">Coordinate policy-governed containment and response across integrated controls.</span></button>
+        <button class="pillar" type="button" role="tab" aria-selected="false"><span class="pillar__dot">05</span><span class="pillar__t">Restore &amp; Learn</span><span class="pillar__b">Validate secure restoration and incorporate outcomes into continuous improvement workflows.</span></button>
+      </div>
+    </div>
+
+    <div class="split split--a">
+      <div class="stage" id="stage" role="tabpanel">
+        <div class="kicker" id="stage-kicker">Stage 01 · Detect</div>
+        <p id="stage-detail">Signals from compute, identity, network, storage, and existing security tools are evaluated continuously for behavior that departs from established operating patterns.</p>
+      </div>
+      <div class="panel">
+        <div class="label">What happens at this stage</div>
+        <div class="dot-list stage-points" id="stage-points">
+          <div class="dot-item">Ingests telemetry from existing security and infrastructure tools</div>
+          <div class="dot-item">Behavior-oriented analysis, not signatures alone</div>
+          <div class="dot-item">Designed to surface previously unseen activity</div>
+        </div>
+      </div>
+    </div>
+    <a class="link-arrow" href="#radar">See the CA AI Core →</a>
+  </div>
+</section>
+
+<!-- ============================== AI WORKLOADS ============================== -->
+<section class="sec workloads" id="ai-workloads">
+  <div class="wrap">
+    <div class="eyebrow">Securing AI &amp; GPU workloads</div>
+    <h2 class="h2 w20">Your AI Is Only as Valuable as It Is Secure.</h2>
+    <p class="lead lead--66">GPU clusters, models, and training data represent extraordinary concentrations of value — and extraordinary targets. CyberActive AI applies autonomous security technology to the assets that matter most in AI infrastructure, understanding each workload in the context of the compute, identity, and data it depends on.</p>
+    <div class="threats">
+      <span class="label">Threats we're built for</span>
+      <span class="threat-tag">Model theft &amp; exfiltration</span>
+      <span class="threat-tag">Data &amp; model poisoning</span>
+      <span class="threat-tag">GPU resource hijacking</span>
+      <span class="threat-tag">Tenant breakout</span>
+      <span class="threat-tag">Control-plane compromise</span>
+      <span class="threat-tag">Inference API abuse</span>
+    </div>
+    <div class="grid g3" data-reveal>
+      <div class="card card--lg"><div class="card__n">01</div><h3>Model weights &amp; checkpoints</h3><p>Your most valuable IP. Detect anomalous access, exfiltration, and tampering of trained models and training checkpoints.</p></div>
+      <div class="card card--lg"><div class="card__n">02</div><h3>Training pipelines &amp; datasets</h3><p>Protect data integrity across ingestion, preprocessing, and training — where poisoning and supply-chain compromise begin.</p></div>
+      <div class="card card--lg"><div class="card__n">03</div><h3>Inference endpoints &amp; APIs</h3><p>Identify abuse, credential misuse, and anomalous traffic against production inference services.</p></div>
+      <div class="card card--lg"><div class="card__n">04</div><h3>GPU clusters &amp; management planes</h3><p>Context across GPU hosts, BMC and management interfaces, fabric, and firmware — where a single compromise has the largest blast radius.</p></div>
+      <div class="card card--lg"><div class="card__n">05</div><h3>Multi-tenant isolation</h3><p>Understand tenant relationships and shared infrastructure so one tenant's compromise does not become another's outage.</p></div>
+      <div class="card card--lg"><div class="card__n">06</div><h3>Orchestration &amp; identity</h3><p>Kubernetes, schedulers, service accounts, and privileged access — the control plane attackers target to reach AI workloads.</p></div>
+    </div>
+    <div class="row">
+      <a class="btn btn--primary btn--md" href="#contact" data-open="0">Request a Demo</a>
+      <a class="btn btn--ghost btn--md" href="#radar">See the AI Core in action</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== RADAR ============================== -->
+<section class="sec radar" id="radar">
+  <div class="wrap">
+    <div class="eyebrow">Autonomous telemetry radar</div>
+    <h2 class="h2 w22">Every Domain. One AI Core. Continuous Awareness.</h2>
+    <p class="lead lead--66">Facilities, compute, network, applications, security, and cloud telemetry all feed the CA AI Core — where signals are normalized (e.g. OCSF), correlated, analyzed for anomalies, evaluated for risk propagation and business impact, and used to drive governed response and recovery. Select a domain to inspect it.</p>
+
+    <div class="radar__grid">
+      <div class="glass ai-panel">
+        <div class="ai-panel__head"><span class="label">AI intelligence layer</span><span class="live">Adapting</span></div>
+        <div id="ai-stats">
+          <div class="stat"><span class="stat__k">Telemetry rate</span><span class="stat__v">46.4K ev/s</span></div>
+          <div class="stat"><span class="stat__k">Events analyzed</span><span class="stat__v">1.28M</span></div>
+          <div class="stat"><span class="stat__k">Models updated</span><span class="stat__v">412</span></div>
+          <div class="stat"><span class="stat__k">Predictions generated</span><span class="stat__v">9.1K</span></div>
+          <div class="stat"><span class="stat__k">Actions executed</span><span class="stat__v">214</span></div>
+          <div class="stat"><span class="stat__k">Risk correlations</span><span class="stat__v">3.9K</span></div>
+          <div class="stat"><span class="stat__k">Graph updates</span><span class="stat__v">18.2K</span></div>
+        </div>
+        <div class="legend">
+          <div class="label">Anomaly confidence</div>
+          <ul>
+            <li style="--c:#277BFF">Normal telemetry</li>
+            <li style="--c:#FFBC57">Potential anomaly</li>
+            <li style="--c:#FF8C50">High confidence</li>
+            <li style="--c:#FF6475">Critical</li>
+            <li style="--c:#00D5FF">Resolved</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="radar__stage">
+        <canvas class="radar__canvas" id="radar-canvas" aria-label="Telemetry radar — click a domain to inspect it"></canvas>
+        <div class="radar__core">
+          <img src="assets/logo-13b.svg" alt="">
+          <div class="radar__core-t">CA AI Core</div>
+          <div class="radar__core-s">Autonomous AI &amp; GPU Infrastructure Security</div>
+        </div>
+        <div class="chips" id="core-chips">
+          <span class="chip">Health <b>99.2%</b></span>
+          <span class="chip">Mode <b>Approve</b></span>
+          <span class="chip">AI confidence <b>0.98</b></span>
+          <span class="chip">Active anomalies <b>0</b></span>
+          <span class="chip">Recovery ops <b>0</b></span>
+        </div>
+        <div class="radar__foot">
+          <div class="chain" id="chain"><span>Facilities</span><span>→ Compute</span><span>→ Applications</span><span>→ Network</span><span>→ Security</span><span>→ Cloud</span></div>
+          <span class="sim-note">Illustrative simulation</span>
+        </div>
+      </div>
+
+      <div class="glass domain-panel">
+        <div class="domain-panel__head">
+          <span class="label">Domain telemetry</span>
+          <span class="pill pill--blue" id="rd-state">Normal</span>
+        </div>
+        <h3 id="rd-name">Facilities</h3>
+        <p class="domain-panel__scope" id="rd-scope">Power distribution, UPS, generators, cooling, HVAC, environmental, fire suppression, leak detection, BMS, physical access.</p>
+        <div class="tabs" id="radar-tabs" role="tablist" aria-label="Telemetry domains">
+          <button class="tab is-active" type="button" role="tab" aria-selected="true">Facilities</button>
+          <button class="tab" type="button" role="tab" aria-selected="false">Network</button>
+          <button class="tab" type="button" role="tab" aria-selected="false">Security</button>
+          <button class="tab" type="button" role="tab" aria-selected="false">Cloud</button>
+          <button class="tab" type="button" role="tab" aria-selected="false">Applications</button>
+          <button class="tab" type="button" role="tab" aria-selected="false">Compute</button>
+        </div>
+        <div class="metrics" id="rd-metrics">
+          <div class="metric"><div class="metric__k">Overall health</div><div class="metric__v">98.6%</div></div>
+          <div class="metric"><div class="metric__k">Telemetry volume</div><div class="metric__v">7.6K ev/s</div></div>
+          <div class="metric"><div class="metric__k">Active assets</div><div class="metric__v">1,840</div></div>
+          <div class="metric"><div class="metric__k">Current anomalies</div><div class="metric__v">None</div></div>
+          <div class="metric"><div class="metric__k">AI confidence</div><div class="metric__v">0.98</div></div>
+          <div class="metric"><div class="metric__k">Risk score</div><div class="metric__v">12 / 100</div></div>
+          <div class="metric"><div class="metric__k">Predicted impact</div><div class="metric__v">None</div></div>
+          <div class="metric"><div class="metric__k">Autonomous actions</div><div class="metric__v">0</div></div>
+          <div class="metric"><div class="metric__k">Business impact</div><div class="metric__v">None</div></div>
+          <div class="metric"><div class="metric__k">Recovery status</div><div class="metric__v">Not required</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CONTEXTUAL INTELLIGENCE ============================== -->
+<section class="sec sec--boxed" id="dependency">
+  <div class="eyebrow">Contextual intelligence</div>
+  <h2 class="h2 w20">An Attack Is Never Just an Alert. It Is a Chain of Consequences.</h2>
+
+  <div class="ctx">
+    <div class="ctx__viz" aria-hidden="true">
+      <div class="ctx__dots"></div>
+      <div class="ctx__halo"></div>
+      <svg class="ctx__svg" viewBox="0 0 640 440" preserveAspectRatio="none" id="ctx-lines">
+        <path d="M147 52H220C266 52 258 220 300 220" fill="none" vector-effect="non-scaling-stroke"/>
+        <path d="M147 136H220C266 136 258 220 300 220" fill="none" vector-effect="non-scaling-stroke"/>
+        <path d="M147 220H220C266 220 258 220 300 220" fill="none" vector-effect="non-scaling-stroke"/>
+        <path d="M147 304H220C266 304 258 220 300 220" fill="none" vector-effect="non-scaling-stroke"/>
+        <path d="M147 388H220C266 388 258 220 300 220" fill="none" vector-effect="non-scaling-stroke"/>
+        <path d="M300 220H316M404 220H452" fill="none" stroke="rgba(155,123,255,.7)" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
       </svg>
-      <div style="position:absolute;inset:0;pointer-events:none">{{ ctxFlow }}</div>
-      <sc-for list="{{ ctxSources }}" as="t" hint-placeholder-count="5">
-        <div data-ctx-tile="1" style="{{ t.style }}">
-          <span style="{{ t.badge }}">{{ t.code }}</span>
-          <span data-ctx-txt="1" style="display:flex;flex-direction:column;gap:2px;min-width:0"><span style="font-size:12.5px;font-weight:500;color:#F4F8FF;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ t.name }}</span><span style="font-size:10.5px;color:#6F8399;white-space:nowrap">{{ t.sub }}</span></span>
-        </div>
-      </sc-for>
-      <div style="position:absolute;left:56.25%;top:50%;width:150px;height:150px;transform:translate(-50%,-50%);border-radius:50%;border:1px solid rgba(155,123,255,.22);background:radial-gradient(circle,rgba(139,92,255,.08),transparent 70%)"></div>
-      <div style="position:absolute;left:56.25%;top:50%;width:92px;height:92px;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;border-radius:50%;border:1px solid rgba(155,123,255,.5);background:radial-gradient(circle at 50% 35%,#16234A,#0A1020);box-shadow:0 0 40px rgba(139,92,255,.35),inset 0 0 20px rgba(0,213,255,.12)">
-        <img src="assets/logo-13b.svg" alt="" style="width:56px;height:56px;display:block">
-      </div>
-      <div style="position:absolute;left:56.25%;top:calc(50% + 62px);transform:translateX(-50%);font-family:'Geist Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#A890FF;white-space:nowrap">CA AI Core</div>
-      <div id="ca-ctx-pill" style="position:absolute;left:70.6%;right:3%;top:50%;transform:translateY(-50%);display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid rgba(155,123,255,.45);border-radius:12px;background:rgba(11,20,36,.92);box-shadow:0 0 30px rgba(139,92,255,.2)">
-        <span style="flex:none;width:8px;height:8px;border-radius:50%;background:{{ ctx.outColor }};box-shadow:0 0 10px {{ ctx.outColor }}"></span>
-        <span style="font-size:13px;font-weight:500;line-height:1.3;color:#F4F8FF">{{ ctx.out }}</span>
-      </div>
-      <div style="position:absolute;left:14px;bottom:12px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#4E6176">Illustrative simulation</div>
+      <svg class="ctx__svg" viewBox="0 0 640 440" preserveAspectRatio="none" id="ctx-flow"></svg>
+      <div class="src" style="top:11.82%"><span class="src__code">GPU</span><span class="src__txt"><span class="src__name">GPU clusters</span><span class="src__sub">hosts · BMC · fabric</span></span></div>
+      <div class="src" style="top:30.91%"><span class="src__code">K8S</span><span class="src__txt"><span class="src__name">Orchestration</span><span class="src__sub">Kubernetes · schedulers</span></span></div>
+      <div class="src" style="top:50%"><span class="src__code">IAM</span><span class="src__txt"><span class="src__name">Identity</span><span class="src__sub">admins · service accounts</span></span></div>
+      <div class="src" style="top:69.09%"><span class="src__code">NET</span><span class="src__txt"><span class="src__name">Network</span><span class="src__sub">east-west · segmentation</span></span></div>
+      <div class="src" style="top:88.18%"><span class="src__code">CLD</span><span class="src__txt"><span class="src__name">Cloud &amp; storage</span><span class="src__sub">hybrid · datasets</span></span></div>
+      <div class="core-ring"></div>
+      <div class="core-orb"><img src="assets/logo-13b.svg" alt=""></div>
+      <div class="core-label">CA AI Core</div>
+      <div class="ctx-out" id="ctx-out"><span>Threat correlated across 3 dependencies</span></div>
+      <div class="sim-note">Illustrative simulation</div>
     </div>
 
-    <div style="display:flex;flex-direction:column;padding:34px 34px 30px">
-      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
-        <img src="assets/logo-13b.svg" alt="" style="width:44px;height:44px;display:block">
-        <span style="display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border:1px solid rgba(159,178,200,.18);border-radius:999px;font-size:12px;color:#C9D6E4"><span style="width:6px;height:6px;border-radius:50%;background:#35D5A4;animation:caBlink 1.8s infinite"></span>Dependency-aware</span>
+    <div class="ctx__side">
+      <div class="ctx__side-head">
+        <img src="assets/logo-13b.svg" alt="">
+        <span class="tag-live">Dependency-aware</span>
       </div>
-      <h3 style="margin:22px 0 0;font-size:30px;font-weight:600;letter-spacing:-.025em;background:linear-gradient(90deg,#F4F8FF,#C9BEFF);-webkit-background-clip:text;background-clip:text;color:transparent">CA AI Core</h3>
-      <p style="margin:12px 0 0;font-size:15.5px;line-height:1.65;color:#9FB2C8;text-wrap:pretty">Telemetry from GPU clusters, orchestration, identity, network, and cloud converges in one intelligence core — correlated against infrastructure dependencies, so a single compromise is understood as the chain of consequences it can become.</p>
-      <div style="height:1px;margin:24px 0 10px;background:linear-gradient(90deg,rgba(159,178,200,.2),transparent)"></div>
-      <div style="display:flex;flex-direction:column">
-        <sc-for list="{{ ctxCaps }}" as="c" hint-placeholder-count="4">
-          <button onClick="{{ c.onClick }}" style="{{ c.style }}">
-            <span style="{{ c.num }}">{{ c.n }}</span>
-            <span style="display:flex;flex-direction:column;gap:3px;text-align:left"><span style="font-size:15px;font-weight:500;color:{{ c.titleColor }}">{{ c.title }}</span><span style="font-size:13px;line-height:1.45;color:#6F8399">{{ c.body }}</span></span>
-          </button>
-        </sc-for>
+      <h3>CA AI Core</h3>
+      <p>Telemetry from GPU clusters, orchestration, identity, network, and cloud converges in one intelligence core — correlated against infrastructure dependencies, so a single compromise is understood as the chain of consequences it can become.</p>
+      <div class="rule"></div>
+      <div class="caps" id="ctx-caps">
+        <button class="cap is-active" type="button"><span class="cap__n">01</span><span class="cap__txt"><span class="cap__t">Detect</span><span class="cap__b">Lateral movement from a compromised privileged identity.</span></span></button>
+        <button class="cap" type="button"><span class="cap__n">02</span><span class="cap__txt"><span class="cap__t">Understand</span><span class="cap__b">Blast radius across GPU clusters and tenant workloads.</span></span></button>
+        <button class="cap" type="button"><span class="cap__n">03</span><span class="cap__txt"><span class="cap__t">Decide</span><span class="cap__b">Containment ranked by operational criticality and policy.</span></span></button>
+        <button class="cap" type="button"><span class="cap__n">04</span><span class="cap__txt"><span class="cap__t">Act</span><span class="cap__b">Governed response through your integrated controls.</span></span></button>
       </div>
-      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:24px">
-        <a href="#contact" onClick="{{ openDemo }}" style="padding:12px 20px;border-radius:9px;background:linear-gradient(135deg,#7FF0FF,#5B8CFF 55%,#9B7BFF);color:#050B14;font-size:14px;font-weight:600;cursor:pointer" style-hover="color:#050B14">Request a Demo</a>
-        <a href="#response" style="padding:12px 20px;border:1px solid rgba(244,248,255,.2);border-radius:9px;color:#F4F8FF;font-size:14px;font-weight:500" style-hover="border-color:rgba(244,248,255,.5);color:#F4F8FF">Explore Decision Intelligence</a>
+      <div class="row">
+        <a class="btn btn--primary btn--sm" href="#contact" data-open="0">Request a Demo</a>
+        <a class="btn btn--ghost btn--sm" href="#response">Explore Decision Intelligence</a>
       </div>
     </div>
   </div>
 </section>
 
-<section id="response" style="padding:104px 40px;background:linear-gradient(180deg,#050B14,#0B1424 40%,#050B14)">
-  <div style="max-width:1240px;margin:0 auto">
-    <div style="font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#A890FF;margin-bottom:20px">Intelligent response</div>
-    <h2 style="margin:0;max-width:20ch;font-size:clamp(32px,4.2vw,56px);font-weight:600;line-height:1.05;letter-spacing:-.035em;text-wrap:balance">From Threat Detection to Coordinated Action.</h2>
-    <p style="margin:24px 0 0;max-width:64ch;font-size:17px;line-height:1.65;color:#9FB2C8;text-wrap:pretty">Traditional workflows rely on alerts, investigation queues, and multiple response systems. CyberActive is designed to bring contextual decisions and coordinated enforcement into one governed workflow.</p>
+<!-- ============================== RESPONSE ============================== -->
+<section class="sec response" id="response">
+  <div class="wrap">
+    <div class="eyebrow">Intelligent response</div>
+    <h2 class="h2 w20">From Threat Detection to Coordinated Action.</h2>
+    <p class="lead lead--64">Traditional workflows rely on alerts, investigation queues, and multiple response systems. CyberActive is designed to bring contextual decisions and coordinated enforcement into one governed workflow.</p>
 
-    <div style="display:inline-flex;gap:4px;padding:5px;margin-top:44px;border:1px solid rgba(159,178,200,.14);border-radius:12px;background:#08111D">
-      <sc-for list="{{ modes }}" as="m" hint-placeholder-count="3">
-        <button onClick="{{ m.onClick }}" style="{{ m.style }}">{{ m.title }}</button>
-      </sc-for>
+    <div class="seg" id="modes" role="tablist" aria-label="Operating mode">
+      <button type="button" role="tab" aria-selected="false">Observe</button>
+      <button class="is-active" type="button" role="tab" aria-selected="true">Approve</button>
+      <button type="button" role="tab" aria-selected="false">Autonomous</button>
     </div>
-    <div data-r="gside" style="display:grid;grid-template-columns:1fr 1.3fr;gap:20px;margin-top:20px">
-      <div style="padding:30px;border:1px solid rgba(0,213,255,.22);border-radius:14px;background:linear-gradient(135deg,rgba(0,213,255,.06),transparent)">
-        <h3 style="margin:0 0 12px;font-size:26px;font-weight:600;letter-spacing:-.02em">{{ mode.title }}</h3>
-        <p style="margin:0;font-size:16px;line-height:1.6;color:#C9D6E4">{{ mode.body }}</p>
+    <div class="split split--b">
+      <div class="mode" role="tabpanel">
+        <h3 id="mode-title">Approve</h3>
+        <p id="mode-body">Prepare response recommendations for authorized human review before any action is taken.</p>
       </div>
-      <div style="padding:26px;border:1px solid rgba(159,178,200,.12);border-radius:14px;background:#08111D">
-        <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6F8399;margin-bottom:16px">Workflow in this mode</div>
-        <div style="display:flex;flex-direction:column;gap:8px">
-          <sc-for list="{{ mode.flow }}" as="f" hint-placeholder-count="5">
-            <div style="display:flex;align-items:center;gap:14px;padding:11px 14px;border:1px solid rgba(159,178,200,.08);border-radius:9px;background:#0B1424">
-              <span style="font-family:'Geist Mono',monospace;font-size:11px;color:#6F8399;width:18px">{{ f.n }}</span>
-              <span style="flex:1;font-size:14.5px;color:#F4F8FF">{{ f.step }}</span>
-              <span style="{{ f.tagStyle }}">{{ f.who }}</span>
-            </div>
-          </sc-for>
-        </div>
+      <div class="flow">
+        <div class="label">Workflow in this mode</div>
+        <ol id="mode-flow">
+          <li><span class="flow__n">01</span><span class="flow__s">Detect and correlate signals</span><span class="pill pill--blue">Platform</span></li>
+          <li><span class="flow__n">02</span><span class="flow__s">Evaluate risk and propagation</span><span class="pill pill--blue">Platform</span></li>
+          <li><span class="flow__n">03</span><span class="flow__s">Select candidate actions</span><span class="pill pill--blue">Platform</span></li>
+          <li><span class="flow__n">04</span><span class="flow__s">Authorize action</span><span class="pill pill--amber">Approver</span></li>
+          <li><span class="flow__n">05</span><span class="flow__s">Execute and record</span><span class="pill pill--blue">Platform</span></li>
+        </ol>
       </div>
     </div>
-    <p style="margin:44px 0 0;max-width:34ch;font-size:clamp(20px,2.2vw,26px);font-weight:500;line-height:1.35;letter-spacing:-.015em;text-wrap:balance">Autonomy must be controlled, explainable, and aligned with infrastructure availability.</p>
-    <a href="#contact" style="display:inline-flex;margin-top:20px;font-size:15px;font-weight:500;color:#7FE6FF" style-hover="color:#F4F8FF">Discuss governance requirements →</a>
+    <p class="quote">Autonomy must be controlled, explainable, and aligned with infrastructure availability.</p>
+    <a class="link-arrow" href="#contact">Discuss governance requirements →</a>
   </div>
 </section>
 
-
-
-<section id="markets" style="max-width:1240px;margin:0 auto;padding:104px 40px">
-  <div style="font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#A890FF;margin-bottom:20px">Who we protect</div>
-  <h2 style="margin:0;max-width:20ch;font-size:clamp(32px,4.2vw,56px);font-weight:600;line-height:1.05;letter-spacing:-.035em;text-wrap:balance">Engineered for Infrastructure Where Disruption Matters.</h2>
-  <p style="margin:24px 0 0;max-width:64ch;font-size:17px;line-height:1.65;color:#9FB2C8;text-wrap:pretty">AI and GPU infrastructure is our primary commercial focus. The same architecture applies wherever security incidents, infrastructure failures, and operational disruption carry significant business, financial, or societal consequences.</p>
-  <div style="display:flex;align-items:center;gap:14px;margin-top:52px;margin-bottom:16px"><span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#00D5FF">Primary focus</span><span style="flex:1;height:1px;background:linear-gradient(90deg,rgba(0,213,255,.4),transparent)"></span></div>
-  <div data-r="g3" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px">
-    <sc-for list="{{ marketsPrimary }}" as="m" hint-placeholder-count="3">
-      <a href="#ai-workloads" style="display:flex;flex-direction:column;min-height:230px;padding:28px 26px;border:1px solid rgba(0,213,255,.22);border-radius:14px;background:radial-gradient(ellipse at 0% 0%,rgba(0,213,255,.1),transparent 60%),#0B1424;color:#F4F8FF;transition:all .25s" style-hover="border-color:rgba(0,213,255,.55);transform:translateY(-3px);color:#F4F8FF">
-        <span style="font-family:'Geist Mono',monospace;font-size:11.5px;color:#00D5FF">{{ m.n }}</span>
-        <span style="margin-top:auto;font-size:21px;font-weight:600;line-height:1.25;letter-spacing:-.015em">{{ m.title }}</span>
-        <span style="margin-top:10px;font-size:14px;line-height:1.55;color:#9FB2C8">{{ m.body }}</span>
-        <span style="margin-top:18px;font-size:13px;color:#7FE6FF">Learn more →</span>
-      </a>
-    </sc-for>
+<!-- ============================== MARKETS ============================== -->
+<section class="sec sec--boxed markets" id="markets">
+  <div class="eyebrow">Who we protect</div>
+  <h2 class="h2 w20">Engineered for Infrastructure Where Disruption Matters.</h2>
+  <p class="lead lead--64">AI and GPU infrastructure is our primary commercial focus. The same architecture applies wherever security incidents, infrastructure failures, and operational disruption carry significant business, financial, or societal consequences.</p>
+  <div class="divider divider--cyan"><span>Primary focus</span><span></span></div>
+  <div class="grid g3" data-reveal>
+    <a class="market" href="#ai-workloads"><span class="market__n">01</span><span class="market__t">AI &amp; GPU Infrastructure</span><span class="market__b">Resilience intelligence for high-performance compute, GPU clusters, and AI workload environments.</span><span class="market__go">Learn more →</span></a>
+    <a class="market" href="#ai-workloads"><span class="market__n">02</span><span class="market__t">GPU Cloud &amp; AI-as-a-Service</span><span class="market__b">Protection designed around multi-tenant compute, orchestration, and service continuity.</span><span class="market__go">Learn more →</span></a>
+    <a class="market" href="#ai-workloads"><span class="market__n">03</span><span class="market__t">Data Centers &amp; Colocation</span><span class="market__b">Security and response coordination across interconnected data center infrastructure.</span><span class="market__go">Learn more →</span></a>
   </div>
-  <div style="display:flex;align-items:center;gap:14px;margin-top:40px;margin-bottom:16px"><span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#9FB2C8">Mission-critical environments</span><span style="flex:1;height:1px;background:linear-gradient(90deg,rgba(159,178,200,.3),transparent)"></span></div>
-  <div data-r="g3" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px">
-    <sc-for list="{{ marketsCritical }}" as="m" hint-placeholder-count="6">
-      <div style="padding:22px 22px 24px;border:1px solid rgba(159,178,200,.12);border-radius:12px;background:#08111D;transition:border-color .25s" style-hover="border-color:rgba(159,178,200,.35)">
-        <div style="font-size:16px;font-weight:600;letter-spacing:-.01em;color:#F4F8FF">{{ m.title }}</div>
-        <div style="margin-top:8px;font-size:13.5px;line-height:1.55;color:#9FB2C8">{{ m.body }}</div>
-      </div>
-    </sc-for>
+  <div class="divider"><span>Mission-critical environments</span><span></span></div>
+  <div class="grid g3 grid--tight" data-reveal>
+    <div class="sector"><h3>Critical Infrastructure</h3><p>Governed security and recovery for high-consequence operational environments.</p></div>
+    <div class="sector"><h3>Energy &amp; Utilities</h3><p>Resilience where cyber and operational failures carry societal impact.</p></div>
+    <div class="sector"><h3>Financial Services</h3><p>Impact-aware response where disruption carries direct financial consequence.</p></div>
+    <div class="sector"><h3>Healthcare</h3><p>Continuity of the systems that clinical operations depend on.</p></div>
+    <div class="sector"><h3>Government &amp; Public Sector</h3><p>Policy-governed, auditable security for public-service infrastructure.</p></div>
+    <div class="sector"><h3>Enterprise &amp; Hybrid Cloud</h3><p>Contextual risk and coordinated response across interconnected enterprise systems.</p></div>
   </div>
 </section>
 
-<section id="status" style="max-width:1240px;margin:0 auto;padding:0 40px 130px">
-  <div style="padding:36px;border:1px solid rgba(159,178,200,.12);border-radius:16px;background:#08111D">
-    <div style="font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#00D5FF;margin-bottom:14px">Capability status</div>
-    <h3 style="margin:0 0 8px;font-size:clamp(22px,2.4vw,30px);font-weight:600;letter-spacing:-.02em">Precise about what exists today.</h3>
-    <p style="margin:0 0 28px;max-width:70ch;font-size:15px;line-height:1.6;color:#9FB2C8">We distinguish established platform functionality, patented technology, and capabilities under development. Integrations and deployments are confirmed per engagement.</p>
-    <div data-r="g3" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px">
-      <sc-for list="{{ statusCols }}" as="c" hint-placeholder-count="3">
-        <div style="padding:22px;border:1px solid rgba(159,178,200,.1);border-radius:12px;background:#0B1424">
-          <span style="{{ c.tagStyle }}">{{ c.tag }}</span>
-          <div style="margin-top:16px;display:flex;flex-direction:column;gap:10px">
-            <sc-for list="{{ c.items }}" as="it" hint-placeholder-count="3">
-              <div style="display:flex;gap:10px;align-items:baseline;font-size:14px;line-height:1.5;color:#C9D6E4"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:{{ c.dot }};transform:translateY(-2px)"></span>{{ it }}</div>
-            </sc-for>
-          </div>
-        </div>
-      </sc-for>
-    </div>
-  </div>
-</section>
-
-
-
-<section id="investors" style="padding:104px 40px;background:radial-gradient(ellipse 60% 60% at 100% 0%,rgba(139,92,255,.14),transparent 70%),#0B1424">
-  <div style="max-width:1240px;margin:0 auto">
-    <div style="font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#A890FF;margin-bottom:20px">For investors</div>
-    <h2 style="margin:0;max-width:20ch;font-size:clamp(32px,4.2vw,56px);font-weight:600;line-height:1.05;letter-spacing:-.035em;text-wrap:balance">The Security Layer for the AI Infrastructure Economy.</h2>
-    <p style="margin:24px 0 0;max-width:66ch;font-size:17px;line-height:1.65;color:#9FB2C8;text-wrap:pretty">Every AI factory, GPU cloud, and AI-enabled enterprise will need security that operates at machine speed. CyberActive AI is building the autonomous security and resilience intelligence layer for that infrastructure.</p>
-    <div data-r="g3" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:48px">
-      <div style="padding:26px 24px;border:1px solid rgba(159,178,200,.12);border-radius:14px;background:linear-gradient(180deg,#0B1424,#08111D);transition:border-color .25s,transform .25s" style-hover="border-color:rgba(155,123,255,.4);transform:translateY(-3px)"><div style="font-family:'Geist Mono',monospace;font-size:11.5px;color:#A890FF;margin-bottom:16px">01</div><h3 style="margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.015em">A new category</h3><p style="margin:0;font-size:14.5px;line-height:1.6;color:#9FB2C8">Autonomous security for AI infrastructure sits at the intersection of AI infrastructure, autonomous operations, and cyber resilience.</p></div>
-      <div style="padding:26px 24px;border:1px solid rgba(159,178,200,.12);border-radius:14px;background:linear-gradient(180deg,#0B1424,#08111D);transition:border-color .25s,transform .25s" style-hover="border-color:rgba(155,123,255,.4);transform:translateY(-3px)"><div style="font-family:'Geist Mono',monospace;font-size:11.5px;color:#A890FF;margin-bottom:16px">02</div><h3 style="margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.015em">Patented technology</h3><p style="margin:0;font-size:14.5px;line-height:1.6;color:#9FB2C8">The platform is built on approved, patented technology, with additional applications filed and a continuing IP program.</p></div>
-      <div style="padding:26px 24px;border:1px solid rgba(159,178,200,.12);border-radius:14px;background:linear-gradient(180deg,#0B1424,#08111D);transition:border-color .25s,transform .25s" style-hover="border-color:rgba(155,123,255,.4);transform:translateY(-3px)"><div style="font-family:'Geist Mono',monospace;font-size:11.5px;color:#A890FF;margin-bottom:16px">03</div><h3 style="margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.015em">Grows with AI compute</h3><p style="margin:0;font-size:14.5px;line-height:1.6;color:#9FB2C8">Platform value expands with every new GPU cluster, tenant environment, and facility it protects.</p></div>
-      <div style="padding:26px 24px;border:1px solid rgba(159,178,200,.12);border-radius:14px;background:linear-gradient(180deg,#0B1424,#08111D);transition:border-color .25s,transform .25s" style-hover="border-color:rgba(155,123,255,.4);transform:translateY(-3px)"><div style="font-family:'Geist Mono',monospace;font-size:11.5px;color:#A890FF;margin-bottom:16px">04</div><h3 style="margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.015em">Enterprise software economics</h3><p style="margin:0;font-size:14.5px;line-height:1.6;color:#9FB2C8">Designed around multi-year platform subscriptions, environment expansion, and partner licensing.</p></div>
-      <div style="padding:26px 24px;border:1px solid rgba(159,178,200,.12);border-radius:14px;background:linear-gradient(180deg,#0B1424,#08111D);transition:border-color .25s,transform .25s" style-hover="border-color:rgba(155,123,255,.4);transform:translateY(-3px)"><div style="font-family:'Geist Mono',monospace;font-size:11.5px;color:#A890FF;margin-bottom:16px">05</div><h3 style="margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.015em">Multiple routes to market</h3><p style="margin:0;font-size:14.5px;line-height:1.6;color:#9FB2C8">Direct enterprise, GPU cloud and data-center operators, OEM, MSSP, and government programs.</p></div>
-      <div style="padding:26px 24px;border:1px solid rgba(159,178,200,.12);border-radius:14px;background:linear-gradient(180deg,#0B1424,#08111D);transition:border-color .25s,transform .25s" style-hover="border-color:rgba(155,123,255,.4);transform:translateY(-3px)"><div style="font-family:'Geist Mono',monospace;font-size:11.5px;color:#A890FF;margin-bottom:16px">06</div><h3 style="margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.015em">Experienced team</h3><p style="margin:0;font-size:14.5px;line-height:1.6;color:#9FB2C8">Decades across enterprise cybersecurity, artificial intelligence, and mission-critical software.</p></div>
-    </div>
-    <div data-r="gside" style="display:grid;grid-template-columns:1.4fr 1fr;gap:16px;margin-top:16px">
-      <div style="padding:26px 28px;border:1px solid rgba(159,178,200,.12);border-radius:14px;background:#08111D">
-        <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6F8399;margin-bottom:14px">Investment priorities</div>
-        <div data-r="g2" style="display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;font-size:14.5px;line-height:1.5;color:#C9D6E4">
-          <div style="display:flex;gap:10px;align-items:baseline"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#9B7BFF;transform:translateY(-2px)"></span>Decision AI and the operational intelligence model</div>
-          <div style="display:flex;gap:10px;align-items:baseline"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#9B7BFF;transform:translateY(-2px)"></span>Autonomous recovery and platform expansion</div>
-          <div style="display:flex;gap:10px;align-items:baseline"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#9B7BFF;transform:translateY(-2px)"></span>Enterprise readiness: SOC 2, ISO certifications, FedRAMP roadmap</div>
-          <div style="display:flex;gap:10px;align-items:baseline"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#9B7BFF;transform:translateY(-2px)"></span>Enterprise sales, channel, and AI infrastructure partnerships</div>
-          <div style="display:flex;gap:10px;align-items:baseline"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#9B7BFF;transform:translateY(-2px)"></span>Continued expansion of the patent portfolio</div>
-          <div style="display:flex;gap:10px;align-items:baseline"><span style="flex:none;width:5px;height:5px;border-radius:50%;background:#9B7BFF;transform:translateY(-2px)"></span>Production deployments with AI infrastructure operators</div>
+<!-- ============================== CAPABILITY STATUS ============================== -->
+<section class="sec sec--boxed status" id="status">
+  <div class="status__box">
+    <div class="eyebrow eyebrow--cyan">Capability status</div>
+    <h3>Precise about what exists today.</h3>
+    <p>We distinguish established platform functionality, patented technology, and capabilities under development. Integrations and deployments are confirmed per engagement.</p>
+    <div class="grid g3" data-reveal>
+      <div class="status__col">
+        <span class="pill pill--green">Platform today</span>
+        <div class="dot-list" style="--dot:#35D5A4">
+          <div class="dot-item">Core platform architecture developed</div>
+          <div class="dot-item">Infrastructure context and dependency modeling</div>
+          <div class="dot-item">Policy-governed response workflows with human oversight</div>
         </div>
       </div>
-      <div style="display:flex;flex-direction:column;justify-content:space-between;gap:18px;padding:26px 28px;border:1px solid rgba(155,123,255,.3);border-radius:14px;background:linear-gradient(135deg,rgba(139,92,255,.12),rgba(0,213,255,.04))">
-        <p style="margin:0;font-size:15px;line-height:1.6;color:#C9D6E4">Detailed materials, financial information, and technical diligence are available to qualified investors under NDA.</p>
-        <a href="#contact" onClick="{{ openIR }}" style="align-self:flex-start;padding:12px 20px;border-radius:9px;background:linear-gradient(135deg,#7FF0FF,#5B8CFF 55%,#9B7BFF);color:#050B14;font-size:14px;font-weight:600;cursor:pointer" style-hover="color:#050B14">Contact Investor Relations</a>
+      <div class="status__col">
+        <span class="pill pill--cyan">Patented technology</span>
+        <div class="dot-list" style="--dot:#00D5FF">
+          <div class="dot-item">Approved patented technology underpinning the platform</div>
+          <div class="dot-item">Details available under NDA</div>
+        </div>
       </div>
-    </div>
-    <p style="margin:16px 0 0;font-size:12px;line-height:1.6;color:#6F8399">This section contains forward-looking statements about strategy and plans, which involve risks and uncertainties. It is not an offer to sell or a solicitation of an offer to buy any security.</p>
-  </div>
-</section>
-
-
-<section id="partners" style="max-width:1240px;margin:0 auto;padding:104px 40px">
-  <div style="position:relative;padding:64px 56px;border:1px solid rgba(0,213,255,.2);border-radius:20px;background:radial-gradient(ellipse 80% 120% at 100% 0%,rgba(139,92,255,.24),transparent 60%),radial-gradient(ellipse 60% 90% at 0% 100%,rgba(0,213,255,.1),transparent 60%),linear-gradient(135deg,#0B1424,#08111D);overflow:hidden">
-    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(159,178,200,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(159,178,200,.05) 1px,transparent 1px);background-size:48px 48px;-webkit-mask-image:linear-gradient(90deg,transparent,#000);mask-image:linear-gradient(90deg,transparent,#000)"></div>
-    <div style="position:relative;max-width:760px">
-      <div style="font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#A890FF;margin-bottom:20px">Technology partnerships</div>
-      <h2 style="margin:0;font-size:clamp(30px,3.8vw,50px);font-weight:600;line-height:1.08;letter-spacing:-.035em;text-wrap:balance">Building Resilient AI Infrastructure and Critical Operations — Together.</h2>
-      <p style="margin:22px 0 0;font-size:17px;line-height:1.65;color:#9FB2C8;text-wrap:pretty">CyberActive welcomes engagement with data center operators, GPU infrastructure and AI cloud providers, critical infrastructure and public-sector organizations, and technology partners seeking to advance autonomous security and operational resilience.</p>
-      <p style="margin:14px 0 0;font-size:17px;line-height:1.65;color:#9FB2C8;text-wrap:pretty">We invite qualified organizations to explore platform demonstrations, technical evaluations, pilot opportunities, and strategic integration discussions.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:32px">
-        <a href="#contact" onClick="{{ openDemo }}" style="padding:14px 26px;border-radius:9px;background:linear-gradient(135deg,#7FF0FF,#5B8CFF 55%,#9B7BFF);color:#050B14;font-size:15px;font-weight:600;cursor:pointer" style-hover="color:#050B14">Request a Technical Demo</a>
-        <a href="#contact" onClick="{{ openPartner }}" style="padding:14px 26px;border:1px solid rgba(244,248,255,.22);border-radius:9px;color:#F4F8FF;font-size:15px;font-weight:500;cursor:pointer" style-hover="border-color:rgba(244,248,255,.55);color:#F4F8FF">Explore Strategic Partnership</a>
+      <div class="status__col">
+        <span class="pill pill--amber">In development</span>
+        <div class="dot-list" style="--dot:#FFBC57">
+          <div class="dot-item">AI models undergoing further training and validation</div>
+          <div class="dot-item">Expanded recovery capabilities</div>
+          <div class="dot-item">Integrations validated per engagement</div>
+        </div>
       </div>
     </div>
   </div>
-  <div data-r="g4" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:16px">
-    <div style="padding:26px 24px;border:1px solid rgba(159,178,200,.12);border-radius:14px;background:linear-gradient(180deg,#0B1424,#08111D);transition:border-color .25s,transform .25s" style-hover="border-color:rgba(155,123,255,.4);transform:translateY(-3px)"><div style="font-family:'Geist Mono',monospace;font-size:11.5px;color:#A890FF;margin-bottom:16px">01</div><h3 style="margin:0 0 10px;font-size:17px;font-weight:600;letter-spacing:-.015em">OEM & API</h3><p style="margin:0;font-size:14px;line-height:1.6;color:#9FB2C8">Embed autonomous decision intelligence into GPU, cloud, and infrastructure platforms.</p></div>
-    <div style="padding:26px 24px;border:1px solid rgba(159,178,200,.12);border-radius:14px;background:linear-gradient(180deg,#0B1424,#08111D);transition:border-color .25s,transform .25s" style-hover="border-color:rgba(155,123,255,.4);transform:translateY(-3px)"><div style="font-family:'Geist Mono',monospace;font-size:11.5px;color:#A890FF;margin-bottom:16px">02</div><h3 style="margin:0 0 10px;font-size:17px;font-weight:600;letter-spacing:-.015em">MSSP platform</h3><p style="margin:0;font-size:14px;line-height:1.6;color:#9FB2C8">Deliver autonomous resilience as a managed service across your customer base.</p></div>
-    <div style="padding:26px 24px;border:1px solid rgba(159,178,200,.12);border-radius:14px;background:linear-gradient(180deg,#0B1424,#08111D);transition:border-color .25s,transform .25s" style-hover="border-color:rgba(155,123,255,.4);transform:translateY(-3px)"><div style="font-family:'Geist Mono',monospace;font-size:11.5px;color:#A890FF;margin-bottom:16px">03</div><h3 style="margin:0 0 10px;font-size:17px;font-weight:600;letter-spacing:-.015em">AI infrastructure operators</h3><p style="margin:0;font-size:14px;line-height:1.6;color:#9FB2C8">Deploy across GPU clouds, AI data centers, and colocation environments.</p></div>
-    <div style="padding:26px 24px;border:1px solid rgba(159,178,200,.12);border-radius:14px;background:linear-gradient(180deg,#0B1424,#08111D);transition:border-color .25s,transform .25s" style-hover="border-color:rgba(155,123,255,.4);transform:translateY(-3px)"><div style="font-family:'Geist Mono',monospace;font-size:11.5px;color:#A890FF;margin-bottom:16px">04</div><h3 style="margin:0 0 10px;font-size:17px;font-weight:600;letter-spacing:-.015em">Technology integrations</h3><p style="margin:0;font-size:14px;line-height:1.6;color:#9FB2C8">Connect identity, network, orchestration, and security controls for governed enforcement.</p></div>
-  </div>
-  <p style="margin:14px 0 0;font-size:12.5px;color:#6F8399">Partnership models under development; integrations are confirmed per engagement.</p>
 </section>
 
-<section id="contact" style="padding:110px 40px 130px;background:radial-gradient(ellipse 60% 60% at 20% 100%,rgba(0,213,255,.1),transparent 70%),#050B14;border-top:1px solid rgba(159,178,200,.08)">
-  <div data-r="gside" style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start">
+<!-- ============================== INVESTORS ============================== -->
+<section class="sec investors" id="investors">
+  <div class="wrap">
+    <div class="eyebrow">For investors</div>
+    <h2 class="h2 w20">The Security Layer for the AI Infrastructure Economy.</h2>
+    <p class="lead lead--66">Every AI factory, GPU cloud, and AI-enabled enterprise will need security that operates at machine speed. CyberActive AI is building the autonomous security and resilience intelligence layer for that infrastructure.</p>
+    <div class="grid g3" data-reveal>
+      <div class="card"><div class="card__n">01</div><h3>A new category</h3><p>Autonomous security for AI infrastructure sits at the intersection of AI infrastructure, autonomous operations, and cyber resilience.</p></div>
+      <div class="card"><div class="card__n">02</div><h3>Patented technology</h3><p>The platform is built on approved, patented technology, with additional applications filed and a continuing IP program.</p></div>
+      <div class="card"><div class="card__n">03</div><h3>Grows with AI compute</h3><p>Platform value expands with every new GPU cluster, tenant environment, and facility it protects.</p></div>
+      <div class="card"><div class="card__n">04</div><h3>Enterprise software economics</h3><p>Designed around multi-year platform subscriptions, environment expansion, and partner licensing.</p></div>
+      <div class="card"><div class="card__n">05</div><h3>Multiple routes to market</h3><p>Direct enterprise, GPU cloud and data-center operators, OEM, MSSP, and government programs.</p></div>
+      <div class="card"><div class="card__n">06</div><h3>Experienced team</h3><p>Decades across enterprise cybersecurity, artificial intelligence, and mission-critical software.</p></div>
+    </div>
+    <div class="split split--c">
+      <div class="panel priorities">
+        <div class="label">Investment priorities</div>
+        <div class="grid g2" data-reveal>
+          <div class="dot-item">Decision AI and the operational intelligence model</div>
+          <div class="dot-item">Autonomous recovery and platform expansion</div>
+          <div class="dot-item">Enterprise readiness: SOC 2, ISO certifications, FedRAMP roadmap</div>
+          <div class="dot-item">Enterprise sales, channel, and AI infrastructure partnerships</div>
+          <div class="dot-item">Continued expansion of the patent portfolio</div>
+          <div class="dot-item">Production deployments with AI infrastructure operators</div>
+        </div>
+      </div>
+      <div class="ir">
+        <p>Detailed materials, financial information, and technical diligence are available to qualified investors under NDA.</p>
+        <a class="btn btn--primary btn--sm" href="#contact" data-open="2">Contact Investor Relations</a>
+      </div>
+    </div>
+    <p class="fine">This section contains forward-looking statements about strategy and plans, which involve risks and uncertainties. It is not an offer to sell or a solicitation of an offer to buy any security.</p>
+  </div>
+</section>
+
+<!-- ============================== PARTNERS ============================== -->
+<section class="sec sec--boxed partners" id="partners">
+  <div class="partner-hero">
+    <div class="partner-hero__inner">
+      <div class="eyebrow">Technology partnerships</div>
+      <h2 class="h2">Building Resilient AI Infrastructure and Critical Operations — Together.</h2>
+      <p class="lead">CyberActive welcomes engagement with data center operators, GPU infrastructure and AI cloud providers, critical infrastructure and public-sector organizations, and technology partners seeking to advance autonomous security and operational resilience.</p>
+      <p class="lead">We invite qualified organizations to explore platform demonstrations, technical evaluations, pilot opportunities, and strategic integration discussions.</p>
+      <div class="row">
+        <a class="btn btn--primary" href="#contact" data-open="0">Request a Technical Demo</a>
+        <a class="btn btn--ghost" href="#contact" data-open="1">Explore Strategic Partnership</a>
+      </div>
+    </div>
+  </div>
+  <div class="grid g4" data-reveal>
+    <div class="card card--sm"><div class="card__n">01</div><h3>OEM &amp; API</h3><p>Embed autonomous decision intelligence into GPU, cloud, and infrastructure platforms.</p></div>
+    <div class="card card--sm"><div class="card__n">02</div><h3>MSSP platform</h3><p>Deliver autonomous resilience as a managed service across your customer base.</p></div>
+    <div class="card card--sm"><div class="card__n">03</div><h3>AI infrastructure operators</h3><p>Deploy across GPU clouds, AI data centers, and colocation environments.</p></div>
+    <div class="card card--sm"><div class="card__n">04</div><h3>Technology integrations</h3><p>Connect identity, network, orchestration, and security controls for governed enforcement.</p></div>
+  </div>
+  <p class="fine">Partnership models under development; integrations are confirmed per engagement.</p>
+</section>
+
+<!-- ============================== CONTACT ============================== -->
+<section class="contact" id="contact">
+  <div class="contact__grid">
     <div>
-      <h2 style="margin:0;max-width:18ch;font-size:clamp(32px,4.2vw,56px);font-weight:600;line-height:1.05;letter-spacing:-.035em;text-wrap:balance">Your Infrastructure Is Becoming More Intelligent. Its Security Should Too.</h2>
-      <p style="margin:24px 0 0;max-width:52ch;font-size:17px;line-height:1.65;color:#9FB2C8;text-wrap:pretty">Explore how CyberActive's autonomous resilience architecture can support the security and continuity requirements of your AI infrastructure and mission-critical operations.</p>
-      <div style="display:flex;flex-direction:column;gap:10px;margin-top:36px">
-        <sc-for list="{{ routes }}" as="r" hint-placeholder-count="3">
-          <button onClick="{{ r.onClick }}" style="{{ r.style }}">
-            <span style="display:flex;flex-direction:column;gap:4px;text-align:left">
-              <span style="font-size:16px;font-weight:600;color:#F4F8FF">{{ r.title }}</span>
-              <span style="font-size:13.5px;color:#9FB2C8">{{ r.body }}</span>
-            </span>
-            <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#7FE6FF;white-space:nowrap">{{ r.email }}</span>
-          </button>
-        </sc-for>
+      <h2 class="h2 w18">Your Infrastructure Is Becoming More Intelligent. Its Security Should Too.</h2>
+      <p class="lead lead--52">Explore how CyberActive's autonomous resilience architecture can support the security and continuity requirements of your AI infrastructure and mission-critical operations.</p>
+      <div class="routes" id="routes">
+        <button class="route is-active" type="button" aria-pressed="true"><span class="route__txt"><span class="route__t">Request a Demo</span><span class="route__b">Technical walkthrough of the platform</span></span><span class="route__e">sales@cyberactive.ai</span></button>
+        <button class="route" type="button" aria-pressed="false"><span class="route__txt"><span class="route__t">Strategic Engagement</span><span class="route__b">Partnerships, pilots, and integrations</span></span><span class="route__e">partners@cyberactive.ai</span></button>
+        <button class="route" type="button" aria-pressed="false"><span class="route__txt"><span class="route__t">Investor Relations</span><span class="route__b">For qualified investors</span></span><span class="route__e">ir@cyberactive.ai</span></button>
       </div>
     </div>
-    <form onSubmit="{{ submitContact }}" style="padding:34px;border:1px solid rgba(159,178,200,.14);border-radius:18px;background:#0B1424;box-shadow:0 40px 100px rgba(0,0,0,.4)">
-      <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#7FE6FF;margin-bottom:8px">{{ route.title }}</div>
-      <div style="font-size:22px;font-weight:600;letter-spacing:-.02em;margin-bottom:24px">Engage With CyberActive AI</div>
-      <div data-r="gform" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-        <label style="display:block"><span style="display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6F8399;margin-bottom:7px">Name</span><input name="name" required autocomplete="name" style="width:100%;padding:12px 14px;border:1px solid rgba(159,178,200,.18);border-radius:9px;background:#08111D;color:#F4F8FF;font:inherit;font-size:14.5px;outline:none" style-focus="border-color:#00D5FF"></label>
-        <label style="display:block"><span style="display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6F8399;margin-bottom:7px">Organization</span><input name="company" autocomplete="organization" style="width:100%;padding:12px 14px;border:1px solid rgba(159,178,200,.18);border-radius:9px;background:#08111D;color:#F4F8FF;font:inherit;font-size:14.5px;outline:none" style-focus="border-color:#00D5FF"></label>
-        <label style="display:block"><span style="display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6F8399;margin-bottom:7px">Work email</span><input name="email" type="email" required autocomplete="email" style="width:100%;padding:12px 14px;border:1px solid rgba(159,178,200,.18);border-radius:9px;background:#08111D;color:#F4F8FF;font:inherit;font-size:14.5px;outline:none" style-focus="border-color:#00D5FF"></label>
-        <label style="display:block"><span style="display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6F8399;margin-bottom:7px">Role</span><input name="role" placeholder="e.g. CISO, CTO, Infrastructure lead" style="width:100%;padding:12px 14px;border:1px solid rgba(159,178,200,.18);border-radius:9px;background:#08111D;color:#F4F8FF;font:inherit;font-size:14.5px;outline:none" style-focus="border-color:#00D5FF"></label>
+    <form class="form" id="contact-form" data-contact>
+      <div class="form__eyebrow" data-route="title">Request a Demo</div>
+      <div class="form__title">Engage With CyberActive AI</div>
+      <div class="grid g2">
+        <label class="field"><span>Name</span><input class="input" name="name" required autocomplete="name"></label>
+        <label class="field"><span>Organization</span><input class="input" name="company" autocomplete="organization"></label>
+        <label class="field"><span>Work email</span><input class="input" name="email" type="email" required autocomplete="email"></label>
+        <label class="field"><span>Role</span><input class="input" name="role" placeholder="e.g. CISO, CTO, Infrastructure lead"></label>
       </div>
-      <label style="display:block;margin-top:14px"><span style="display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6F8399;margin-bottom:7px">Environment &amp; objectives</span><textarea name="message" rows="4" placeholder="GPU fleet size, environments, timelines, or what you'd like to evaluate." style="width:100%;padding:12px 14px;border:1px solid rgba(159,178,200,.18);border-radius:9px;background:#08111D;color:#F4F8FF;font:inherit;font-size:14.5px;line-height:1.55;outline:none;resize:vertical" style-focus="border-color:#00D5FF"></textarea></label>
-      <button type="submit" style="width:100%;margin-top:20px;padding:15px;border:0;border-radius:10px;background:linear-gradient(135deg,#7FF0FF,#5B8CFF 55%,#9B7BFF);color:#050B14;font:inherit;font-size:15px;font-weight:600;cursor:pointer">{{ route.cta }}</button>
-      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
-        <p style="margin:14px 0 0;font-size:13px;color:#35D5A4">Your email client should open with the request drafted to {{ route.email }}.</p>
-      </sc-if>
+      <label class="field"><span>Environment &amp; objectives</span><textarea class="input" name="message" rows="4" placeholder="GPU fleet size, environments, timelines, or what you'd like to evaluate."></textarea></label>
+      <button class="btn btn--primary btn--block" type="submit" data-route="cta">Request a Demo</button>
+      <p class="form__sent" data-sent hidden>Your email client should open with the request drafted to <span data-route="email">sales@cyberactive.ai</span>.</p>
     </form>
   </div>
 </section>
 
-<footer style="padding:64px 40px 40px;border-top:1px solid rgba(159,178,200,.1);background:#03070D">
-  <div style="max-width:1240px;margin:0 auto">
-    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:40px">
-      <div style="max-width:340px">
-        <div style="display:flex;align-items:center;gap:12px"><img src="assets/logo-13b.svg" alt="" style="height:42px;width:42px;display:block"><span style="display:inline-flex;align-items:center;font-size:22px;font-weight:600;letter-spacing:-.02em;color:#F4F8FF">CyberActive<span style="margin-left:6px;color:#A08BFF">AI</span></span></div>
-        <p style="margin:20px 0 0;font-size:17px;font-weight:500;line-height:1.35;letter-spacing:-.01em;color:#F4F8FF;text-wrap:balance">Autonomous security for the infrastructure <span style="background:linear-gradient(90deg,#7FF0FF,#9B7BFF);-webkit-background-clip:text;background-clip:text;color:transparent">powering AI.</span></p>
-        <p style="margin:10px 0 0;font-size:13.5px;line-height:1.6;color:#9FB2C8">Protecting GPU clusters, AI workloads, and mission-critical environments — at machine speed.</p>
-        <div style="display:flex;gap:10px;margin-top:22px">
-          <a href="https://www.linkedin.com/company/cyb3ractive/" target="_blank" rel="noopener noreferrer" aria-label="CyberActive AI on LinkedIn" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid rgba(159,178,200,.18);border-radius:10px;color:#9FB2C8;transition:all .2s" style-hover="border-color:rgba(0,213,255,.5);color:#F4F8FF;background:rgba(0,213,255,.08)"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
-          <a href="https://www.facebook.com/Cyb3rActive/" target="_blank" rel="noopener noreferrer" aria-label="CyberActive AI on Facebook" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid rgba(159,178,200,.18);border-radius:10px;color:#9FB2C8;transition:all .2s" style-hover="border-color:rgba(0,213,255,.5);color:#F4F8FF;background:rgba(0,213,255,.08)"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+</main>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__about">
+        <div class="footer__brand"><img src="assets/logo-13b.svg" alt=""><span class="brand__name">CyberActive<span>AI</span></span></div>
+        <p class="footer__tag">Autonomous security for the infrastructure <span>powering AI.</span></p>
+        <p>Protecting GPU clusters, AI workloads, and mission-critical environments — at machine speed.</p>
+        <div class="social">
+          <a href="https://www.linkedin.com/company/cyb3ractive/" target="_blank" rel="noopener noreferrer" aria-label="CyberActive AI on LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+          <a href="https://www.facebook.com/Cyb3rActive/" target="_blank" rel="noopener noreferrer" aria-label="CyberActive AI on Facebook"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
         </div>
       </div>
-      <div style="display:flex;flex-wrap:wrap;gap:14px 30px;font-size:14px;align-content:flex-start">
-        <sc-for list="{{ footLinks }}" as="l" hint-placeholder-count="8">
-          <a href="{{ l.href }}" style="color:#9FB2C8" style-hover="color:#F4F8FF">{{ l.label }}</a>
-        </sc-for>
-      </div>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="#platform">Platform</a>
+        <a href="#ai-workloads">AI Workloads</a>
+        <a href="#radar">CA AI Core</a>
+        <a href="#markets">Who we protect</a>
+        <a href="#investors">Investors</a>
+        <a href="#partners">Partners</a>
+        <a href="#contact">Contact</a>
+        <a href="legal.html#privacy">Privacy Policy</a>
+        <a href="legal.html#terms">Terms of Use</a>
+      </nav>
     </div>
-    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;margin-top:48px;padding-top:24px;border-top:1px solid rgba(159,178,200,.08);font-size:12.5px;color:#4E6176">
+    <div class="footer__legal">
       <span>© 2026 CyberActive AI. All rights reserved.</span>
-      <span>Visualizations on this site are illustrative simulations, not live customer telemetry. Nothing on this site constitutes a guarantee of security outcomes. <a href="/legal#terms" style="color:#6F8399">Terms</a> · <a href="/legal#privacy" style="color:#6F8399">Privacy</a></span>
+      <span>Visualizations on this site are illustrative simulations, not live customer telemetry. Nothing on this site constitutes a guarantee of security outcomes. <a href="legal.html#terms">Terms</a> · <a href="legal.html#privacy">Privacy</a></span>
     </div>
   </div>
 </footer>
 
-<sc-if value="{{ showCookie }}" hint-placeholder-val="{{ false }}">
-  <div role="region" aria-label="Cookie notice" style="position:fixed;left:20px;right:20px;bottom:20px;z-index:90;max-width:640px;margin:0 auto;display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding:16px 20px;border:1px solid rgba(159,178,200,.18);border-radius:14px;background:rgba(11,20,36,.94);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 20px 60px rgba(0,0,0,.5);animation:caPop .3s">
-    <p style="flex:1;min-width:240px;margin:0;font-size:13.5px;line-height:1.55;color:#C9D6E4">We use cookies and similar technologies to improve site performance and security. By continuing to use this site, you consent to our use of cookies as described in our <a href="/legal#privacy">Privacy Policy</a>.</p>
-    <button onClick="{{ acceptCookie }}" style="padding:10px 20px;border:1px solid #00D5FF;border-radius:8px;background:transparent;color:#F4F8FF;font-size:14px;font-weight:500;cursor:pointer" style-hover="background:rgba(0,213,255,.14)">Accept</button>
-  </div>
-</sc-if>
-
-<sc-if value="{{ modalOpen }}" hint-placeholder-val="{{ false }}">
-  <div id="ca-modal" onClick="{{ closeModal }}" style="position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(3,7,13,.8);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);overflow-y:auto;animation:caFade .2s">
-    <form onClick="{{ stop }}" onSubmit="{{ submitContact }}" style="position:relative;width:100%;max-width:600px;margin:auto;padding:36px 34px;border:1px solid rgba(0,213,255,.28);border-radius:18px;background:linear-gradient(170deg,#101E30,#0B1424);box-shadow:0 60px 140px rgba(0,0,0,.7);animation:caPop .25s">
-      <button type="button" onClick="{{ closeModal }}" aria-label="Close" style="position:absolute;top:16px;right:16px;width:34px;height:34px;border:1px solid rgba(159,178,200,.2);border-radius:9px;background:transparent;color:#9FB2C8;font:inherit;font-size:18px;cursor:pointer">×</button>
-      <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#7FE6FF;margin-bottom:10px">{{ route.email }}</div>
-      <h3 style="margin:0 0 8px;font-size:28px;font-weight:600;letter-spacing:-.025em">{{ route.title }}</h3>
-      <p style="margin:0 0 22px;font-size:14.5px;line-height:1.6;color:#9FB2C8">{{ route.lead }}</p>
-      <div data-r="gform" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-        <input name="name" required placeholder="Name" style="padding:12px 14px;border:1px solid rgba(159,178,200,.18);border-radius:9px;background:#08111D;color:#F4F8FF;font:inherit;font-size:14.5px;outline:none" style-focus="border-color:#00D5FF">
-        <input name="company" placeholder="Organization" style="padding:12px 14px;border:1px solid rgba(159,178,200,.18);border-radius:9px;background:#08111D;color:#F4F8FF;font:inherit;font-size:14.5px;outline:none" style-focus="border-color:#00D5FF">
-        <input name="email" type="email" required placeholder="Work email" style="padding:12px 14px;border:1px solid rgba(159,178,200,.18);border-radius:9px;background:#08111D;color:#F4F8FF;font:inherit;font-size:14.5px;outline:none" style-focus="border-color:#00D5FF">
-        <input name="role" placeholder="Role" style="padding:12px 14px;border:1px solid rgba(159,178,200,.18);border-radius:9px;background:#08111D;color:#F4F8FF;font:inherit;font-size:14.5px;outline:none" style-focus="border-color:#00D5FF">
-      </div>
-      <textarea name="message" rows="3" placeholder="Environment, scale, and what you'd like to see." style="width:100%;margin-top:12px;padding:12px 14px;border:1px solid rgba(159,178,200,.18);border-radius:9px;background:#08111D;color:#F4F8FF;font:inherit;font-size:14.5px;outline:none;resize:vertical" style-focus="border-color:#00D5FF"></textarea>
-      <button type="submit" style="width:100%;margin-top:18px;padding:15px;border:0;border-radius:10px;background:linear-gradient(135deg,#7FF0FF,#5B8CFF 55%,#9B7BFF);color:#050B14;font:inherit;font-size:15px;font-weight:600;cursor:pointer">{{ route.cta }}</button>
-      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
-        <p style="margin:14px 0 0;font-size:13px;color:#35D5A4">Your email client should open with the request drafted.</p>
-      </sc-if>
-    </form>
-  </div>
-</sc-if>
-
+<!-- ============================== COOKIE NOTICE ============================== -->
+<div class="cookie" id="cookie" role="region" aria-label="Cookie notice" hidden>
+  <p>We use cookies and similar technologies to improve site performance and security. By continuing to use this site, you consent to our use of cookies as described in our <a href="legal.html#privacy">Privacy Policy</a>.</p>
+  <button type="button" id="cookie-ok">Accept</button>
 </div>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;motion&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;}}">
-class Component extends DCLogic {
-  state = { phase: 'Normal operations', phaseI: 0, pillar: 0, domain: 0, dep: 'cred', mode: 1, rSel: 0,
-            rad: { states: [0,0,0,0,0,0], step: -1, cycle: 0, vol: [.6,.6,.6,.6,.6,.6] }, ai: { ev: 1284000, models: 412, preds: 9120, acts: 214, corr: 3870, graph: 18240 },
-            route: 0, modalOpen: false, sent: false, menuOpen: false, active: '', ctx: 0, ctxManual: false, cookie: (() => { try { return localStorage.getItem('ca-cookie-ok') === '1'; } catch (e) { return false; } })() };
-  heroRef = React.createRef();
-  progRef = React.createRef();
-  radarRef = React.createRef();
 
-  componentDidMount() {
-    import('./ca-visuals.js').then(V => {
-      if (this.props.motion === false) return;
-      if (this.heroRef.current) this.stopHero = V.startHero(this.heroRef.current, (l, i) => this.setState({ phase: l, phaseI: i }));
-      if (this.radarRef.current) this.stopRadar = V.startRadar(this.radarRef.current, {
-        getSelected: () => this.state.rSel,
-        onSelect: i => this.setState({ rSel: i < 0 ? this.state.rSel : i }),
-        onTick: s => this.setState(st => ({ rad: s, ai: {
-          ev: st.ai.ev + 2400 + Math.floor(Math.random() * 900), models: st.ai.models + (Math.random() > .85 ? 1 : 0),
-          preds: st.ai.preds + Math.floor(Math.random() * 4), acts: st.ai.acts + (s.step === 7 && st.rad.step !== 7 ? 6 : 0),
-          corr: st.ai.corr + (s.step > 0 ? 2 : 0), graph: st.ai.graph + Math.floor(Math.random() * 7) } }))
-      });
-    });
-    this.onKey = e => { if (e.key === 'Escape') this.setState({ modalOpen: false, menuOpen: false }); };
-    window.addEventListener('keydown', this.onKey);
-    // scroll progress + active nav section
-    const ids = ['platform', 'ai-workloads', 'radar', 'markets', 'investors', 'partners', 'contact'];
-    this.onScroll = () => {
-      const de = document.documentElement, p = de.scrollTop / Math.max(1, de.scrollHeight - innerHeight);
-      if (this.progRef.current) this.progRef.current.style.width = (p * 100).toFixed(2) + '%';
-      let cur = '';
-      for (const id of ids) { const el = document.getElementById(id); if (el && el.getBoundingClientRect().top < innerHeight * .4) cur = id; }
-      if (cur !== this.state.active) this.setState({ active: cur });
-    };
-    window.addEventListener('scroll', this.onScroll, { passive: true }); this.onScroll();
-    this.ctxT = setInterval(() => { if (!this.state.ctxManual && this.props.motion !== false) this.setState(st => ({ ctx: (st.ctx + 1) % 4 })); }, 3800);
-    // scroll reveal (progressive: content is visible if JS or IO is unavailable)
-    if ('IntersectionObserver' in window && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
-      const els = [...document.querySelectorAll('section:not(#top) h2, section:not(#top) > p, section:not(#top) > div > p, [data-r] > *, #ca-proof > *')]
-        .filter(el => el.getBoundingClientRect().top > innerHeight);
-      els.forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(22px)'; });
-      this.io = new IntersectionObserver(es => es.forEach(e => {
-        if (!e.isIntersecting) return;
-        const el = e.target, sib = el.parentElement ? [...el.parentElement.children].indexOf(el) : 0;
-        el.style.transition = 'opacity .9s cubic-bezier(.2,.7,.2,1) ' + Math.min(sib, 6) * 70 + 'ms, transform .9s cubic-bezier(.2,.7,.2,1) ' + Math.min(sib, 6) * 70 + 'ms';
-        el.style.opacity = '1'; el.style.transform = 'none';
-        this.io.unobserve(el);
-        setTimeout(() => { el.style.transition = ''; el.style.transform = ''; }, 1400);
-      }), { rootMargin: '0px 0px -8% 0px' });
-      els.forEach(el => this.io.observe(el));
-    }
-  }
-  componentWillUnmount() { this.stopHero && this.stopHero(); this.stopRadar && this.stopRadar(); window.removeEventListener('keydown', this.onKey); window.removeEventListener('scroll', this.onScroll); clearInterval(this.ctxT); this.io && this.io.disconnect(); }
+<!-- ============================== CONTACT MODAL ============================== -->
+<div class="modal" id="modal" hidden>
+  <form class="modal__box" data-contact role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal__close" type="button" data-close aria-label="Close">×</button>
+    <div class="modal__email" data-route="email">sales@cyberactive.ai</div>
+    <h3 id="modal-title" data-route="title">Request a Demo</h3>
+    <p class="modal__lead" data-route="lead">A guided technical session covering detection, dependency analysis, governed response, and recovery — tailored to your environment.</p>
+    <div class="grid g2">
+      <input class="input" name="name" required placeholder="Name" aria-label="Name" autocomplete="name">
+      <input class="input" name="company" placeholder="Organization" aria-label="Organization" autocomplete="organization">
+      <input class="input" name="email" type="email" required placeholder="Work email" aria-label="Work email" autocomplete="email">
+      <input class="input" name="role" placeholder="Role" aria-label="Role">
+    </div>
+    <textarea class="input" name="message" rows="3" placeholder="Environment, scale, and what you'd like to see." aria-label="Message"></textarea>
+    <button class="btn btn--primary btn--block" type="submit" data-route="cta">Request a Demo</button>
+    <p class="form__sent" data-sent hidden>Your email client should open with the request drafted.</p>
+  </form>
+</div>
 
-  problems = [
-    { n: '01', title: 'Expanding Attack Surface', body: 'AI infrastructure combines complex software stacks, privileged management systems, cloud services, and interconnected compute resources.' },
-    { n: '02', title: 'Cascading Infrastructure Risk', body: 'A localized compromise can affect dependent workloads, storage systems, network segments, and customer-facing services.' },
-    { n: '03', title: 'Decision-Making Delays', body: 'Fragmented alerts and manual handoffs create delays when rapid, coordinated response is essential.' },
-    { n: '04', title: 'Recovery Complexity', body: 'Restoring a secure operating state requires more than removing the initial threat. Dependencies, access, workloads, and system integrity must be considered.' }
-  ];
-  pillarData = [
-    { n: '01', title: 'Detect', body: 'Identify suspicious activity and emerging threats across connected systems.', detail: 'Signals from compute, identity, network, storage, and existing security tools are evaluated continuously for behavior that departs from established operating patterns.', points: ['Ingests telemetry from existing security and infrastructure tools', 'Behavior-oriented analysis, not signatures alone', 'Designed to surface previously unseen activity'] },
-    { n: '02', title: 'Understand', body: 'Correlate signals, infrastructure relationships, and operational dependencies.', detail: 'Events are placed in context: which assets, identities, and services are connected, and what those relationships mean for the environment.', points: ['Maintains a model of asset and service relationships', 'Links identity, workload, and network context', 'Turns isolated alerts into connected situations'] },
-    { n: '03', title: 'Decide', body: 'Evaluate risk, likely propagation, and potential operational impact.', detail: 'The platform weighs how a threat could spread and what it would affect, then ranks candidate actions by risk and operational consequence.', points: ['Assesses potential propagation paths', 'Considers operational and business criticality', 'Produces explainable, policy-checked recommendations'] },
-    { n: '04', title: 'Act', body: 'Coordinate policy-governed containment and response across integrated controls.', detail: 'Approved actions are coordinated across integrated controls — identity, network, and orchestration — within the permissions and safeguards operators define.', points: ['Observe, approve, or autonomous operating modes', 'Enforcement through integrated existing controls', 'Every action recorded and attributable'] },
-    { n: '05', title: 'Restore & Learn', body: 'Validate secure restoration and incorporate outcomes into continuous improvement workflows.', detail: 'Recovery is coordinated and validated, and the outcome of each event informs how future situations are evaluated.', points: ['Coordinated restoration of affected services', 'Integrity and state validation before return to service', 'Outcomes feed continuous improvement'] }
-  ];
-  domainData = [
-    { title: 'GPU Compute & Hosts', body: 'Security context across compute nodes, host systems, and management interfaces.', signals: [{ k: 'Scope', v: 'GPU nodes, hosts, BMC / management planes' }, { k: 'Key risk', v: 'Management-interface and host compromise' }, { k: 'Response lever', v: 'Host isolation, access restriction' }] },
-    { title: 'AI Workloads & Orchestration', body: 'Visibility into the relationships among workloads, containers, orchestration systems, and supporting services.', signals: [{ k: 'Scope', v: 'Kubernetes, schedulers, containers' }, { k: 'Key risk', v: 'Workload tampering, scheduler abuse' }, { k: 'Response lever', v: 'Workload quarantine, rescheduling' }] },
-    { title: 'Identity & Privileged Access', body: 'Correlate access risk involving administrators, service identities, and privileged infrastructure controls.', signals: [{ k: 'Scope', v: 'Admins, service accounts, keys' }, { k: 'Key risk', v: 'Credential misuse, privilege escalation' }, { k: 'Response lever', v: 'Session revocation, step-up controls' }] },
-    { title: 'Networking & Segmentation', body: 'Evaluate lateral movement risk and coordinate containment through connected network security controls.', signals: [{ k: 'Scope', v: 'Fabric, firewalls, east-west traffic' }, { k: 'Key risk', v: 'Lateral movement' }, { k: 'Response lever', v: 'Segmentation and isolation policies' }] },
-    { title: 'Storage & Data Dependencies', body: 'Understand the infrastructure relationships that influence data availability and workload recovery.', signals: [{ k: 'Scope', v: 'Shared storage, datasets, checkpoints' }, { k: 'Key risk', v: 'Data integrity and availability' }, { k: 'Response lever', v: 'Access fencing, trusted restore points' }] },
-    { title: 'Cloud & Hybrid Infrastructure', body: 'Extend resilience workflows across distributed cloud and on-premises environments.', signals: [{ k: 'Scope', v: 'Public cloud, hybrid, SaaS' }, { k: 'Key risk', v: 'Cross-environment exposure' }, { k: 'Response lever', v: 'Policy-driven cross-cloud actions' }] }
-  ];
-  radarData = [
-    { name: 'Facilities', scope: 'Power distribution, UPS, generators, cooling, HVAC, environmental, fire suppression, leak detection, BMS, physical access.', assets: 1840, base: 'Cooling loop temperature drift' },
-    { name: 'Network', scope: 'Routers, switches, firewalls, SD-WAN, load balancers, DNS, connectivity, east-west traffic.', assets: 2310, base: 'Traffic redistribution across fabric' },
-    { name: 'Security', scope: 'Firewalls, EDR/XDR, SIEM, IDS/IPS, Zero Trust, identity services, threat intelligence, vulnerability management.', assets: 960, base: 'Abnormal authentication activity' },
-    { name: 'Cloud', scope: 'AWS, Azure, Google Cloud, hybrid, SaaS, cloud networking and security, cloud-native Kubernetes.', assets: 3420, base: 'Automatic workload migration' },
-    { name: 'Applications', scope: 'Customer applications, AI workloads, APIs, databases, web services, enterprise software, APM.', assets: 1270, base: 'Inference latency increase' },
-    { name: 'Compute', scope: 'Physical servers, GPU clusters, AI infrastructure, virtualization, containers, Kubernetes, hypervisors.', assets: 5680, base: 'GPU temperature increase' }
-  ];
-  chainOrder = [0, 5, 4, 1, 2, 3];
-  depData = {
-    cred:   { label: 'Compromised credential', x: 170, y: 230, crit: 'Origin', c: '#FF6475', rows: [['Security event', 'Privileged administrator credential used from an unfamiliar context outside normal operating hours.'], ['Connected dependencies', 'GPU management, orchestration control plane, network control systems.'], ['Potential attack path', 'Credential → orchestration → tenant workloads → critical applications.'], ['Suggested containment', 'Revoke active sessions, require step-up authentication, restrict privileged scope.'], ['Recovery considerations', 'Rotate credentials and keys; review actions taken during the exposure window.']] },
-    gpu:    { label: 'GPU management services', x: 420, y: 110, crit: 'High', c: '#FFBC57', rows: [['Security event', 'Management API calls inconsistent with established administrator behavior.'], ['Connected dependencies', 'GPU hosts, shared storage, scheduler.'], ['Potential attack path', 'Firmware or configuration changes affecting compute availability.'], ['Suggested containment', 'Restrict management-plane access to approved paths.'], ['Recovery considerations', 'Validate host configuration against a trusted baseline.']] },
-    k8s:    { label: 'Kubernetes orchestration', x: 520, y: 330, crit: 'Critical', c: '#FF8C50', rows: [['Security event', 'Unexpected changes to workload scheduling and role bindings.'], ['Connected dependencies', 'Tenant workloads, shared storage, GPU pools.'], ['Potential attack path', 'Malicious workload deployment across tenants.'], ['Suggested containment', 'Freeze privileged changes; quarantine affected namespaces.'], ['Recovery considerations', 'Reconcile cluster state to the last trusted configuration.']] },
-    netc:   { label: 'Network control systems', x: 400, y: 470, crit: 'High', c: '#FFBC57', rows: [['Security event', 'Policy modification attempts on segmentation controls.'], ['Connected dependencies', 'East-west fabric, tenant segments.'], ['Potential attack path', 'Weakened segmentation enabling lateral movement.'], ['Suggested containment', 'Lock segmentation policy; isolate affected segments.'], ['Recovery considerations', 'Restore approved policy set and verify enforcement.']] },
-    store:  { label: 'Shared storage', x: 730, y: 170, crit: 'High', c: '#FFBC57', rows: [['Security event', 'Elevated read activity against model checkpoints.'], ['Connected dependencies', 'Training jobs, inference services.'], ['Potential attack path', 'Data exfiltration or integrity tampering.'], ['Suggested containment', 'Fence write access; snapshot current state.'], ['Recovery considerations', 'Restore from verified, integrity-checked restore points.']] },
-    tenant: { label: 'Tenant workloads', x: 760, y: 400, crit: 'Medium', c: '#277BFF', rows: [['Security event', 'No direct indicators; exposed through orchestration dependency.'], ['Connected dependencies', 'Orchestration, network segments, critical applications.'], ['Potential attack path', 'Indirect impact via compromised control plane.'], ['Suggested containment', 'Monitor; prepare rescheduling to clean capacity.'], ['Recovery considerations', 'Confirm workload integrity before resuming.']] },
-    apps:   { label: 'Critical applications', x: 860, y: 290, crit: 'Business-critical', c: '#277BFF', rows: [['Security event', 'Downstream of affected storage and workloads.'], ['Connected dependencies', 'Customer-facing services.'], ['Potential attack path', 'Service degradation reaching customers.'], ['Suggested containment', 'Preserve availability; prioritize protective actions upstream.'], ['Recovery considerations', 'Validate service health and customer-facing performance.']] }
-  };
-  depLinks = [['cred','gpu'],['cred','k8s'],['cred','netc'],['k8s','gpu'],['k8s','store'],['k8s','tenant'],['gpu','store'],['netc','tenant'],['store','apps'],['tenant','apps']];
-  modeData = [
-    { title: 'Observe', body: 'Monitor, correlate, and recommend actions without modifying production systems.', who: ['Platform','Platform','Platform','Operator','Operator'] },
-    { title: 'Approve', body: 'Prepare response recommendations for authorized human review before any action is taken.', who: ['Platform','Platform','Platform','Approver','Platform'] },
-    { title: 'Autonomous', body: 'Execute explicitly authorized actions within defined policies, permissions, and operational safeguards — with human override at every stage.', who: ['Platform','Platform','Platform','Policy','Platform'] }
-  ];
-  flowSteps = ['Detect and correlate signals', 'Evaluate risk and propagation', 'Select candidate actions', 'Authorize action', 'Execute and record'];
-  recoveryData = ['Stabilize affected systems', 'Identify required remediation', 'Establish trusted recovery conditions', 'Coordinate restoration actions', 'Validate operational and security state', 'Record outcomes for continuous improvement'];
-  marketsPrimary = [
-    { n: '01', title: 'AI & GPU Infrastructure', body: 'Resilience intelligence for high-performance compute, GPU clusters, and AI workload environments.' },
-    { n: '02', title: 'GPU Cloud & AI-as-a-Service', body: 'Protection designed around multi-tenant compute, orchestration, and service continuity.' },
-    { n: '03', title: 'Data Centers & Colocation', body: 'Security and response coordination across interconnected data center infrastructure.' }
-  ];
-  marketsCritical = [
-    { title: 'Critical Infrastructure', body: 'Governed security and recovery for high-consequence operational environments.' },
-    { title: 'Energy & Utilities', body: 'Resilience where cyber and operational failures carry societal impact.' },
-    { title: 'Financial Services', body: 'Impact-aware response where disruption carries direct financial consequence.' },
-    { title: 'Healthcare', body: 'Continuity of the systems that clinical operations depend on.' },
-    { title: 'Government & Public Sector', body: 'Policy-governed, auditable security for public-service infrastructure.' },
-    { title: 'Enterprise & Hybrid Cloud', body: 'Contextual risk and coordinated response across interconnected enterprise systems.' }
-  ];
-  statusData = [
-    { tag: 'Platform today', c: '#35D5A4', items: ['Core platform architecture developed', 'Infrastructure context and dependency modeling', 'Policy-governed response workflows with human oversight'] },
-    { tag: 'Patented technology', c: '#00D5FF', items: ['Approved patented technology underpinning the platform', 'Details available under NDA'] },
-    { tag: 'In development', c: '#FFBC57', items: ['AI models undergoing further training and validation', 'Expanded recovery capabilities', 'Integrations validated per engagement'] }
-  ];
-  compare = [
-    { k: 'Primary focus', a: 'Alert visibility', b: 'Risk and operational consequence' },
-    { k: 'Decision model', a: 'Analyst-driven triage', b: 'Contextual decision intelligence' },
-    { k: 'Infrastructure context', a: 'Disconnected telemetry', b: 'Dependency-aware analysis' },
-    { k: 'Response', a: 'Fragmented workflows', b: 'Coordinated enforcement' },
-    { k: 'Recovery', a: 'Separate processes', b: 'Integrated recovery orchestration' },
-    { k: 'Governance', a: 'Multiple control planes', b: 'Unified policy-oriented oversight' }
-  ];
-  routeData = [
-    { title: 'Request a Demo', body: 'Technical walkthrough of the platform', email: 'sales@cyberactive.ai', cta: 'Request a Demo', lead: 'A guided technical session covering detection, dependency analysis, governed response, and recovery — tailored to your environment.' },
-    { title: 'Strategic Engagement', body: 'Partnerships, pilots, and integrations', email: 'partners@cyberactive.ai', cta: 'Start a Conversation', lead: 'For data center operators, GPU cloud providers, critical infrastructure organizations, and technology partners exploring pilots or strategic integration.' },
-    { title: 'Investor Relations', body: 'For qualified investors', email: 'ir@cyberactive.ai', cta: 'Contact Investor Relations', lead: 'For qualified investors seeking information about CyberActive AI' }
-  ];
-
-  navMark() {
-    if (this._nm) return this._nm;
-    const h = React.createElement, still = this.props.motion === false;
-    const SC = 'M54 22V11.5L32 5 10 11.5V31c0 13.6 8.6 23 22 28.5 9-3.7 15.6-9.3 19.6-16.5';
-    const SCF = SC + 'L54 22Z', PULSE = 'M14.5 36H21L32 13.5 42 46l4-10H51.5';
-    const anim = (v) => still ? null : { animation: v };
-    this._nm = h('svg', { viewBox: '0 0 64 64', width: '100%', height: '100%', 'aria-hidden': 'true', style: { display: 'block', overflow: 'visible' } },
-      h('defs', null,
-        h('linearGradient', { id: 'caNavS', x1: 10, y1: 5, x2: 54, y2: 60, gradientUnits: 'userSpaceOnUse' }, h('stop', { offset: 0, stopColor: '#7FF0FF' }), h('stop', { offset: .5, stopColor: '#3D7BFF' }), h('stop', { offset: 1, stopColor: '#8B5CFF' })),
-        h('linearGradient', { id: 'caNavP', x1: 14, y1: 0, x2: 52, y2: 0, gradientUnits: 'userSpaceOnUse' }, h('stop', { offset: 0, stopColor: '#B9A6FF' }), h('stop', { offset: .45, stopColor: '#FFFFFF' }), h('stop', { offset: 1, stopColor: '#B9A6FF' })),
-        h('radialGradient', { id: 'caNavF0', cx: 32, cy: 24, r: 32, gradientUnits: 'userSpaceOnUse' }, h('stop', { offset: 0, stopColor: '#3D7BFF', stopOpacity: .22 }), h('stop', { offset: 1, stopColor: '#8B5CFF', stopOpacity: 0 })),
-        h('filter', { id: 'caNavF', x: '-40%', y: '-40%', width: '180%', height: '180%' }, h('feGaussianBlur', { stdDeviation: 1.4, result: 'b' }), h('feMerge', null, h('feMergeNode', { in: 'b' }), h('feMergeNode', { in: 'SourceGraphic' })))),
-      h('path', { d: SCF, fill: 'url(#caNavF0)', fillOpacity: .6 }),
-      h('path', { d: SC, fill: 'none', stroke: 'url(#caNavS)', strokeWidth: 5.4, strokeLinecap: 'round', strokeLinejoin: 'round', filter: 'url(#caNavF)' }),
-      h('path', { d: PULSE, fill: 'none', stroke: 'url(#caNavP)', strokeWidth: 4.4, strokeLinecap: 'round', strokeLinejoin: 'round', filter: 'url(#caNavF)' }),
-      still ? null : h('path', { d: PULSE, pathLength: 100, fill: 'none', stroke: '#FFFFFF', strokeWidth: 5.2, strokeLinecap: 'round', strokeLinejoin: 'round', strokeDasharray: '16 200', filter: 'url(#caNavF)', style: { animation: 'caSpark 4s cubic-bezier(.45,0,.2,1) .8s infinite' } }),
-      h('circle', { cx: 55.5, cy: 36, r: 6.4, fill: 'none', stroke: '#8B5CFF', strokeOpacity: .45, strokeWidth: 1, style: anim('caHalo 4s ease-out .8s infinite') }),
-      h('circle', { cx: 55.5, cy: 36, r: 4, fill: '#8B5CFF', filter: 'url(#caNavF)', style: anim('caNode 4s ease-out .8s infinite') }),
-      h('circle', { cx: 55.5, cy: 36, r: 1.7, fill: '#FFFFFF' }));
-    return this._nm;
-  }
-  ctxSrc = [
-    { code: 'GPU', name: 'GPU clusters', sub: 'hosts · BMC · fabric', y: 52 },
-    { code: 'K8S', name: 'Orchestration', sub: 'Kubernetes · schedulers', y: 136 },
-    { code: 'IAM', name: 'Identity', sub: 'admins · service accounts', y: 220 },
-    { code: 'NET', name: 'Network', sub: 'east-west · segmentation', y: 304 },
-    { code: 'CLD', name: 'Cloud & storage', sub: 'hybrid · datasets', y: 388 }
-  ];
-  ctxCapData = [
-    { title: 'Detect', body: 'Lateral movement from a compromised privileged identity.', src: [2, 3], out: 'Threat correlated across 3 dependencies', c: '#FFBC57' },
-    { title: 'Understand', body: 'Blast radius across GPU clusters and tenant workloads.', src: [0, 1], out: 'Blast radius mapped · GPU pool B at risk', c: '#FF8C50' },
-    { title: 'Decide', body: 'Containment ranked by operational criticality and policy.', src: [1, 4], out: 'Containment plan ranked · policy-checked', c: '#9B7BFF' },
-    { title: 'Act', body: 'Governed response through your integrated controls.', src: [0, 1, 2, 3, 4], out: 'Contained · operator-approved', c: '#35D5A4' }
-  ];
-  ctxPath(y) { return 'M147 ' + y + 'H220C266 ' + y + ' 258 220 300 220'; }
-  ctxFlowEl(active) {
-    const h = React.createElement, still = this.props.motion === false;
-    if (still) return null;
-    const kids = [];
-    this.ctxSrc.forEach((t, i) => {
-      const on = active.includes(i), d = this.ctxPath(t.y) + 'H316';
-      for (let k = 0; k < (on ? 3 : 1); k++) kids.push(h('circle', { key: i + '-' + k + (on ? 'a' : 'b'), r: on ? 3.4 : 2.2, fill: on ? '#C9BEFF' : '#7FF0FF', opacity: on ? 1 : .5 },
-        h('animateMotion', { dur: on ? '1.6s' : '3.4s', repeatCount: 'indefinite', begin: (-(k * (on ? .53 : 1.1)) - i * .3) + 's', path: d })));
-    });
-    for (let k = 0; k < 2; k++) kids.push(h('circle', { key: 'o' + k, r: 3.2, fill: '#C9BEFF' }, h('animateMotion', { dur: '1.2s', repeatCount: 'indefinite', begin: (-k * .6) + 's', path: 'M404 220H452' })));
-    return h('svg', { viewBox: '0 0 640 440', preserveAspectRatio: 'none', style: { position: 'absolute', inset: 0, width: '100%', height: '100%', display: 'block' } }, kids);
-  }
-  fmt(n) { return n >= 1e6 ? (n / 1e6).toFixed(2) + 'M' : n >= 1e3 ? (n / 1e3).toFixed(1) + 'K' : String(n); }
-
-  renderVals() {
-    const s = this.state, C = '#00D5FF';
-    const STATE = [['Normal', '#277BFF'], ['Potential anomaly', '#FFBC57'], ['High confidence', '#FF8C50'], ['Critical', '#FF6475'], ['Resolved', '#00D5FF']];
-    const pill = c => 'padding:4px 10px;border-radius:999px;border:1px solid ' + c + '66;background:' + c + '1a;color:' + c + ';font-size:11px;font-weight:500;white-space:nowrap';
-    const p = this.pillarData[s.pillar], d = this.domainData[s.domain];
-    const rs = s.rad.states[s.rSel] || 0, rdat = this.radarData[s.rSel], v = s.rad.vol[s.rSel] || .6;
-    const health = [98.6, 92.1, 84.3, 71.5, 97.8][rs];
-    const anyCrit = s.rad.states.filter(x => x > 0 && x < 4).length;
-    const dep = this.depData[s.dep];
-    const near = new Set([s.dep]); this.depLinks.forEach(([a, b]) => { if (a === s.dep) near.add(b); if (b === s.dep) near.add(a); });
-    const mode = this.modeData[s.mode];
-    const route = this.routeData[s.route];
-    const openRoute = i => e => { if (e) e.preventDefault(); this.setState({ route: i, modalOpen: true, sent: false, menuOpen: false }); };
-
-    return {
-      navMark: this.navMark(),
-      ctx: { out: this.ctxCapData[s.ctx].out, outColor: this.ctxCapData[s.ctx].c },
-      ctxFlow: this.ctxFlowEl(this.ctxCapData[s.ctx].src),
-      ctxLines: this.ctxSrc.map((t, i) => { const on = this.ctxCapData[s.ctx].src.includes(i); return { d: this.ctxPath(t.y), stroke: on ? 'rgba(201,190,255,.9)' : 'rgba(127,240,255,.22)', w: on ? 1.8 : 1.1 }; }),
-      ctxSources: this.ctxSrc.map((t, i) => { const on = this.ctxCapData[s.ctx].src.includes(i);
-        return { ...t, style: 'display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;background:linear-gradient(180deg,#101C30,#0A1322);box-shadow:0 8px 24px rgba(0,0,0,.35);transition:all .3s;position:absolute;left:3%;width:20.5%;min-width:132px;top:' + (t.y / 4.4) + '%;transform:translateY(-50%);border:1px solid ' + (on ? 'rgba(155,123,255,.6)' : 'rgba(159,178,200,.14)') + ';' + (on ? 'box-shadow:0 0 24px rgba(139,92,255,.3);' : ''),
-          badge: 'flex:none;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:9px;font-family:Geist Mono,monospace;font-size:10px;font-weight:500;letter-spacing:.04em;' + (on ? 'background:linear-gradient(135deg,rgba(127,240,255,.2),rgba(139,92,255,.3));color:#F4F8FF;border:1px solid rgba(155,123,255,.5)' : 'background:#0B1424;color:#9FB2C8;border:1px solid rgba(159,178,200,.16)') }; }),
-      ctxCaps: this.ctxCapData.map((c, i) => ({ n: '0' + (i + 1), title: c.title, body: c.body, titleColor: i === s.ctx ? '#F4F8FF' : '#9FB2C8',
-        onClick: () => this.setState({ ctx: i, ctxManual: true }),
-        num: 'flex:none;width:28px;font-family:Geist Mono,monospace;font-size:11.5px;padding-top:2px;color:' + (i === s.ctx ? '#A890FF' : '#4E6176'),
-        style: 'display:flex;gap:12px;align-items:flex-start;width:100%;padding:13px 12px;margin:0 -12px;border:0;border-radius:10px;background:' + (i === s.ctx ? 'linear-gradient(90deg,rgba(139,92,255,.14),transparent)' : 'transparent') + ';font:inherit;cursor:pointer;transition:background .25s' })),
-      heroRef: this.heroRef, radarRef: this.radarRef, progRef: this.progRef, phaseLabel: s.phase,
-      navLinks: [['Platform','#platform','platform'],['AI Workloads','#ai-workloads','ai-workloads'],['Solutions','#markets','markets'],['Intelligence','#radar','radar'],['Partners','#partners','partners'],['Investors','#investors','investors'],['Contact','#contact','contact']].map(([label, href, id]) => ({ label, href,
-        style: 'padding:8px 12px;border-radius:7px;color:' + (s.active === id ? '#F4F8FF' : '#9FB2C8') + ';background:' + (s.active === id ? 'rgba(0,213,255,.08)' : 'transparent') + ';transition:color .2s,background .2s' })),
-      menuOpen: s.menuOpen,
-      showCookie: !s.cookie,
-      acceptCookie: () => { try { localStorage.setItem('ca-cookie-ok', '1'); } catch (e) {} this.setState({ cookie: true }); },
-      toggleMenu: () => this.setState({ menuOpen: !s.menuOpen }),
-      closeMenu: () => this.setState({ menuOpen: false }),
-      burger1: 'display:block;width:18px;height:1.5px;background:#F4F8FF;transition:transform .25s;transform:' + (s.menuOpen ? 'translateY(6.5px) rotate(45deg)' : 'none'),
-      burger2: 'display:block;width:18px;height:1.5px;background:#F4F8FF;transition:opacity .2s;opacity:' + (s.menuOpen ? 0 : 1),
-      burger3: 'display:block;width:18px;height:1.5px;background:#F4F8FF;transition:transform .25s;transform:' + (s.menuOpen ? 'translateY(-6.5px) rotate(-45deg)' : 'none'),
-      proof: [
-        { v: 'Patented', k: 'Built on approved patented technology' },
-        { v: 'Human-governed', k: 'Observe, approve, or autonomous modes with override' },
-        { v: 'Complementary', k: 'Designed to work with existing security and infrastructure tools' },
-        { v: 'Independent', k: 'Technology provider partnering across operators globally' }
-      ],
-      heroSteps: [0,1,2,3,4].map(i => ({ style: 'width:' + (i === s.phaseI ? 26 : 8) + 'px;height:4px;border-radius:2px;transition:all .4s;background:' + (i === s.phaseI ? ['#277BFF','#FF6475','#FFBC57',C,'#35D5A4'][i] : 'rgba(159,178,200,.25)') })),
-      problems: this.problems,
-      pillars: this.pillarData.map((x, i) => ({ ...x, onClick: () => this.setState({ pillar: i }),
-        style: 'display:block;text-align:left;padding:0 18px 22px;border:1px solid ' + (i === s.pillar ? 'rgba(0,213,255,.4)' : 'transparent') + ';border-radius:14px;background:' + (i === s.pillar ? 'rgba(0,213,255,.05)' : 'transparent') + ';font:inherit;cursor:pointer;transition:all .25s',
-        dot: 'display:inline-flex;align-items:center;justify-content:center;width:54px;height:54px;border-radius:50%;border:1px solid ' + (i === s.pillar ? C : 'rgba(159,178,200,.25)') + ';background:' + (i === s.pillar ? 'radial-gradient(circle,rgba(0,213,255,.3),#050B14 70%)' : '#08111D') + ';font-family:Geist Mono,monospace;font-size:13px;color:' + (i === s.pillar ? '#F4F8FF' : '#9FB2C8') + ';box-shadow:' + (i === s.pillar ? '0 0 30px rgba(0,213,255,.35)' : 'none') })),
-      pillar: p,
-      domains: this.domainData.map((x, i) => ({ n: '0' + (i + 1), title: x.title, onClick: () => this.setState({ domain: i }),
-        cells: Array.from({ length: 8 }, (_, j) => 'width:6px;height:16px;border-radius:2px;background:' + (i === s.domain ? (j < 6 ? C : 'rgba(0,213,255,.25)') : 'rgba(39,123,255,' + (.15 + (j % 3) * .1) + ')')),
-        style: 'display:flex;align-items:center;gap:14px;width:100%;padding:16px 18px;border:1px solid ' + (i === s.domain ? 'rgba(0,213,255,.5)' : 'rgba(159,178,200,.12)') + ';border-radius:10px;background:' + (i === s.domain ? 'linear-gradient(90deg,rgba(0,213,255,.12),rgba(39,123,255,.04))' : '#0B1424') + ';font:inherit;cursor:pointer;transition:all .2s;transform:translateX(' + (i === s.domain ? '6px' : '0') + ')' })),
-      domain: { ...d, n: '0' + (s.domain + 1) },
-
-      aiStats: [
-        { k: 'Telemetry rate', v: (38 + v * 14).toFixed(1) + 'K ev/s' }, { k: 'Events analyzed', v: this.fmt(s.ai.ev) },
-        { k: 'Models updated', v: String(s.ai.models) }, { k: 'Predictions generated', v: this.fmt(s.ai.preds) },
-        { k: 'Actions executed', v: String(s.ai.acts) }, { k: 'Risk correlations', v: this.fmt(s.ai.corr) },
-        { k: 'Graph updates', v: this.fmt(s.ai.graph) }
-      ],
-      coreChips: [
-        { k: 'Health', v: anyCrit ? (96 - anyCrit * 3.1).toFixed(1) + '%' : '99.2%' }, { k: 'Mode', v: 'Approve' },
-        { k: 'AI confidence', v: anyCrit ? '0.94' : '0.98' }, { k: 'Active anomalies', v: String(anyCrit) },
-        { k: 'Recovery ops', v: s.rad.step >= 7 ? '1 active' : '0' }
-      ],
-      chain: this.chainOrder.map((di, ci) => {
-        const st = s.rad.states[di] || 0, col = STATE[st][1], on = st > 0;
-        return { label: (ci ? '→ ' : '') + this.radarData[di].name, style: 'padding:3px 7px;border-radius:5px;color:' + (on ? col : '#4E6176') + ';background:' + (on ? col + '14' : 'transparent') + ';transition:all .3s' };
-      }),
-      radarTabs: this.radarData.map((x, i) => ({ label: x.name, onClick: () => this.setState({ rSel: i }),
-        style: 'padding:6px 10px;border:1px solid ' + (i === s.rSel ? 'rgba(0,213,255,.5)' : 'rgba(159,178,200,.14)') + ';border-radius:7px;background:' + (i === s.rSel ? 'rgba(0,213,255,.1)' : 'transparent') + ';color:' + (i === s.rSel ? '#F4F8FF' : '#9FB2C8') + ';font:inherit;font-size:12px;cursor:pointer' })),
-      rd: { name: rdat.name, scope: rdat.scope, stateLabel: STATE[rs][0], badgeStyle: pill(STATE[rs][1]),
-        metrics: [
-          { k: 'Overall health', v: health + '%' }, { k: 'Telemetry volume', v: (4 + v * 6).toFixed(1) + 'K ev/s' },
-          { k: 'Active assets', v: rdat.assets.toLocaleString('en-US') }, { k: 'Current anomalies', v: rs > 0 && rs < 4 ? rdat.base : 'None' },
-          { k: 'AI confidence', v: rs > 0 && rs < 4 ? ['', '0.71', '0.88', '0.96'][rs] : '0.98' }, { k: 'Risk score', v: ['12', '41', '67', '88', '18'][rs] + ' / 100' },
-          { k: 'Predicted impact', v: ['None', 'Low', 'Moderate', 'High', 'Contained'][rs] }, { k: 'Autonomous actions', v: rs >= 2 ? (rs === 4 ? '6 executed' : '3 proposed') : '0' },
-          { k: 'Business impact', v: ['None', 'None', 'At risk', 'Service at risk', 'None'][rs] }, { k: 'Recovery status', v: rs === 4 ? 'Validated' : rs === 3 ? 'Initiating' : 'Not required' }
-        ] },
-
-      depEdges: this.depLinks.map(([a, b]) => { const A = this.depData[a], B = this.depData[b], on = a === s.dep || b === s.dep;
-        return { x1: A.x, y1: A.y, x2: B.x, y2: B.y, stroke: on ? '#FFBC57' : 'rgba(39,123,255,.35)', w: on ? 2.2 : 1.2, dash: a === 'cred' ? '6 6' : '' }; }),
-      depNodes: Object.keys(this.depData).map(k => { const n = this.depData[k], on = k === s.dep, nearOn = near.has(k);
-        return { label: n.label, onClick: () => this.setState({ dep: k }),
-          style: 'position:absolute;left:' + (n.x / 10) + '%;top:' + (n.y / 5.6) + '%;transform:translate(' + (n.x < 300 ? '-18%' : n.x > 800 ? '-82%' : '-50%') + ',-50%);display:flex;align-items:center;gap:8px;padding:7px 12px 7px 9px;border:1px solid ' + (on ? n.c : nearOn ? n.c + '66' : 'rgba(159,178,200,.18)') + ';border-radius:999px;background:' + (on ? n.c + '22' : 'rgba(5,11,20,.92)') + ';font:inherit;cursor:pointer;box-shadow:' + (on ? '0 0 26px ' + n.c + '55' : 'none') + ';opacity:' + (nearOn ? 1 : .55) + ';transition:all .25s',
-          dot: 'width:10px;height:10px;border-radius:50%;background:' + n.c + ';box-shadow:0 0 10px ' + n.c }; }),
-      dep: { label: dep.label, crit: dep.crit, critStyle: pill(dep.c), rows: dep.rows.map(r => ({ k: r[0], v: r[1] })).concat([{ k: 'Operational criticality', v: dep.crit }]) },
-
-      modes: this.modeData.map((m, i) => ({ title: m.title, onClick: () => this.setState({ mode: i }),
-        style: 'padding:10px 22px;border:0;border-radius:8px;background:' + (i === s.mode ? 'linear-gradient(135deg,rgba(0,213,255,.22),rgba(39,123,255,.18))' : 'transparent') + ';color:' + (i === s.mode ? '#F4F8FF' : '#9FB2C8') + ';font:inherit;font-size:14px;font-weight:500;cursor:pointer;transition:all .2s' })),
-      mode: { title: mode.title, body: mode.body, flow: this.flowSteps.map((st, i) => { const w = mode.who[i];
-        const c = w === 'Platform' ? '#277BFF' : w === 'Policy' ? '#35D5A4' : '#FFBC57';
-        return { n: '0' + (i + 1), step: st, who: w, tagStyle: pill(c) }; }) },
-
-      recovery: this.recoveryData.map((t, i) => ({ n: i + 1, title: t, bar: 'linear-gradient(90deg,#35D5A4,' + (i < 5 ? 'rgba(53,213,164,.2)' : '#00D5FF') + ')',
-        style: 'padding:22px 18px 26px;border:1px solid rgba(159,178,200,.12);border-radius:12px;background:linear-gradient(180deg,rgba(53,213,164,' + (.02 + i * .012) + '),#08111D)' })),
-      marketsPrimary: this.marketsPrimary, marketsCritical: this.marketsCritical, compare: this.compare,
-      statusCols: this.statusData.map(c => ({ tag: c.tag, items: c.items, dot: c.c, tagStyle: pill(c.c) })),
-      routes: this.routeData.map((r, i) => ({ ...r, onClick: () => this.setState({ route: i, sent: false }),
-        style: 'display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;padding:18px 20px;border:1px solid ' + (i === s.route ? 'rgba(0,213,255,.45)' : 'rgba(159,178,200,.12)') + ';border-radius:12px;background:' + (i === s.route ? 'rgba(0,213,255,.06)' : '#08111D') + ';font:inherit;cursor:pointer;flex-wrap:wrap;transition:all .2s' })),
-      route, sent: s.sent, modalOpen: s.modalOpen,
-      openDemo: openRoute(0), openPartner: openRoute(1), openIR: openRoute(2),
-      closeModal: e => { if (e) e.preventDefault(); this.setState({ modalOpen: false }); },
-      stop: e => e.stopPropagation(),
-      submitContact: e => {
-        e.preventDefault(); const f = e.target, g = n => (f.elements[n] && f.elements[n].value || '').trim();
-        const body = ['Request: ' + route.title, 'Name: ' + g('name'), 'Organization: ' + g('company'), 'Email: ' + g('email'), 'Role: ' + g('role'), '', g('message')].join('\n');
-        window.location.href = 'mailto:' + route.email + '?subject=' + encodeURIComponent('[' + route.title + '] ' + (g('company') || g('name'))) + '&body=' + encodeURIComponent(body);
-        this.setState({ sent: true });
-      },
-      footLinks: [['Platform','#platform'],['AI Workloads','#ai-workloads'],['CA AI Core','#radar'],['Who we protect','#markets'],['Investors','#investors'],['Partners','#partners'],['Contact','#contact'],['Privacy Policy','/legal#privacy'],['Terms of Use','/legal#terms']].map(([label, href]) => ({ label, href }))
-    };
-  }
-}
-</script>
 </body>
 </html>
