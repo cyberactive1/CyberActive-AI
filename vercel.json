@@ -1,6 +1,85 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/platform",
+      "destination": "/page.html"
+    },
+    {
+      "source": "/solutions",
+      "destination": "/page.html"
+    },
+    {
+      "source": "/solutions/ai-workloads",
+      "destination": "/page.html"
+    },
+    {
+      "source": "/solutions/gpu-infrastructure",
+      "destination": "/page.html"
+    },
+    {
+      "source": "/solutions/ai-data-centers",
+      "destination": "/page.html"
+    },
+    {
+      "source": "/solutions/enterprise-ai",
+      "destination": "/page.html"
+    },
+    {
+      "source": "/solutions/mission-critical",
+      "destination": "/page.html"
+    },
+    {
+      "source": "/technology",
+      "destination": "/page.html"
+    },
+    {
+      "source": "/technology/patents",
+      "destination": "/page.html"
+    },
+    {
+      "source": "/demo",
+      "destination": "/page.html"
+    },
+    {
+      "source": "/customers",
+      "destination": "/page.html"
+    },
+    {
+      "source": "/partners",
+      "destination": "/page.html"
+    },
+    {
+      "source": "/investors",
+      "destination": "/page.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/page.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/page.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/privacy",
+      "destination": "/legal#privacy",
+      "permanent": true
+    },
+    {
+      "source": "/terms",
+      "destination": "/legal#terms",
+      "permanent": true
+    },
+    {
+      "source": "/page",
+      "destination": "/platform",
+      "permanent": false
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

@@ -1,32 +1,30 @@
-# cyberactive.ai
+# cyberactive.ai — Release 2.0
 
-Static marketing site for CyberActive AI — plain HTML, CSS and vanilla JavaScript. No framework, no build step.
+Static site + one Vercel Serverless Function. No build step.
 
-## Structure
-- `index.html` — homepage
-- `legal.html` — Privacy Policy & Terms of Use (served at `/legal`)
-- `css/site.css` — all styles (design tokens at the top, then sections in page order, then responsive rules)
-- `js/site.js` — page behaviour: nav, tabs, radar panels, contact routes/modal, cookie notice, scroll reveal
-- `ca-visuals.js` — hero and telemetry-radar canvas animations (ES module, imported by `js/site.js`)
-- `assets/` — logo, icons, images
-- `vercel.json` — clean URLs, security headers, asset caching
+## Routes
+/ (homepage) · /platform · /solutions · /solutions/ai-workloads · /solutions/gpu-infrastructure · /solutions/ai-data-centers · /solutions/enterprise-ai · /solutions/mission-critical · /technology · /technology/patents · /demo · /customers · /partners · /investors · /about · /contact · /legal (/privacy, /terms redirect)
 
-## Editing
-- Copy lives directly in the HTML. Interactive panels (platform stages, radar domains, response modes, contact routes) also have their data in `js/site.js` — update both when changing those texts.
-- Colours and fonts are CSS custom properties in `:root` at the top of `css/site.css`.
+All sub-pages are served by `page.html`, which renders content from `pages-data.js` based on the URL path (see `rewrites` in vercel.json).
 
-## Local preview
-```
-npx serve .
-```
-(Use a local server, not file://, so the ES module imports load.)
+## Files
+- index.html — homepage · page.html — all sub-pages · legal.html — Privacy & Terms
+- pages-data.js — sub-page content (edit copy here)
+- ca-forms.js — client form validation + submission to /api/contact
+- api/contact.js — server-side validation, honeypot, rate limiting, email delivery via Resend
+- support.js — page runtime (loads React 18 from unpkg with SRI) · ca-visuals.js — canvas visuals
 
-## Deploy to Vercel
-1. In Vercel: **Add New → Project → Import** this repo.
-2. Framework preset: **Other**. Build command: *none*. Output directory: `./`.
-3. Add the domain `cyberactive.ai` under **Settings → Domains**.
+## Forms — configure before launch
+Set in Vercel → Settings → Environment Variables:
+- RESEND_API_KEY — from resend.com (verify the cyberactive.ai sending domain)
+- CONTACT_FROM — e.g. `CyberActive AI <web@cyberactive.ai>`
+- Optional: ROUTE_DEMO, ROUTE_PARTNER, ROUTE_INVESTOR (defaults sales@, partners@, ir@cyberactive.ai)
+Until RESEND_API_KEY is set, the API returns 503 and the form shows the direct email address. The in-memory rate limit is best-effort; add Vercel KV/Upstash for strict limits.
 
-## Before launch
-- Contact forms open the visitor's email client (mailto). Swap for a form endpoint (e.g. Vercel Function, Formspree, HubSpot) to capture leads server-side.
-- Confirm mailboxes: sales@, partners@, ir@, legal@cyberactive.ai.
-- Legal copy should be reviewed by counsel.
+## Deploy
+1. Push this folder to GitHub. 2. Vercel → Add New Project → Import → Framework "Other", no build command, output `./`. 3. Add env vars. 4. Add domain cyberactive.ai.
+
+## Claims review before launch
+- Capability statuses (Available / In Validation / Planned / Verified IP) on /technology and /investors
+- "Approved patent" labels on three innovation areas; "Autonomous Recovery" as additional IP
+- All interactive visuals are labeled illustrative simulations

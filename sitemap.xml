@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://cyberactive.ai/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://cyberactive.ai/legal</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://cyberactive.ai/</loc></url>
+  <url><loc>https://cyberactive.ai/platform</loc></url>
+  <url><loc>https://cyberactive.ai/solutions</loc></url>
+  <url><loc>https://cyberactive.ai/solutions/ai-workloads</loc></url>
+  <url><loc>https://cyberactive.ai/solutions/gpu-infrastructure</loc></url>
+  <url><loc>https://cyberactive.ai/solutions/ai-data-centers</loc></url>
+  <url><loc>https://cyberactive.ai/solutions/enterprise-ai</loc></url>
+  <url><loc>https://cyberactive.ai/solutions/mission-critical</loc></url>
+  <url><loc>https://cyberactive.ai/technology</loc></url>
+  <url><loc>https://cyberactive.ai/technology/patents</loc></url>
+  <url><loc>https://cyberactive.ai/demo</loc></url>
+  <url><loc>https://cyberactive.ai/customers</loc></url>
+  <url><loc>https://cyberactive.ai/partners</loc></url>
+  <url><loc>https://cyberactive.ai/investors</loc></url>
+  <url><loc>https://cyberactive.ai/about</loc></url>
+  <url><loc>https://cyberactive.ai/contact</loc></url>
+  <url><loc>https://cyberactive.ai/legal</loc></url>
 </urlset>

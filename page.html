@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://cyberactive.ai">
+<meta property="og:url" content="https://cyberactive.ai">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CyberActive AI">
+<meta property="og:image" content="https://cyberactive.ai/assets/icon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>CyberActive AI</title>
+<meta name="description" content="Autonomous Security &amp; Resilience for AI Workloads and GPU Infrastructure.">
+<link rel="icon" type="image/svg+xml" href="/assets/logo-13b.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<script src="/pages-data.js"></script>
+<script src="/ca-forms.js"></script>
+<style>
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: #050B14; color: #F4F8FF; font-family: 'Geist', system-ui, -apple-system, 'Segoe UI', sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #7FE6FF; text-decoration: none; } a:hover { color: #F4F8FF; }
+  :focus-visible { outline: 2px solid #00D5FF; outline-offset: 2px; }
+  ::selection { background: rgba(139,92,255,.35); }
+  input, select, textarea, button { font-family: inherit; }
+  @keyframes pgFade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  @keyframes pgPulse { 0%,100% { box-shadow: 0 0 0 0 rgba(255,100,117,.55); } 50% { box-shadow: 0 0 0 10px rgba(255,100,117,0); } }
+  @media (max-width: 1000px) {
+    [data-r="c4"], [data-r="c3"] { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
+    [data-r="side"] { grid-template-columns: 1fr !important; }
+    #pg-links { display: none !important; }
+    #pg-menu-btn { display: inline-flex !important; }
+  }
+  @media (max-width: 680px) {
+    [data-r="c4"], [data-r="c3"], [data-r="c2"], [data-r="form"], [data-r="steps"] { grid-template-columns: 1fr !important; }
+    [data-r="cmp"] { grid-template-columns: 1fr !important; }
+    [data-r="cmp-h"] { display: none !important; }
+    section, footer, #pg-nav { padding-left: 20px !important; padding-right: 20px !important; }
+    section { padding-top: 56px !important; padding-bottom: 56px !important; }
+    #pg-cta-nav { display: none !important; }
+    #pg-graph { height: 380px !important; }
+    [data-node-label] { font-size: 10.5px !important; }
+    footer a, [data-tap] { min-height: 44px; display: inline-flex !important; align-items: center; }
+    input, select, textarea { font-size: 16px !important; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+</style>
+</helmet>
+
+<nav id="pg-nav" style="position:-webkit-sticky;position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 40px;background:rgba(5,11,20,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(159,178,200,.1)">
+  <a href="/" aria-label="CyberActive AI home" style="display:flex;align-items:center;gap:10px;color:#F4F8FF">
+    <img src="/assets/logo-13b.svg" alt="" style="width:30px;height:30px">
+    <span style="font-size:18px;font-weight:600;letter-spacing:-.02em">CyberActive<span style="margin-left:6px;color:#A08BFF">AI</span></span>
+  </a>
+  <div id="pg-links" style="display:flex;align-items:center;gap:4px">
+    <sc-for list="{{ navLinks }}" as="l" hint-placeholder-count="6">
+      <a href="{{ l.href }}" style="{{ l.style }}">{{ l.label }}</a>
+    </sc-for>
+  </div>
+  <div style="display:flex;align-items:center;gap:10px">
+    <a id="pg-cta-nav" href="/contact?demo" style="padding:10px 18px;border-radius:9px;background:linear-gradient(135deg,#7FF0FF,#5B8CFF 55%,#9B7BFF);color:#050B14;font-size:14px;font-weight:600" style-hover="color:#050B14;filter:brightness(1.08)">Request a Demo</a>
+    <button id="pg-menu-btn" onClick="{{ toggleMenu }}" aria-label="Menu" style="display:none;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid rgba(159,178,200,.2);border-radius:9px;background:transparent;color:#F4F8FF;font-size:20px;cursor:pointer">☰</button>
+  </div>
+</nav>
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;top:72px;left:0;right:0;z-index:49;display:flex;flex-direction:column;padding:12px 20px 24px;background:#050B14;border-bottom:1px solid rgba(159,178,200,.14)">
+    <sc-for list="{{ navLinks }}" as="l" hint-placeholder-count="6">
+      <a href="{{ l.href }}" onClick="{{ closeMenu }}" style="display:flex;align-items:center;min-height:48px;font-size:17px;color:#F4F8FF;border-bottom:1px solid rgba(159,178,200,.08)">{{ l.label }}</a>
+    </sc-for>
+    <a href="/contact?demo" onClick="{{ closeMenu }}" style="margin-top:16px;display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:9px;background:linear-gradient(135deg,#7FF0FF,#5B8CFF 55%,#9B7BFF);color:#050B14;font-weight:600">Request a Demo</a>
+  </div>
+</sc-if>
+
+<main>
+  <sc-for list="{{ sections }}" as="s" hint-placeholder-count="3">
+    <sc-if value="{{ s.isHero }}">
+      <section style="position:relative;padding:112px 40px 88px;overflow:hidden;background:radial-gradient(ellipse 55% 70% at 85% 0%,rgba(139,92,255,.16),transparent 70%),radial-gradient(ellipse 45% 60% at 0% 100%,rgba(0,213,255,.08),transparent 70%),#050B14;border-bottom:1px solid rgba(159,178,200,.08)">
+        <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(127,230,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(127,230,255,.05) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse 70% 80% at 70% 20%,#000,transparent 75%);mask-image:radial-gradient(ellipse 70% 80% at 70% 20%,#000,transparent 75%)"></div>
+        <div style="position:relative;max-width:1240px;margin:0 auto;animation:pgFade .5s ease-out">
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:13px;color:#6F8399;margin-bottom:26px">
+            <a href="/" data-tap="1" style="color:#9FB2C8">Home</a>
+            <sc-for list="{{ s.crumbs }}" as="c"><span>/</span><a href="{{ c.href }}" data-tap="1" style="color:#9FB2C8">{{ c.label }}</a></sc-for>
+          </div>
+          <div style="font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#A890FF;margin-bottom:20px">{{ s.eyebrow }}</div>
+          <h1 style="margin:0;max-width:22ch;font-size:clamp(36px,5vw,68px);font-weight:600;line-height:1.03;letter-spacing:-.04em;text-wrap:balance">{{ s.title }}</h1>
+          <p style="margin:26px 0 0;max-width:64ch;font-size:18px;line-height:1.65;color:#9FB2C8;text-wrap:pretty">{{ s.body }}</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:34px">
+            <sc-for list="{{ s.ctas }}" as="b"><a href="{{ b.href }}" style="{{ b.style }}">{{ b.label }}</a></sc-for>
+          </div>
+        </div>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ s.isCards }}">
+      <section style="max-width:1240px;margin:0 auto;padding:96px 40px 0">
+        <sc-if value="{{ s.eyebrow }}"><div style="font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#A890FF;margin-bottom:18px">{{ s.eyebrow }}</div></sc-if>
+        <sc-if value="{{ s.title }}"><h2 style="margin:0;max-width:24ch;font-size:clamp(28px,3.6vw,46px);font-weight:600;line-height:1.08;letter-spacing:-.035em;text-wrap:balance">{{ s.title }}</h2></sc-if>
+        <div data-r="{{ s.r }}" style="display:grid;grid-template-columns:{{ s.grid }};gap:14px;margin-top:40px">
+          <sc-for list="{{ s.items }}" as="it">
+            <a href="{{ it.href }}" style="{{ it.style }}">
+              <sc-if value="{{ it.k }}"><div style="font-family:'Geist Mono',monospace;font-size:11.5px;letter-spacing:.06em;color:#A890FF;margin-bottom:16px">{{ it.k }}</div></sc-if>
+              <h3 style="margin:0 0 10px;font-size:19px;font-weight:600;line-height:1.3;letter-spacing:-.015em;color:#F4F8FF">{{ it.t }}</h3>
+              <p style="margin:0;font-size:14.5px;line-height:1.6;color:#9FB2C8">{{ it.b }}</p>
+              <sc-if value="{{ it.cta }}"><span style="margin-top:auto;padding-top:18px;font-size:14px;font-weight:500;color:#C9BEFF">{{ it.cta }} →</span></sc-if>
+            </a>
+          </sc-for>
+        </div>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ s.isSteps }}">
+      <section style="max-width:1240px;margin:0 auto;padding:96px 40px 0">
+        <div style="font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#A890FF;margin-bottom:18px">{{ s.eyebrow }}</div>
+        <h2 style="margin:0;max-width:24ch;font-size:clamp(28px,3.6vw,46px);font-weight:600;line-height:1.08;letter-spacing:-.035em;text-wrap:balance">{{ s.title }}</h2>
+        <p style="margin:20px 0 0;max-width:62ch;font-size:16.5px;line-height:1.65;color:#9FB2C8">{{ s.body }}</p>
+        <div data-r="steps" style="position:relative;display:grid;grid-template-columns:{{ s.grid }};gap:12px;margin-top:44px">
+          <sc-for list="{{ s.items }}" as="it">
+            <div style="position:relative;padding:22px 20px 24px;border:1px solid rgba(0,213,255,.2);border-radius:14px;background:linear-gradient(180deg,rgba(0,213,255,.06),#08111D)">
+              <div style="display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;border:1px solid rgba(127,230,255,.5);font-family:'Geist Mono',monospace;font-size:12.5px;color:#7FE6FF;margin-bottom:16px">{{ it.n }}</div>
+              <h3 style="margin:0 0 8px;font-size:18px;font-weight:600;letter-spacing:-.015em">{{ it.t }}</h3>
+              <p style="margin:0;font-size:14px;line-height:1.6;color:#9FB2C8">{{ it.b }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ s.isList }}">
+      <section style="max-width:1240px;margin:0 auto;padding:96px 40px 0">
+        <div data-r="side" style="display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:start;padding:40px;border:1px solid rgba(159,178,200,.12);border-radius:18px;background:radial-gradient(ellipse at 0% 0%,rgba(139,92,255,.08),transparent 60%),#08111D">
+          <div>
+            <sc-if value="{{ s.eyebrow }}"><div style="font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#A890FF;margin-bottom:16px">{{ s.eyebrow }}</div></sc-if>
+            <h2 style="margin:0;font-size:clamp(24px,2.8vw,36px);font-weight:600;line-height:1.12;letter-spacing:-.03em;text-wrap:balance">{{ s.title }}</h2>
+            <sc-if value="{{ s.body }}"><p style="margin:16px 0 0;font-size:15.5px;line-height:1.65;color:#9FB2C8">{{ s.body }}</p></sc-if>
+          </div>
+          <div data-r="c2" style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <sc-for list="{{ s.items }}" as="it">
+              <div style="display:flex;gap:12px;align-items:baseline;padding:13px 16px;border:1px solid rgba(159,178,200,.1);border-radius:10px;background:#0B1424;font-size:14.5px;line-height:1.45;color:#C9D6E4"><span style="flex:none;width:6px;height:6px;border-radius:2px;background:linear-gradient(135deg,#7FF0FF,#9B7BFF);transform:translateY(-2px)"></span>{{ it }}</div>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ s.isScenarios }}">
+      <section style="max-width:1240px;margin:0 auto;padding:96px 40px 0">
+        <div style="font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#FF8C95;margin-bottom:18px">{{ s.eyebrow }}</div>
+        <h2 style="margin:0;max-width:24ch;font-size:clamp(28px,3.6vw,46px);font-weight:600;line-height:1.08;letter-spacing:-.035em">{{ s.title }}</h2>
+        <div data-r="c3" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:40px">
+          <sc-for list="{{ s.items }}" as="it">
+            <div style="display:flex;flex-direction:column;padding:24px;border:1px solid rgba(159,178,200,.12);border-radius:14px;background:#08111D">
+              <h3 style="margin:0 0 8px;font-size:18px;font-weight:600">{{ it.t }}</h3>
+              <p style="margin:0;font-size:14px;line-height:1.55;color:#FFC2C7">{{ it.b }}</p>
+              <div style="margin-top:16px;padding-top:14px;border-top:1px solid rgba(159,178,200,.1)">
+                <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#7FE6FF;margin-bottom:6px">Designed response</div>
+                <p style="margin:0;font-size:14px;line-height:1.6;color:#C9D6E4">{{ it.r }}</p>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ s.isLayers }}">
+      <section style="max-width:1240px;margin:0 auto;padding:96px 40px 0">
+        <h2 style="margin:0;font-size:clamp(28px,3.6vw,46px);font-weight:600;letter-spacing:-.035em">{{ s.title }}</h2>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:40px">
+          <sc-for list="{{ s.items }}" as="it">
+            <div data-r="side" style="display:grid;grid-template-columns:64px minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center;padding:22px 26px;border:1px solid {{ it.border }};border-radius:14px;background:{{ it.bg }}">
+              <div style="font-family:'Geist Mono',monospace;font-size:13px;color:#7FE6FF">L{{ it.n }}</div>
+              <div><h3 style="margin:0 0 6px;font-size:19px;font-weight:600">{{ it.t }}</h3><p style="margin:0;font-size:14.5px;line-height:1.55;color:#9FB2C8">{{ it.b }}</p></div>
+              <div style="font-family:'Geist Mono',monospace;font-size:12.5px;line-height:1.7;color:#C9BEFF">{{ it.ex }}</div>
+            </div>
+          </sc-for>
+          <div style="display:flex;align-items:center;justify-content:center;gap:10px;padding:14px;border:1px dashed rgba(155,123,255,.45);border-radius:14px;font-size:13.5px;letter-spacing:.08em;text-transform:uppercase;color:#C9BEFF">Governance &amp; audit across every layer</div>
+        </div>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ s.isCompare }}">
+      <section style="max-width:1240px;margin:0 auto;padding:96px 40px 0">
+        <div style="font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#A890FF;margin-bottom:18px">{{ s.eyebrow }}</div>
+        <h2 style="margin:0;font-size:clamp(28px,3.6vw,46px);font-weight:600;letter-spacing:-.035em">{{ s.title }}</h2>
+        <p style="margin:20px 0 0;max-width:66ch;font-size:16.5px;line-height:1.65;color:#9FB2C8">{{ s.body }}</p>
+        <div style="margin-top:40px;border:1px solid rgba(159,178,200,.12);border-radius:16px;overflow:hidden">
+          <div data-r="cmp-h" style="display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1fr);gap:24px;padding:14px 24px;background:#0B1424;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#6F8399"><span>Category</span><span>Primary focus</span><span style="color:#7FE6FF">How CyberActive AI complements it</span></div>
+          <sc-for list="{{ s.rows }}" as="r">
+            <div data-r="cmp" style="display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1fr);gap:8px 24px;padding:18px 24px;border-top:1px solid rgba(159,178,200,.08);background:#08111D">
+              <span style="font-size:15.5px;font-weight:600">{{ r.c }}</span>
+              <span style="font-size:14.5px;line-height:1.55;color:#9FB2C8">{{ r.f }}</span>
+              <span style="font-size:14.5px;line-height:1.55;color:#C9D6E4">{{ r.a }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ s.isStatus }}">
+      <section style="max-width:1240px;margin:0 auto;padding:96px 40px 0">
+        <div style="font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#A890FF;margin-bottom:18px">{{ s.eyebrow }}</div>
+        <h2 style="margin:0;font-size:clamp(28px,3.6vw,46px);font-weight:600;letter-spacing:-.035em">{{ s.title }}</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:13px;color:#9FB2C8">
+          <sc-for list="{{ statusKey }}" as="k"><span style="display:inline-flex;align-items:center;gap:8px"><span style="{{ k.dot }}"></span>{{ k.label }} — {{ k.desc }}</span></sc-for>
+        </div>
+        <div style="display:flex;flex-direction:column;margin-top:28px;border:1px solid rgba(159,178,200,.12);border-radius:16px;overflow:hidden">
+          <sc-for list="{{ s.items }}" as="it">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 22px;border-top:1px solid rgba(159,178,200,.07);background:#08111D">
+              <span style="font-size:15.5px;color:#F4F8FF">{{ it.t }}</span>
+              <span style="{{ it.pill }}">{{ it.s }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ s.isPatents }}">
+      <section style="max-width:1240px;margin:0 auto;padding:96px 40px 0">
+        <div data-r="c2" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px">
+          <sc-for list="{{ s.items }}" as="it">
+            <div style="position:relative;overflow:hidden;padding:30px;border:1px solid rgba(155,123,255,.28);border-radius:18px;background:radial-gradient(ellipse at 100% 0%,rgba(139,92,255,.14),transparent 60%),#08111D">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px">
+                <span style="padding:5px 10px;border:1px solid rgba(155,123,255,.45);border-radius:999px;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#C9BEFF">{{ it.k }}</span>
+                <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#7FE6FF">Lifecycle · {{ it.role }}</span>
+              </div>
+              <h3 style="margin:0 0 20px;font-size:24px;font-weight:600;line-height:1.2;letter-spacing:-.02em">{{ it.t }}</h3>
+              <div style="display:grid;grid-template-columns:1fr;gap:14px">
+                <div><div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#FF8C95;margin-bottom:5px">The challenge</div><p style="margin:0;font-size:14.5px;line-height:1.6;color:#C9D6E4">{{ it.ch }}</p></div>
+                <div><div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#35D5A4;margin-bottom:5px">The approach</div><p style="margin:0;font-size:14.5px;line-height:1.6;color:#C9D6E4">{{ it.ap }}</p></div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ s.isDemo }}">
+      <section style="max-width:1240px;margin:0 auto;padding:64px 40px 0">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px">
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <button onClick="{{ demoPlay }}" style="min-height:44px;padding:0 18px;border:0;border-radius:9px;background:linear-gradient(135deg,#7FF0FF,#5B8CFF 55%,#9B7BFF);color:#050B14;font-size:14px;font-weight:600;cursor:pointer">{{ demoPlayLabel }}</button>
+            <button onClick="{{ demoReset }}" style="min-height:44px;padding:0 16px;border:1px solid rgba(244,248,255,.22);border-radius:9px;background:transparent;color:#F4F8FF;font-size:14px;cursor:pointer">Reset</button>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px">
+            <span style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#6F8399">Governance mode</span>
+            <div style="display:flex;padding:3px;border:1px solid rgba(159,178,200,.18);border-radius:10px;background:#08111D">
+              <sc-for list="{{ demoModes }}" as="m"><button onClick="{{ m.onClick }}" style="{{ m.style }}">{{ m.label }}</button></sc-for>
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin-bottom:14px">
+          <sc-for list="{{ demoSteps }}" as="st"><button onClick="{{ st.onClick }}" style="{{ st.style }}"><span style="font-family:'Geist Mono',monospace;font-size:11px;opacity:.75">0{{ st.n }}</span><span>{{ st.t }}</span></button></sc-for>
+        </div>
+        <div data-r="side" style="display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:14px">
+          <div id="pg-graph" style="position:relative;height:480px;border:1px solid rgba(159,178,200,.12);border-radius:16px;background:radial-gradient(ellipse at 50% 40%,rgba(91,140,255,.1),transparent 70%),#050B14;overflow:hidden">
+            <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(127,240,255,.18) 1px,transparent 1.3px);background-size:14px 14px;opacity:.5"></div>
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%">
+              <sc-for list="{{ demoEdges }}" as="e"><line x1="{{ e.x1 }}" y1="{{ e.y1 }}" x2="{{ e.x2 }}" y2="{{ e.y2 }}" stroke="{{ e.color }}" stroke-width="{{ e.w }}" stroke-dasharray="{{ e.dash }}" vector-effect="non-scaling-stroke"></line></sc-for>
+            </svg>
+            <sc-for list="{{ demoNodes }}" as="n">
+              <button onClick="{{ n.onClick }}" style="{{ n.style }}"><span style="{{ n.dot }}"></span><span data-node-label="1" style="font-size:12px;font-weight:500;line-height:1.2;white-space:nowrap">{{ n.label }}</span></button>
+            </sc-for>
+            <div style="position:absolute;left:12px;bottom:10px;font-size:11px;letter-spacing:.06em;color:#9FB2C8">{{ demoLabel }}</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="padding:22px;border:1px solid {{ demoAccent }};border-radius:14px;background:#08111D;animation:pgFade .35s">
+              <div style="font-family:'Geist Mono',monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:{{ demoAccentText }};margin-bottom:10px">Stage 0{{ demoCur.n }} · {{ demoCur.t }}</div>
+              <h3 style="margin:0 0 10px;font-size:19px;font-weight:600;line-height:1.3">{{ demoCur.head }}</h3>
+              <p style="margin:0;font-size:14.5px;line-height:1.6;color:#C9D6E4">{{ demoCur.body }}</p>
+              <sc-if value="{{ demoCur.hasOptions }}">
+                <div style="display:flex;flex-direction:column;gap:6px;margin-top:14px">
+                  <sc-for list="{{ demoCur.options }}" as="o"><div style="{{ o.style }}"><span>{{ o.t }}</span><span style="font-family:'Geist Mono',monospace;font-size:11.5px;white-space:nowrap">{{ o.m }}</span></div></sc-for>
+                </div>
+              </sc-if>
+              <div style="margin-top:14px;padding-top:12px;border-top:1px solid rgba(159,178,200,.1);font-size:13.5px;line-height:1.55;color:#9FB2C8"><span style="color:#C9BEFF">Rationale · </span>{{ demoCur.why }}</div>
+            </div>
+            <div style="padding:18px 20px;border:1px solid rgba(159,178,200,.12);border-radius:14px;background:#08111D">
+              <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#6F8399;margin-bottom:8px">Inspect · select any component</div>
+              <div style="font-size:16px;font-weight:600">{{ demoSel.label }}</div>
+              <div style="margin-top:4px;font-size:13.5px;line-height:1.55;color:#9FB2C8">{{ demoSel.desc }}</div>
+              <div style="margin-top:10px;font-size:13px;color:#C9D6E4"><span style="color:#6F8399">Depends on / connects to · </span>{{ demoSel.deps }}</div>
+              <div style="margin-top:6px;font-size:13px;color:#C9D6E4"><span style="color:#6F8399">State · </span><span style="color:{{ demoSel.color }}">{{ demoSel.state }}</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ s.isForm }}">
+      <section id="form" style="max-width:1240px;margin:0 auto;padding:96px 40px 0">
+        <div data-r="side" style="display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:48px;align-items:start">
+          <div>
+            <div style="font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#A890FF;margin-bottom:18px">{{ form.eyebrow }}</div>
+            <h2 style="margin:0;font-size:clamp(28px,3.4vw,42px);font-weight:600;line-height:1.1;letter-spacing:-.035em;text-wrap:balance">{{ form.title }}</h2>
+            <p style="margin:18px 0 0;font-size:16px;line-height:1.65;color:#9FB2C8">{{ form.lead }}</p>
+            <sc-if value="{{ s.selectable }}">
+              <div style="display:flex;flex-direction:column;gap:8px;margin-top:28px">
+                <sc-for list="{{ formRoutes }}" as="r"><button onClick="{{ r.onClick }}" style="{{ r.style }}"><span style="font-size:15.5px;font-weight:600">{{ r.title }}</span><span style="font-size:13px;color:#9FB2C8">{{ r.email }}</span></button></sc-for>
+              </div>
+            </sc-if>
+          </div>
+          <form onSubmit="{{ submitForm }}" novalidate="" style="padding:32px;border:1px solid rgba(155,123,255,.25);border-radius:18px;background:linear-gradient(180deg,#0B1424,#08111D)">
+            <sc-if value="{{ formSent }}">
+              <div style="padding:20px 0">
+                <div style="width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(53,213,164,.14);color:#35D5A4;font-size:22px;margin-bottom:16px">✓</div>
+                <div style="font-size:22px;font-weight:600">Thank you — your request was received.</div>
+                <p style="margin:10px 0 0;font-size:15px;line-height:1.6;color:#9FB2C8">{{ formSentMsg }}</p>
+              </div>
+            </sc-if>
+            <sc-if value="{{ formOpen }}">
+              <div data-r="form" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+                <sc-for list="{{ form.fields }}" as="f">
+                  <label style="{{ f.wrap }}">
+                    <span style="display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#9FB2C8;margin-bottom:7px">{{ f.label }}</span>
+                    <sc-if value="{{ f.isInput }}"><input name="{{ f.name }}" type="{{ f.type }}" required="{{ f.required }}" autocomplete="{{ f.ac }}" style="box-sizing:border-box;width:100%;min-height:46px;padding:12px 14px;border:1px solid rgba(159,178,200,.2);border-radius:9px;background:#050B14;color:#F4F8FF;font-size:15px;outline:none" style-focus="border-color:#00D5FF"></input></sc-if>
+                    <sc-if value="{{ f.isSelect }}"><select name="{{ f.name }}" style="box-sizing:border-box;width:100%;min-height:46px;padding:12px 14px;border:1px solid rgba(159,178,200,.2);border-radius:9px;background:#050B14;color:#F4F8FF;font-size:15px" style-focus="border-color:#00D5FF"><sc-for list="{{ f.options }}" as="o"><option value="{{ o }}">{{ o }}</option></sc-for></select></sc-if>
+                    <sc-if value="{{ f.isArea }}"><textarea name="{{ f.name }}" rows="4" style="box-sizing:border-box;width:100%;padding:12px 14px;border:1px solid rgba(159,178,200,.2);border-radius:9px;background:#050B14;color:#F4F8FF;font-size:15px;resize:vertical;outline:none" style-focus="border-color:#00D5FF"></textarea></sc-if>
+                  </label>
+                </sc-for>
+                <input name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0"></input>
+              </div>
+              <sc-if value="{{ formError }}"><div role="alert" style="margin-top:14px;padding:11px 14px;border:1px solid rgba(255,100,117,.4);border-radius:9px;background:rgba(255,100,117,.08);font-size:14px;color:#FFC2C7">{{ formError }}</div></sc-if>
+              <button type="submit" style="margin-top:20px;width:100%;min-height:50px;border:0;border-radius:10px;background:linear-gradient(135deg,#7FF0FF,#5B8CFF 55%,#9B7BFF);color:#050B14;font-size:15.5px;font-weight:600;cursor:pointer">{{ formBtn }}</button>
+              <p style="margin:14px 0 0;font-size:12.5px;line-height:1.6;color:#6F8399">By submitting, you agree that CyberActive AI may contact you about your request. See our <a href="/legal#privacy">Privacy Policy</a>.</p>
+            </sc-if>
+          </form>
+        </div>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ s.isNote }}">
+      <section style="max-width:1240px;margin:0 auto;padding:40px 40px 0">
+        <p style="margin:0;padding:16px 20px;border-left:2px solid rgba(155,123,255,.5);font-size:13px;line-height:1.65;color:#6F8399">{{ s.text }}</p>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ s.isCta }}">
+      <section style="max-width:1240px;margin:0 auto;padding:96px 40px 0">
+        <div style="position:relative;overflow:hidden;padding:64px 56px;border:1px solid rgba(155,123,255,.3);border-radius:22px;background:radial-gradient(ellipse 60% 90% at 100% 0%,rgba(139,92,255,.22),transparent 70%),radial-gradient(ellipse 50% 80% at 0% 100%,rgba(0,213,255,.12),transparent 70%),#08111D">
+          <h2 style="margin:0;max-width:22ch;font-size:clamp(28px,3.6vw,46px);font-weight:600;line-height:1.08;letter-spacing:-.035em;text-wrap:balance">{{ s.title }}</h2>
+          <p style="margin:18px 0 0;max-width:62ch;font-size:16.5px;line-height:1.65;color:#C9D6E4">{{ s.body }}</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:30px">
+            <sc-for list="{{ s.ctas }}" as="b"><a href="{{ b.href }}" style="{{ b.style }}">{{ b.label }}</a></sc-for>
+          </div>
+        </div>
+      </section>
+    </sc-if>
+  </sc-for>
+</main>
+
+<footer style="margin-top:110px;padding:56px 40px 40px;border-top:1px solid rgba(159,178,200,.1);background:#03070D">
+  <div style="max-width:1240px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:40px">
+    <div style="max-width:340px">
+      <div style="display:flex;align-items:center;gap:10px"><img src="/assets/logo-13b.svg" alt="" style="width:34px;height:34px"><span style="font-size:19px;font-weight:600;letter-spacing:-.02em">CyberActive<span style="margin-left:6px;color:#A08BFF">AI</span></span></div>
+      <p style="margin:18px 0 0;font-size:15px;font-weight:500;line-height:1.4;color:#F4F8FF">The Autonomous Security Layer for AI Workloads and GPU Infrastructure.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(140px,auto));gap:8px 48px">
+      <sc-for list="{{ footCols }}" as="c">
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6F8399;margin-bottom:6px">{{ c.h }}</div>
+          <sc-for list="{{ c.links }}" as="l"><a href="{{ l.href }}" style="font-size:14px;color:#9FB2C8" style-hover="color:#F4F8FF">{{ l.label }}</a></sc-for>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+  <div style="max-width:1240px;margin:40px auto 0;padding-top:20px;border-top:1px solid rgba(159,178,200,.08);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:12.5px;color:#6F8399">
+    <span>© 2026 CyberActive AI. All rights reserved.</span>
+    <span>Interactive visuals are illustrative simulations, not live customer telemetry.</span>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { slug: 'platform', q: '', menuOpen: false, formRoute: null, formSent: false, formError: '', sending: false, step: 0, playing: false, mode: 'approval', sel: 'id' };
+
+  componentDidMount() {
+    this.readLoc();
+    this._h = () => { this.readLoc(); window.scrollTo(0, 0); };
+    window.addEventListener('hashchange', this._h);
+    if (!window.CA_PAGES) this._p = setInterval(() => { if (window.CA_PAGES) { clearInterval(this._p); this.forceUpdate(); } }, 60);
+  }
+  componentWillUnmount() { window.removeEventListener('hashchange', this._h); clearInterval(this._p); clearInterval(this._t); }
+  componentDidUpdate() {
+    const pg = (window.CA_PAGES || {})[this.state.slug];
+    if (pg) {
+      const t = pg.title + ' | CyberActive AI';
+      if (document.title !== t) document.title = t;
+      const m = document.querySelector('meta[name="description"]'); if (m && m.content !== pg.meta) m.content = pg.meta;
+    }
+  }
+  readLoc() {
+    let raw = decodeURIComponent((location.hash || '').slice(1));
+    if (!raw) raw = location.pathname.replace(/^\/+|\/+$/g, '').replace(/\.html$/, '').replace(/^page$/i, '');
+    const [slug, q] = raw.split('?');
+    const s = slug && slug !== 'Page.dc' ? slug : 'platform';
+    const query = q || (location.search || '').slice(1);
+    this.setState({ slug: s, q: query, menuOpen: false, formSent: false, formError: '', formRoute: ['demo', 'partner', 'investor'].includes(query) ? query : null });
+  }
+
+  btn(primary) {
+    return primary
+      ? 'display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:9px;background:linear-gradient(135deg,#7FF0FF,#5B8CFF 55%,#9B7BFF);color:#050B14;font-size:15px;font-weight:600;box-shadow:0 10px 36px rgba(110,110,255,.28)'
+      : 'display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border:1px solid rgba(244,248,255,.22);border-radius:9px;color:#F4F8FF;font-size:15px;font-weight:500';
+  }
+  css(str) { const o = {}; str.split(';').forEach(p => { const i = p.indexOf(':'); if (i > 0) o[p.slice(0, i).trim().replace(/-([a-z])/g, (_, c) => c.toUpperCase())] = p.slice(i + 1).trim(); }); return o; }
+  cta(b) { return { label: b.label, href: b.route ? '/contact?' + b.route : b.href, style: this.css(this.btn(b.primary)) }; }
+
+  demoData() {
+    const N = [
+      { id: 'id', label: 'Privileged identity', x: 12, y: 18, desc: 'svc-admin-07 — administrator service account with rights on the GPU management plane.', deps: 'GPU management plane, Kubernetes control plane' },
+      { id: 'mgmt', label: 'GPU management plane', x: 40, y: 14, desc: 'Cluster management APIs and BMC interfaces controlling GPU hosts.', deps: 'GPU cluster A, GPU cluster B' },
+      { id: 'k8s', label: 'Kubernetes control plane', x: 42, y: 50, desc: 'Schedules training and inference workloads across clusters.', deps: 'Training job, Inference API' },
+      { id: 'gpuA', label: 'GPU cluster A', x: 72, y: 22, desc: 'Training cluster running a large model training job.', deps: 'Training job, Model store' },
+      { id: 'gpuB', label: 'GPU cluster B', x: 74, y: 52, desc: 'Inference cluster serving production traffic.', deps: 'Inference API' },
+      { id: 'train', label: 'Training job', x: 86, y: 36, desc: 'Multi-week training run writing checkpoints.', deps: 'Model store' },
+      { id: 'api', label: 'Inference API', x: 66, y: 82, desc: 'Customer-facing production inference service.', deps: 'GPU cluster B' },
+      { id: 'store', label: 'Model store', x: 38, y: 82, desc: 'Model weights and checkpoints.', deps: 'Training job, Inference API' },
+      { id: 'net', label: 'Network fabric', x: 12, y: 62, desc: 'East-west fabric and egress connecting compute and storage.', deps: 'All clusters, Model store' }];
+    const E = [['id', 'mgmt'], ['id', 'k8s'], ['mgmt', 'gpuA'], ['mgmt', 'gpuB'], ['k8s', 'gpuA'], ['k8s', 'gpuB'], ['gpuA', 'train'], ['train', 'store'], ['gpuB', 'api'], ['store', 'api'], ['net', 'k8s'], ['net', 'store'], ['k8s', 'store']];
+    return { N, E };
+  }
+  demoStates(step, mode) {
+    const S = {};
+    if (step >= 0) S.id = 'threat';
+    if (step >= 1) { S.mgmt = 'risk'; S.k8s = 'risk'; S.gpuA = 'risk'; S.gpuB = 'risk'; S.train = 'watch'; S.api = 'watch'; }
+    if (step >= 3 && mode !== 'observe') { S.id = 'contained'; S.mgmt = 'contained'; S.k8s = 'watch'; S.gpuA = 'watch'; S.gpuB = 'watch'; }
+    if (step >= 4 && mode !== 'observe') { Object.keys(S).forEach(k => S[k] = 'restored'); }
+    return S;
+  }
+  demoStepText(step, mode) {
+    const act = { observe: ['Recommendation logged. No enforcement.', 'In observe mode, the platform records the recommended action and notifies operators. Nothing is changed in the environment.'], approval: ['Operator approves; containment executes.', 'The recommended action is routed for approval. On operator approval (simulated), sessions are revoked and the identity is suspended through the identity provider.'], autonomous: ['Pre-authorized containment executes.', 'This action class is pre-authorized by policy, so the platform revokes sessions and suspends the identity immediately — and logs every step for audit.'] }[mode];
+    return [
+      { t: 'Detect', head: 'Anomalous privileged activity identified.', body: 'Service account svc-admin-07 authenticates from an unrecognized context and begins enumerating GPU management APIs outside its normal schedule.', why: 'Behavior departs from this identity\u2019s baseline on source, timing, and API sequence.' },
+      { t: 'Understand', head: 'Blast radius mapped across the graph.', body: 'The identity holds admin rights on the GPU management plane and the Kubernetes control plane — reaching two GPU clusters, a running training job, and a production inference API.', why: 'Dependency relationships show which workloads and services the identity can reach next.' },
+      { t: 'Decide', head: 'Response options ranked by risk and impact.', body: 'Three options are evaluated against propagation risk, operational impact, and policy.', why: 'Suspending the identity removes the threat path without interrupting training or inference.', options: [{ t: 'Suspend identity & revoke sessions', m: 'Recommended · low impact', on: true }, { t: 'Isolate GPU cluster A', m: 'High impact · halts training' }, { t: 'Monitor only', m: 'High residual risk' }] },
+      { t: 'Act', head: act[0], body: act[1], why: 'Governance mode determines authority. Human override remains available.' },
+      { t: 'Restore', head: mode === 'observe' ? 'Recovery plan prepared for operators.' : 'Recovery coordinated and validated.', body: mode === 'observe' ? 'A recovery plan is generated — credential rotation, configuration integrity checks, and workload validation — for operators to execute.' : 'Credentials are rotated, management-plane configuration is verified against a known-good state, and dependent workloads are validated as healthy.', why: 'Outcomes are recorded and fed back to improve future decisions.' }];
+  }
+
+  renderVals() {
+    const PAGES = window.CA_PAGES || {};
+    const slug = this.state.slug, pg = PAGES[slug] || PAGES.platform || { sections: [] };
+    const P = s => 'Page.dc.html#' + s;
+    const top = ['platform', 'solutions', 'technology', 'partners', 'investors', 'about'];
+    const navLinks = [['Platform', 'platform'], ['Solutions', 'solutions'], ['Technology', 'technology'], ['Demo', 'demo'], ['Partners', 'partners'], ['Investors', 'investors'], ['Company', 'about']].map(([label, s]) => {
+      const on = slug === s || slug.indexOf(s + '/') === 0;
+      return { label, href: P(s), style: this.css('display:inline-flex;align-items:center;min-height:40px;padding:0 12px;border-radius:8px;font-size:14.5px;color:' + (on ? '#F4F8FF;background:rgba(155,123,255,.14)' : '#9FB2C8')) };
+    });
+    const crumbLabels = { solutions: 'Solutions', technology: 'Technology', platform: 'Platform' };
+    const parts = slug.split('/');
+    const crumbs = parts.length > 1 ? [{ label: crumbLabels[parts[0]] || parts[0], href: P(parts[0]) }] : [];
+    const cardBase = 'display:flex;flex-direction:column;padding:26px 24px;border:1px solid rgba(159,178,200,.12);border-radius:14px;background:linear-gradient(180deg,#0B1424,#08111D);transition:border-color .25s,transform .25s;color:#F4F8FF';
+    const STATUS = { 'Available': '#35D5A4', 'In Validation': '#FFB547', 'Planned': '#7FA8FF', 'Illustrative': '#9FB2C8', 'Verified IP': '#C9BEFF' };
+    const sections = (pg.sections || []).map((s, i) => {
+      const o = Object.assign({}, s, { key: i });
+      o['is' + s.type.charAt(0).toUpperCase() + s.type.slice(1)] = true;
+      if (s.ctas) o.ctas = s.ctas.map(b => this.cta(b));
+      if (s.type === 'hero') o.crumbs = crumbs;
+      if (s.type === 'cards') { const c = s.cols || 3; o.r = 'c' + c; o.grid = 'repeat(' + c + ',minmax(0,1fr))'; o.items = s.items.map(it => Object.assign({}, it, { href: it.href || undefined, style: this.css(cardBase + (it.href ? ';cursor:pointer' : '')) })); }
+      if (s.type === 'steps') { o.grid = 'repeat(' + s.items.length + ',minmax(0,1fr))'; o.items = s.items.map((it, j) => Object.assign({}, it, { n: j + 1 })); }
+      if (s.type === 'layers') o.items = s.items.map((it, j) => Object.assign({}, it, { n: j + 1, border: 'rgba(0,213,255,' + (.14 + j * .05) + ')', bg: 'linear-gradient(90deg,rgba(0,213,255,' + (.03 + j * .015) + '),rgba(139,92,255,' + (.02 + j * .02) + '))' }));
+      if (s.type === 'status') o.items = s.items.map(it => Object.assign({}, it, { pill: this.css('flex:none;padding:5px 11px;border-radius:999px;font-size:12px;font-weight:500;white-space:nowrap;color:' + STATUS[it.s] + ';border:1px solid ' + STATUS[it.s] + '55;background:' + STATUS[it.s] + '14') }));
+      if (s.type === 'form') o.selectable = s.route === 'select';
+      return o;
+    });
+    const statusKey = [['Available', 'implemented and demonstrable'], ['In Validation', 'developed, undergoing testing'], ['Planned', 'roadmap'], ['Verified IP', 'patent status confirmed'], ['Illustrative', 'conceptual or simulated']].map(([label, desc]) => ({ label, desc, dot: this.css('width:8px;height:8px;border-radius:50%;background:' + STATUS[label]) }));
+
+    // forms
+    const fSec = (pg.sections || []).find(x => x.type === 'form');
+    const route = (fSec && fSec.route !== 'select' ? fSec.route : this.state.formRoute) || 'demo';
+    const F = (name, label, o = {}) => Object.assign({ name, label, type: 'text', isInput: true, required: false, ac: 'off', wrap: this.css('display:block') }, o);
+    const full = { wrap: this.css('display:block;grid-column:1 / -1') };
+    const common = [F('name', 'Full name *', { required: true, ac: 'name' }), F('company', 'Organization *', { required: true, ac: 'organization' }), F('email', 'Business email *', { type: 'email', required: true, ac: 'email' })];
+    const sel = (name, label, options, o = {}) => Object.assign(F(name, label, o), { isInput: false, isSelect: true, options });
+    const area = (name, label) => Object.assign(F(name, label, full), { isInput: false, isArea: true });
+    const FORMS = {
+      demo: { eyebrow: 'For customers', title: 'Request a Private Demo.', lead: 'A guided technical session covering detection, dependency analysis, governed response, and recovery — tailored to your environment.', btn: 'Request a Private Demo', email: 'sales@cyberactive.ai', fields: common.concat([F('title', 'Job title', { ac: 'organization-title' }), sel('infra', 'Infrastructure type', ['GPU cloud / AI-as-a-Service', 'AI data center', 'Enterprise / private AI', 'Hybrid cloud', 'Mission-critical environment', 'Other']), F('scale', 'Approximate scale (optional)', full), area('objectives', 'Objectives'), area('message', 'Message')]) },
+      partner: { eyebrow: 'For partners', title: 'Explore Strategic Partnership.', lead: (fSec && fSec.lead) || 'Tell us about your infrastructure, technology, or proposed collaboration.', btn: 'Explore Partnership', email: 'partners@cyberactive.ai', fields: common.concat([F('role', 'Role', { ac: 'organization-title' }), sel('category', 'Partnership category', ['AI infrastructure operator', 'GPU cloud / AI-as-a-Service', 'OEM / embedded technology', 'MSSP / integrator', 'Strategic technology partner', 'Other']), area('collab', 'Proposed collaboration'), area('message', 'Message')]) },
+      investor: { eyebrow: 'For investors', title: 'Request an Investor Briefing.', lead: (fSec && fSec.lead) || 'For qualified investors seeking information about CyberActive AI.', btn: 'Request Investor Briefing', email: 'ir@cyberactive.ai', fields: common.concat([sel('investorType', 'Investor type', ['Venture capital', 'Growth equity', 'Strategic / corporate', 'Institutional', 'Family office', 'Other']), sel('interest', 'Area of interest', ['Investment overview', 'Technology & IP', 'Market opportunity', 'Strategic investment', 'Other'], full), area('message', 'Message')]) }
+    };
+    const form = FORMS[route];
+    const formRoutes = ['demo', 'partner', 'investor'].map(r => ({ title: FORMS[r].btn, email: FORMS[r].email, onClick: () => this.setState({ formRoute: r, formSent: false, formError: '' }), style: this.css('display:flex;flex-direction:column;align-items:flex-start;gap:3px;min-height:56px;padding:14px 18px;border-radius:12px;cursor:pointer;text-align:left;color:#F4F8FF;border:1px solid ' + (r === route ? 'rgba(155,123,255,.6);background:rgba(155,123,255,.12)' : 'rgba(159,178,200,.14);background:#08111D')) }));
+
+    // demo
+    const { N, E } = this.demoData(), st = this.state.step, mode = this.state.mode;
+    const SC = { threat: '#FF6475', risk: '#FFB547', watch: '#7FA8FF', contained: '#9B7BFF', restored: '#35D5A4' };
+    const SL = { threat: 'Threat detected', risk: 'At risk', watch: 'Monitored', contained: 'Contained', restored: 'Restored · validated' };
+    const states = this.demoStates(st, mode), pos = {}; N.forEach(n => pos[n.id] = n);
+    const demoNodes = N.map(n => { const s = states[n.id], c = SC[s] || '#5B8CFF', on = this.state.sel === n.id;
+      return { label: n.label, onClick: () => this.setState({ sel: n.id }),
+        style: this.css('position:absolute;left:' + n.x + '%;top:' + n.y + '%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:8px;min-height:40px;padding:8px 12px;border-radius:10px;cursor:pointer;color:#F4F8FF;transition:all .4s;background:' + (s ? c + '1f' : 'rgba(11,20,36,.92)') + ';border:1px solid ' + (on ? '#F4F8FF' : s ? c + 'aa' : 'rgba(159,178,200,.22)') + (s === 'threat' ? ';animation:pgPulse 1.6s infinite' : '')),
+        dot: this.css('flex:none;width:8px;height:8px;border-radius:50%;background:' + c + ';box-shadow:0 0 10px ' + c) }; });
+    const demoEdges = E.map(([a, b]) => { const sa = states[a], sb = states[b], hot = sa && sb && sa !== 'restored', c = hot ? (sa === 'threat' || sb === 'threat' ? '#FF6475' : sa === 'contained' ? '#9B7BFF' : '#FFB547') : (sa === 'restored' && sb === 'restored') ? '#35D5A4' : 'rgba(127,168,255,.25)';
+      return { x1: pos[a].x, y1: pos[a].y, x2: pos[b].x, y2: pos[b].y, color: c, w: hot ? 2 : 1.2, dash: hot ? '6 4' : '' }; });
+    const txt = this.demoStepText(st, mode), cur = Object.assign({ n: st + 1 }, txt[st]);
+    cur.hasOptions = !!cur.options; if (cur.options) cur.options = cur.options.map(o => Object.assign({}, o, { style: this.css('display:flex;justify-content:space-between;gap:10px;padding:10px 12px;border-radius:9px;font-size:13.5px;' + (o.on ? 'border:1px solid rgba(53,213,164,.5);background:rgba(53,213,164,.08);color:#F4F8FF' : 'border:1px solid rgba(159,178,200,.12);color:#9FB2C8')) }));
+    const accent = ['#FF6475', '#FFB547', '#9B7BFF', '#9B7BFF', '#35D5A4'][st];
+    const sn = pos[this.state.sel], ss = states[this.state.sel];
+    const advance = () => this.setState(s => { if (s.step >= 4) { clearInterval(this._t); return { playing: false }; } return { step: s.step + 1 }; });
+
+    return {
+      navLinks, sections, statusKey, menuOpen: this.state.menuOpen,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })), closeMenu: () => this.setState({ menuOpen: false }),
+      footCols: [
+        { h: 'Platform', links: [{ label: 'Overview', href: P('platform') }, { label: 'Technology', href: P('technology') }, { label: 'Patented Innovation', href: P('technology/patents') }, { label: 'Interactive Demo', href: P('demo') }] },
+        { h: 'Solutions', links: [{ label: 'AI Workloads', href: P('solutions/ai-workloads') }, { label: 'GPU Infrastructure', href: P('solutions/gpu-infrastructure') }, { label: 'AI Data Centers & GPU Cloud', href: P('solutions/ai-data-centers') }, { label: 'Enterprise & Private AI', href: P('solutions/enterprise-ai') }, { label: 'Mission-Critical', href: P('solutions/mission-critical') }] },
+        { h: 'Company', links: [{ label: 'About', href: P('about') }, { label: 'Customers', href: P('customers') }, { label: 'Partners', href: P('partners') }, { label: 'Investors', href: P('investors') }, { label: 'Contact', href: P('contact') }, { label: 'Privacy Policy', href: '/legal#privacy' }, { label: 'Terms of Use', href: '/legal#terms' }] }],
+      form, formRoutes, formSent: this.state.formSent, formOpen: !this.state.formSent, formError: this.state.formError,
+      formBtn: this.state.sending ? 'Sending…' : form.btn,
+      formSentMsg: 'Our team will follow up shortly. You can also reach us directly at ' + form.email + '.',
+      submitForm: e => { e.preventDefault(); if (this.state.sending) return; this.setState({ sending: true, formError: '' });
+        window.CAForms.submit(e.target, route).then(r => this.setState(r.ok ? { sending: false, formSent: true } : { sending: false, formError: r.error })); },
+      demoLabel: 'Illustrative Platform Simulation — Not Live Customer Telemetry',
+      demoNodes, demoEdges, demoCur: cur, demoAccent: accent + '66', demoAccentText: accent,
+      demoSel: { label: sn.label, desc: sn.desc, deps: sn.deps, state: ss ? SL[ss] : 'Normal', color: ss ? SC[ss] : '#9FB2C8' },
+      demoPlayLabel: this.state.playing ? 'Pause' : (st >= 4 ? 'Replay scenario' : 'Start scenario'),
+      demoPlay: () => { if (this.state.playing) { clearInterval(this._t); this.setState({ playing: false }); return; }
+        if (this.state.step >= 4) this.setState({ step: 0 }); clearInterval(this._t); this._t = setInterval(advance, 3800); this.setState({ playing: true }); },
+      demoReset: () => { clearInterval(this._t); this.setState({ step: 0, playing: false, sel: 'id' }); },
+      demoSteps: ['Detect', 'Understand', 'Decide', 'Act', 'Restore'].map((t, i) => ({ t, n: i + 1, onClick: () => { clearInterval(this._t); this.setState({ step: i, playing: false }); },
+        style: this.css('display:flex;flex-direction:column;align-items:flex-start;gap:2px;min-height:52px;padding:8px 12px;border-radius:10px;cursor:pointer;font-size:14px;font-weight:500;text-align:left;transition:all .3s;' + (i === st ? 'color:#050B14;border:1px solid transparent;background:linear-gradient(135deg,#7FF0FF,#9B7BFF)' : i < st ? 'color:#F4F8FF;border:1px solid rgba(155,123,255,.4);background:rgba(155,123,255,.1)' : 'color:#9FB2C8;border:1px solid rgba(159,178,200,.14);background:#08111D')) })),
+      demoModes: [['observe', 'Observe'], ['approval', 'Approval'], ['autonomous', 'Autonomous']].map(([k, label]) => ({ label, onClick: () => this.setState({ mode: k }),
+        style: this.css('min-height:38px;padding:0 14px;border:0;border-radius:8px;cursor:pointer;font-size:13.5px;' + (mode === k ? 'background:rgba(155,123,255,.22);color:#F4F8FF' : 'background:transparent;color:#9FB2C8')) }))
+    };
+  }
+}
+</script>
+</body>
+</html>
