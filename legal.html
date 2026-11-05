@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://cyberactive.ai/legal">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Privacy Policy &amp; Terms of Use — CyberActive AI</title>
+<meta name="description" content="Privacy Policy and Terms of Use for CyberActive AI">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="icon" type="image/svg+xml" href="assets/logo-13b.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#050B14">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+  html { scroll-behavior: smooth; background: #050B14; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body { margin: 0; background: #050B14; color: #F4F8FF; font-family: Geist, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  *, *::before, *::after { box-sizing: border-box; }
+  a { color: #7FE6FF; text-decoration: none; }
+  a:hover { color: #F4F8FF; }
+  ::selection { background: rgba(0,213,255,.28); }
+  :focus-visible { outline: 2px solid #00D5FF; outline-offset: 2px; }
+  article, h2 { scroll-margin-top: 90px; }
+  @media (max-width: 860px) { #lg-grid { grid-template-columns: 1fr !important; } #lg-toc { position: static !important; } #lg-nav, #lg-main, footer { padding-left: 20px !important; padding-right: 20px !important; } }
+  @media print { #lg-nav, #lg-toc, footer { display: none !important; } body, html { background: #fff; color: #000; } }
+</style>
+</helmet>
+
+<div style="min-height:100vh;background:#050B14;color:#F4F8FF;font-family:Geist,system-ui,sans-serif">
+  <nav id="lg-nav" style="position:-webkit-sticky;position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 40px;background:rgba(5,11,20,.85);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid rgba(159,178,200,.1)">
+    <a href="/" style="display:flex;align-items:center;gap:12px;color:#F4F8FF">
+      <img src="assets/logo-13b.svg" alt="" style="height:34px;width:34px;display:block">
+      <span style="font-size:18px;font-weight:600;letter-spacing:-.02em;display:inline-flex;align-items:center">CyberActive<span style="margin-left:6px;color:#A08BFF">AI</span></span>
+    </a>
+    <a href="/" style="font-size:14px;color:#9FB2C8" style-hover="color:#F4F8FF">← Back to home</a>
+  </nav>
+
+  <div id="lg-main" style="max-width:1160px;margin:0 auto;padding:72px 40px 100px">
+    <div style="font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#00D5FF;margin-bottom:18px">Legal</div>
+    <h1 style="margin:0;font-size:clamp(36px,5vw,60px);font-weight:600;line-height:1.05;letter-spacing:-.035em">Privacy Policy &amp; Terms of Use</h1>
+    <p style="margin:18px 0 0;font-size:15px;color:#9FB2C8">CyberActive AI — Effective Date: February 2026</p>
+
+    <div id="lg-grid" style="display:grid;grid-template-columns:240px minmax(0,1fr);gap:56px;margin-top:56px;align-items:start">
+      <aside id="lg-toc" style="position:-webkit-sticky;position:sticky;top:92px;display:flex;flex-direction:column;gap:22px">
+        <sc-for list="{{ docs }}" as="d" hint-placeholder-count="2">
+          <div>
+            <a href="#{{ d.id }}" style="display:block;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#F4F8FF;margin-bottom:10px">{{ d.title }}</a>
+            <div style="display:flex;flex-direction:column;gap:7px;padding-left:12px;border-left:1px solid rgba(159,178,200,.14)">
+              <sc-for list="{{ d.sections }}" as="s" hint-placeholder-count="10">
+                <a href="#{{ s.anchor }}" style="font-size:13px;line-height:1.4;color:#9FB2C8" style-hover="color:#F4F8FF">{{ s.n }}. {{ s.h }}</a>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </aside>
+
+      <div style="display:flex;flex-direction:column;gap:64px;min-width:0">
+        <sc-for list="{{ docs }}" as="d" hint-placeholder-count="2">
+          <article id="{{ d.id }}" style="padding:40px;border:1px solid rgba(159,178,200,.12);border-radius:16px;background:#08111D">
+            <h2 style="margin:0;font-size:clamp(26px,3vw,36px);font-weight:600;letter-spacing:-.025em">{{ d.title }}</h2>
+            <p style="margin:10px 0 0;font-size:13.5px;color:#6F8399">CyberActive AI — Effective Date: February 2026</p>
+            <sc-for list="{{ d.sections }}" as="s" hint-placeholder-count="10">
+              <div id="{{ s.anchor }}" style="margin-top:36px;scroll-margin-top:90px">
+                <h3 style="margin:0 0 14px;font-size:19px;font-weight:600;letter-spacing:-.01em;color:#F4F8FF"><span style="font-family:'Geist Mono',monospace;font-size:13px;color:#00D5FF;margin-right:10px">{{ s.n }}</span>{{ s.h }}</h3>
+                <sc-for list="{{ s.blocks }}" as="b" hint-placeholder-count="2">
+                  <div>
+                    <sc-if value="{{ b.isSub }}" hint-placeholder-val="{{ false }}">
+                      <h4 style="margin:18px 0 10px;font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#9FB2C8">{{ b.text }}</h4>
+                    </sc-if>
+                    <sc-if value="{{ b.isP }}" hint-placeholder-val="{{ true }}">
+                      <p style="margin:0 0 12px;max-width:72ch;font-size:15.5px;line-height:1.7;color:#C9D6E4;text-wrap:pretty">{{ b.text }}</p>
+                    </sc-if>
+                    <sc-if value="{{ b.isStrong }}" hint-placeholder-val="{{ false }}">
+                      <p style="margin:6px 0 12px;font-size:15.5px;font-weight:600;color:#F4F8FF">{{ b.text }}</p>
+                    </sc-if>
+                    <sc-if value="{{ b.isMail }}" hint-placeholder-val="{{ false }}">
+                      <p style="margin:0 0 12px;font-size:15.5px;line-height:1.7;color:#C9D6E4">{{ b.text }} <a href="mailto:legal@cyberactive.ai">legal@cyberactive.ai</a></p>
+                    </sc-if>
+                    <sc-if value="{{ b.isList }}" hint-placeholder-val="{{ false }}">
+                      <ul style="margin:0 0 12px;padding-left:20px;display:flex;flex-direction:column;gap:6px;font-size:15.5px;line-height:1.6;color:#C9D6E4">
+                        <sc-for list="{{ b.items }}" as="it" hint-placeholder-count="4">
+                          <li>{{ it }}</li>
+                        </sc-for>
+                      </ul>
+                    </sc-if>
+                  </div>
+                </sc-for>
+              </div>
+            </sc-for>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <footer style="padding:40px;border-top:1px solid rgba(159,178,200,.1);background:#03070D">
+    <div style="max-width:1160px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;font-size:13px;color:#6F8399">
+      <span>© 2026 CyberActive AI. All Rights Reserved.</span>
+      <div style="display:flex;gap:22px">
+        <a href="#privacy" style="color:#9FB2C8">Privacy</a>
+        <a href="#terms" style="color:#9FB2C8">Terms</a>
+        <a href="https://www.linkedin.com/company/cyb3ractive/" target="_blank" rel="noopener noreferrer" style="color:#9FB2C8">LinkedIn</a>
+        <a href="https://www.facebook.com/Cyb3rActive/" target="_blank" rel="noopener noreferrer" style="color:#9FB2C8">Facebook</a>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  P = t => ({ text: t, isP: true });
+  L = items => ({ items, isList: true });
+  privacy = [
+    ['Introduction', [this.P('CyberActive AI ("CyberActive AI," "CyberActive," "we," "us," or "our") respects your privacy. This Privacy Policy describes how we collect, use, and protect information through this website.')]],
+    ['Information We Collect', [{ text: 'Information You Provide', isSub: true }, this.L(['Name', 'Company name', 'Title', 'Email address', 'Phone number', 'Industry', 'Inquiry details']),
+      { text: 'Automatically Collected Information', isSub: true }, this.L(['IP address', 'Device/browser type', 'Pages visited', 'Time spent on pages', 'Referral source']),
+      this.P('We use cookies and similar technologies for analytics and security.')]],
+    ['How We Use Information', [this.P('We use information to:'), this.L(['Respond to inquiries', 'Provide requested materials', 'Schedule briefings or demonstrations', 'Improve website functionality', 'Maintain system security', 'Comply with legal obligations']), { text: 'We do not sell personal information.', isStrong: true }]],
+    ['Data Sharing', [this.P('We may share information with:'), this.L(['Service providers (hosting, analytics, CRM)', 'Legal or compliance advisors', 'Authorities if required by law', 'In connection with corporate transactions']), this.P('All service providers are required to protect data appropriately.')]],
+    ['Data Retention', [this.P('We retain information only as long as necessary to fulfill the purposes described above or comply with legal requirements.')]],
+    ['Security', [this.P('We implement reasonable administrative, technical, and physical safeguards to protect submitted information. However, no internet transmission is guaranteed to be completely secure.')]],
+    ['International Visitors', [this.P('If you access the Site from outside the United States, your information may be transferred to and processed in the United States.')]],
+    ['Your Rights', [this.P('Depending on applicable law, you may have the right to:'), this.L(['Access your information', 'Correct inaccuracies', 'Request deletion', 'Opt out of communications']), { text: 'To exercise rights, contact:', isMail: true }]],
+    ['Updates', [this.P('We may update this Privacy Policy periodically. Changes will be posted with a revised effective date.')]],
+    ['Contact', [{ text: '', isMail: true }]]
+  ];
+  terms = [
+    ['Acceptance of Terms', [this.P('These Terms of Use ("Terms") govern your access to and use of the CyberActive AI website at cyberactive.ai (the "Site"), operated by CyberActive AI ("CyberActive AI," "CyberActive," "Company," "we," "us," or "our").'), this.P('By accessing or using this Site, you agree to these Terms. If you do not agree, you must not use this Site.')]],
+    ['Permitted Use', [this.P('You may use this Site for lawful business purposes only. You may not:'), this.L(['Attempt unauthorized access to any systems', 'Interfere with Site security or functionality', 'Use the Site to transmit malicious code', 'Scrape, harvest, or misuse Site content', 'Reverse engineer or replicate proprietary materials'])]],
+    ['Intellectual Property', [this.P('All content on this Site, including text, graphics, logos, trademarks, layout, and design elements, is the property of CyberActive AI or its licensors and is protected by intellectual property laws.'), this.P('No license is granted except for limited personal, non-commercial viewing. Use of the CyberActive AI and CyberActive names, logos, or trademarks without written permission is prohibited.')]],
+    ['No Security Guarantee', [this.P('This Site is informational in nature. Nothing on this Site constitutes a guarantee of security outcomes, performance results, or protection from cyber incidents. Security effectiveness depends on multiple environmental and operational factors.')]],
+    ['Forward-Looking Statements', [this.P('The Site may contain statements regarding future plans, expectations, or strategic direction. Such statements are forward-looking and involve risks and uncertainties. Actual results may differ materially.')]],
+    ['Disclaimer of Warranties', [this.P('This Site is provided "as is" and "as available." To the maximum extent permitted by law, CyberActive disclaims all warranties, express or implied, including:'), this.L(['Merchantability', 'Fitness for a particular purpose', 'Non-infringement', 'Accuracy or completeness of information'])]],
+    ['Limitation of Liability', [this.P('To the maximum extent permitted by law, CyberActive shall not be liable for indirect, incidental, special, consequential, or punitive damages, loss of profits, loss of data, or business interruption arising from or related to your use of this Site.')]],
+    ['Indemnification', [this.P('You agree to indemnify and hold harmless CyberActive from claims arising out of your misuse of the Site, your violation of these Terms, or your violation of applicable laws.')]],
+    ['Governing Law', [this.P('These Terms are governed by the laws of the State of Delaware, without regard to conflict of law principles. Any disputes shall be resolved in Delaware courts unless otherwise required by law.')]],
+    ['Modifications', [this.P('CyberActive may update these Terms at any time. Continued use of the Site constitutes acceptance of updated Terms.')]],
+    ['Contact', [{ text: '', isMail: true }]]
+  ];
+  renderVals() {
+    const build = (id, title, arr) => ({ id, title, sections: arr.map(([h, blocks], i) => ({ n: i + 1, h, anchor: id + '-' + (i + 1), blocks })) });
+    return { docs: [build('privacy', 'Privacy Policy', this.privacy), build('terms', 'Terms of Use', this.terms)] };
+  }
+}
+</script>
+</body>
+</html>
