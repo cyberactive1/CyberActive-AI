@@ -1,0 +1,73 @@
+    <div class="radar__grid">
+      <div class="glass ai-panel">
+        <div class="ai-panel__head"><span class="label">AI intelligence layer</span><span class="live">Adapting</span></div>
+        <div id="ai-stats">
+          <div class="stat"><span class="stat__k">Telemetry rate</span><span class="stat__v">46.4K ev/s</span></div>
+          <div class="stat"><span class="stat__k">Events analyzed</span><span class="stat__v">1.28M</span></div>
+          <div class="stat"><span class="stat__k">Models updated</span><span class="stat__v">412</span></div>
+          <div class="stat"><span class="stat__k">Predictions generated</span><span class="stat__v">9.1K</span></div>
+          <div class="stat"><span class="stat__k">Actions executed</span><span class="stat__v">214</span></div>
+          <div class="stat"><span class="stat__k">Risk correlations</span><span class="stat__v">3.9K</span></div>
+          <div class="stat"><span class="stat__k">Graph updates</span><span class="stat__v">18.2K</span></div>
+        </div>
+        <div class="legend">
+          <div class="label">Anomaly confidence</div>
+          <ul>
+            <li style="--c:#277BFF">Normal telemetry</li>
+            <li style="--c:#FFBC57">Potential anomaly</li>
+            <li style="--c:#FF8C50">High confidence</li>
+            <li style="--c:#FF6475">Critical</li>
+            <li style="--c:#00D5FF">Resolved</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="radar__stage">
+        <canvas class="radar__canvas" id="radar-canvas" aria-label="Telemetry radar — click a domain to inspect it"></canvas>
+        <div class="radar__core">
+          <img src="ASSET/logo-13b.svg" alt="" width="34" height="34">
+          <div class="radar__core-t">CA AI Core</div>
+          <div class="radar__core-s">Autonomous AI &amp; GPU Infrastructure Security</div>
+        </div>
+        <div class="rchips" id="core-chips">
+          <span class="rchip">Health <b>99.2%</b></span>
+          <span class="rchip">Mode <b>Approve</b></span>
+          <span class="rchip">AI confidence <b>0.98</b></span>
+          <span class="rchip">Active anomalies <b>0</b></span>
+          <span class="rchip">Recovery ops <b>0</b></span>
+        </div>
+        <div class="radar__foot">
+          <div class="chain" id="chain"><span>Facilities</span><span>→ Compute</span><span>→ Applications</span><span>→ Network</span><span>→ Security</span><span>→ Cloud</span></div>
+          <span class="sim-note">Illustrative simulation</span>
+        </div>
+      </div>
+
+      <div class="glass domain-panel">
+        <div class="domain-panel__head">
+          <span class="label">Domain telemetry</span>
+          <span class="pill pill--blue" id="rd-state">Normal</span>
+        </div>
+        <h3 id="rd-name">Facilities</h3>
+        <p class="domain-panel__scope" id="rd-scope">Power distribution, UPS, generators, cooling, HVAC, environmental, fire suppression, leak detection, BMS, physical access.</p>
+        <div class="tabs" id="radar-tabs" role="tablist" aria-label="Telemetry domains">
+          <button class="tab is-active" type="button" role="tab" aria-selected="true">Facilities</button>
+          <button class="tab" type="button" role="tab" aria-selected="false">Network</button>
+          <button class="tab" type="button" role="tab" aria-selected="false">Security</button>
+          <button class="tab" type="button" role="tab" aria-selected="false">Cloud</button>
+          <button class="tab" type="button" role="tab" aria-selected="false">Applications</button>
+          <button class="tab" type="button" role="tab" aria-selected="false">Compute</button>
+        </div>
+        <div class="metrics" id="rd-metrics">
+          <div class="metric"><div class="metric__k">Overall health</div><div class="metric__v">98.6%</div></div>
+          <div class="metric"><div class="metric__k">Telemetry volume</div><div class="metric__v">7.6K ev/s</div></div>
+          <div class="metric"><div class="metric__k">Active assets</div><div class="metric__v">1,840</div></div>
+          <div class="metric"><div class="metric__k">Current anomalies</div><div class="metric__v">None</div></div>
+          <div class="metric"><div class="metric__k">AI confidence</div><div class="metric__v">0.98</div></div>
+          <div class="metric"><div class="metric__k">Risk score</div><div class="metric__v">12 / 100</div></div>
+          <div class="metric"><div class="metric__k">Predicted impact</div><div class="metric__v">None</div></div>
+          <div class="metric"><div class="metric__k">Autonomous actions</div><div class="metric__v">0</div></div>
+          <div class="metric"><div class="metric__k">Business impact</div><div class="metric__v">None</div></div>
+          <div class="metric"><div class="metric__k">Recovery status</div><div class="metric__v">Not required</div></div>
+        </div>
+      </div>
+    </div>
