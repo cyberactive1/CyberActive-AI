@@ -1,0 +1,21 @@
+{
+  "name": "CyberActive AI",
+  "short_name": "CyberActive",
+  "description": "The Autonomous Security Layer for AI Workloads and GPU Infrastructure.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#050B14",
+  "theme_color": "#050B14",
+  "icons": [
+    {
+      "src": "/assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
